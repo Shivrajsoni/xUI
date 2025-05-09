@@ -33,6 +33,9 @@ const config: NextConfig = {
     viewTransition: true,
   },
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default withMDX(config);

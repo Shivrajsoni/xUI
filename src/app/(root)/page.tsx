@@ -1,6 +1,4 @@
 import HeroSection from "@/components/landing/HeroSection";
-import AIInput_01 from "@/components/xui/ai-input/ai-input-01";
-import Image from "next/image";
 
 export default function Home() {
   return (
