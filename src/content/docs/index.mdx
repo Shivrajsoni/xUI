@@ -1,0 +1,127 @@
+---
+title: Installation
+description: Getting started with xUI
+icon: ListStart
+---
+
+### 1. Install utilities
+
+All xUI components use [Tailwind CSS v4](https://tailwindcss.com/docs/installation/framework-guides/nextjs), so make sure it's set up in your project.
+
+We also use the `cn` utility function for classNames—you can install it like this:
+
+<Tabs items={["bun", "npx", "pnpm"]}>
+
+```bash tab="bun"
+bunx shadcn@latest add https://ui.codesnipet.dev/r/utils.json
+```
+
+```bash tab="npx"
+npx shadcn@latest add https://ui.codesnipet.dev/r/utils.json
+```
+
+```bash tab="pnpm"
+pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/utils.json
+```
+
+</Tabs>
+
+### 2. Importing components 🎉
+
+We use [lucide-icons](https://lucide.dev/guide/installation) for icons, and most UI elements come from [shadcn/ui](https://ui.shadcn.com/). These will be handled automatically when using our CLI.
+
+For example, to add the `card-05` component:
+
+<Tabs items={["bun", "npx", "pnpm"]}>
+
+```bash tab="bun"
+bunx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json
+```
+
+```bash tab="npx"
+npx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json
+```
+
+```bash tab="pnpm"
+pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json
+```
+
+</Tabs>
+
+And then use it in your code like this:
+
+```jsx
+import Card01 from "@/components/xui/card/Card01";
+
+export default function Page() {
+  return <Card01 />;
+}
+```
+
+_Note: CLI ensures all required files are included. Don't skip it unless you're a fan of chaos._
+
+### 3. Blocks (a.k.a. full power mode 💪)
+
+Blocks are grouped components that work together. To install them, **CLI is mandatory**.
+
+Example: Install the `ai-card-generation` block:
+
+<Tabs items={["bun", "npx", "pnpm"]}>
+
+```bash tab="bun"
+bunx shadcn@latest add https://ui.codesnipet.dev/r/ai-card-generation.json
+```
+
+```bash tab="npx"
+npx shadcn@latest add https://ui.codesnipet.dev/r/ai-card-generation.json
+```
+
+```bash tab="pnpm"
+pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/ai-card-generation.json
+```
+
+</Tabs>
+
+Now use it like this:
+
+```jsx
+/**
+ * AICardGeneration depends on 5 other components,
+ * all auto-installed via CLI.
+ */
+import AICardGeneration from "@/components/codesnippetui/AICardGeneration";
+
+export default function Page() {
+  return <AICardGeneration />;
+}
+```
+
+### 4. Optional dependencies
+
+Some components might require extra packages (e.g. `@radix-ui/react-slot`, `clsx`, etc.). These will be mentioned in the docs for each component—don’t skip them unless you enjoy debugging at 2AM.
+
+### 5. Using with Monorepo
+
+If you're using a monorepo, pass the path to your app using `-c` like so:
+
+<Tabs items={["bun", "npx", "pnpm"]}>
+
+```bash tab="bun"
+bunx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json -c ./apps/www
+```
+
+```bash tab="npx"
+npx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json -c ./apps/www
+```
+
+```bash tab="pnpm"
+pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json -c ./apps/www
+```
+
+</Tabs>
+
+---
+
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+
+;

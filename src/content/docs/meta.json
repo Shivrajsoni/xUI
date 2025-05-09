@@ -1,0 +1,32 @@
+{
+  "title": "Components",
+  "description": "The headless library",
+  "icon": "Dna",
+  "root": true,
+  "defaultOpen": true,
+  "pages": [
+    "---Get Started---",
+    "index",
+    "---Latest---",
+    "components/action-search-bar",
+    "components/avatar-picker",
+    "components/beams-background",
+    "components/background-circles",
+    "components/background-paths",
+    "components/bento-grid",
+    "components/faq",
+    "components/toolbar",
+    "components/tweet-card",
+    "components/vercel-chat",
+
+    "---Components---",
+    "components/ai-input",
+    "components/alert",
+    "components/button",
+    "components/card",
+    "components/list",
+    "components/profile",
+    "---Hooks---",
+    "hooks/use-auto-resize-textarea"
+  ]
+}
