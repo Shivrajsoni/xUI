@@ -1,0 +1,17 @@
+{
+  "name": "loader-01",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react",
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\";\nimport clsx from \"clsx\";\nimport React from \"react\";\nimport { motion } from \"framer-motion\";\n\nconst Loader01 = () => {\n  return (\n    <div\n      className={clsx(\n        \"relative flex items-center justify-center h-[200px] w-full\",\n        \"bg-white dark:bg-black/5\"\n      )}\n    >\n      <motion.div className=\"absolute h-[38px] w-[38px]\">\n        {[0, 1, 2, 3, 4, 5, 6].map((i) => (\n          <motion.div\n            key={i}\n            className={clsx(\n              \"items-center jusify-center\",\n              \"absolute inset-0 rounded-full\",\n              \"border-2 border-bg-linear-to-br via-gray-500 to-transparent \"\n            )}\n            animate={{\n              rotate: 360,\n              scale: [1, 1.05 + i * 0.05, 1],\n              opacity: [0.8, 1, 0.8],\n            }}\n            transition={{\n              duration: 5,\n              repeat: Number.POSITIVE_INFINITY,\n              ease: \"easeInOut\",\n            }}\n          >\n            <div\n              className={clsx(\n                \"absolute inset-0 rounded-full mix-blend-screen\",\n                \"items-center justify-center\",\n                `bg-[radial-gradient(ellipse_at_center\n                )}/10%,transparent_70%)]`\n              )}\n            />\n          </motion.div>\n        ))}\n      </motion.div>\n    </div>\n  );\n};\n\nexport default Loader01;\n",
+      "path": "/src/components/xui/loader/loader-01.tsx",
+      "target": "@/components/xui/loader-01.tsx"
+    }
+  ]
+}

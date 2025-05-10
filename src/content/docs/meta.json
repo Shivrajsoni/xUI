@@ -26,6 +26,8 @@
     "components/card",
     "components/list",
     "components/profile",
+    "components/loader",
+
     "---Hooks---",
     "hooks/use-auto-resize-textarea"
   ]

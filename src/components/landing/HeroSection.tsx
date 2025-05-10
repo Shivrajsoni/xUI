@@ -7,6 +7,9 @@ import Features from "./Features";
 import { Link } from "next-view-transitions";
 import Card_01 from "../xui/card/card-01";
 import AIInput_01 from "../xui/ai-input/ai-input-01";
+import Btn03 from "../xui/button/btn-03";
+import LoaderHomePage from "../xui/loader-for-home-page";
+import VercelV0Chat from "../xui/vercel-chat";
 
 const HeroSection = () => {
   return (
@@ -20,7 +23,7 @@ const HeroSection = () => {
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100">
             Designed with{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-500 dark:from-rose-400 dark:via-fuchsia-400 dark:to-purple-400">
-              precision
+              Precision
             </span>
             <br />
             Developed with{" "}
@@ -59,18 +62,15 @@ const HeroSection = () => {
         >
           <div className="w-full flex flex-col items-center justify-center ">
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-              {"<Card/>"}
+              {/* <Card_01 /> */}
             </span>
             <Card_01 />
           </div>
           <div className="w-full max-w-[600px] bg-transparent">
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-              Components
+              <LoaderHomePage />
             </span>
-            {/* <ActionSearchBar
-                            actions={allActions}
-                            defaultOpen={true}
-                        /> */}
+            {/* <ActionSearchBar /> */}
             {/* <Card02 /> */}
           </div>
         </motion.div>
@@ -82,9 +82,9 @@ const HeroSection = () => {
           className="w-full"
         >
           <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-            AI Chat
+            <VercelV0Chat />
           </span>
-          <AIInput_01 />
+
           <div className="w-full h-48 rounded-xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
             {/* <AIInput_04 /> */}
           </div>
@@ -101,10 +101,7 @@ const HeroSection = () => {
             </span>
             <div className="w-full h-48 rounded-xl  border border-zinc-200 dark:border-zinc-800 flex flex-col items-center justify-center gap-3">
               <Link href="/docs/components/button">
-                {/* <Btn14 label="Bring me" className=" w-42 py-5" /> */}
-              </Link>
-              <Link href="/docs/components/button">
-                {/* <Btn03 className=" w-42 py-5" /> */}
+                <Btn03 className=" w-42 py-5" />
               </Link>
             </div>
           </div>
@@ -112,7 +109,7 @@ const HeroSection = () => {
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
               Input
             </span>
-            <Link href="/docs/components/input">{/* <Input09 /> */}</Link>
+            {/* <Link href="/docs/components/input"><Input01 /></Link> */}
           </div>
         </motion.div>
       </div>

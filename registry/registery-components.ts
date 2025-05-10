@@ -90,6 +90,18 @@ export const component: Registry = [
     ],
   },
   {
+    name: "card-04",
+    type: "registry:component",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["badge", "button"],
+    files: [
+      {
+        path: "src/components/xui/card/card-04.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "alert-01",
     type: "registry:component",
     dependencies: ["lucide-react"],
@@ -299,6 +311,30 @@ export const component: Registry = [
     files: [
       {
         path: "src/components/xui/avatar-picker.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "loader-01",
+    type: "registry:component",
+    dependencies: ["lucide-react", "motion"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/components/xui/loader/loader-01.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "loader-02",
+    type: "registry:component",
+    dependencies: ["lucide-react", "motion"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/components/xui/loader/loader-02.tsx",
         type: "registry:component",
       },
     ],

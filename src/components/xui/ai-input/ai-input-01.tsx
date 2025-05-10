@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useAutoResizeTextArea } from "@/hooks/use-auto-resize-textarea";
 import { cn } from "@/lib/utils";
@@ -58,7 +59,7 @@ export default function AIInput_01() {
         >
           <Mic className="w-4 h-4 text-black/70 dark:text-white/70" />
         </div>
-        <button
+        <Button
           onClick={handleReset}
           type="button"
           className={cn(
@@ -69,7 +70,7 @@ export default function AIInput_01() {
           )}
         >
           <CornerRightUp className="w-4 h-4 text-black/70 dark:text-white/70 transition-opacity duration-700" />
-        </button>
+        </Button>
       </div>
     </div>
   );

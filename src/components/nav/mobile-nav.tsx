@@ -2,7 +2,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { X } from "lucide-react";
 import type { NavSection } from "@/config/navigation";
-
+import { Button } from "../ui/button";
 interface MobileNavProps {
   sections: NavSection[];
   pathname: string;
@@ -114,7 +114,7 @@ export function MobileNav({
             </div>
 
             <div className="p-4 border-t border-zinc-200 dark:border-zinc-800">
-              <button
+              <Button
                 type="button"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -123,7 +123,7 @@ export function MobileNav({
                 className="w-full flex items-center justify-center p-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/5"
               >
                 <X className="w-4 h-4 text-zinc-500 dark:text-zinc-400" />
-              </button>
+              </Button>
             </div>
           </div>
         ) : (

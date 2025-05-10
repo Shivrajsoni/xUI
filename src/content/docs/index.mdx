@@ -13,16 +13,15 @@ We also use the `cn` utility function for classNames—you can install it like t
 <Tabs items={["bun", "npx", "pnpm"]}>
 
 ```bash tab="bun"
-bunx shadcn@latest add https://ui.codesnipet.dev/r/utils.json
+bunx shadcn@latest add  https://x-ui-self.vercel.app/r/utils.json
 ```
 
 ```bash tab="npx"
-npx shadcn@latest add https://ui.codesnipet.dev/r/utils.json
+npx shadcn@latest add https://x-ui-self.vercel.app/r/utils.json
 ```
 
-```bash tab="pnpm"
-pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/utils.json
-```
+````bash tab="pnpm"
+pnpm dlx shadcn@latest add https://x-ui-self.vercel.app/r/utils.json
 
 </Tabs>
 
@@ -30,20 +29,20 @@ pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/utils.json
 
 We use [lucide-icons](https://lucide.dev/guide/installation) for icons, and most UI elements come from [shadcn/ui](https://ui.shadcn.com/). These will be handled automatically when using our CLI.
 
-For example, to add the `card-05` component:
+For example, to add the `card-01` component:
 
 <Tabs items={["bun", "npx", "pnpm"]}>
 
 ```bash tab="bun"
-bunx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json
-```
+bunx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json
+````
 
 ```bash tab="npx"
-npx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json
+npx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json
 ```
 
 ```bash tab="pnpm"
-pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json
+pnpm dlx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json
 ```
 
 </Tabs>
@@ -60,36 +59,14 @@ export default function Page() {
 
 _Note: CLI ensures all required files are included. Don't skip it unless you're a fan of chaos._
 
-### 3. Blocks (a.k.a. full power mode 💪)
-
-Blocks are grouped components that work together. To install them, **CLI is mandatory**.
-
-Example: Install the `ai-card-generation` block:
-
-<Tabs items={["bun", "npx", "pnpm"]}>
-
-```bash tab="bun"
-bunx shadcn@latest add https://ui.codesnipet.dev/r/ai-card-generation.json
-```
-
-```bash tab="npx"
-npx shadcn@latest add https://ui.codesnipet.dev/r/ai-card-generation.json
-```
-
-```bash tab="pnpm"
-pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/ai-card-generation.json
-```
-
-</Tabs>
-
 Now use it like this:
 
 ```jsx
 /**
- * AICardGeneration depends on 5 other components,
+ * BackgroundPaths depends on 1 other components,
  * all auto-installed via CLI.
  */
-import AICardGeneration from "@/components/codesnippetui/AICardGeneration";
+import BackgroundPaths from "@/components/xui/background-paths";
 
 export default function Page() {
   return <AICardGeneration />;
@@ -107,15 +84,15 @@ If you're using a monorepo, pass the path to your app using `-c` like so:
 <Tabs items={["bun", "npx", "pnpm"]}>
 
 ```bash tab="bun"
-bunx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json -c ./apps/www
+bunx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json -c ./apps/www
 ```
 
 ```bash tab="npx"
-npx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json -c ./apps/www
+npx shadcn@latest addhttps://x-ui-self.vercel.app/r/card-01.json -c ./apps/www
 ```
 
 ```bash tab="pnpm"
-pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json -c ./apps/www
+pnpm dlx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json -c ./apps/www
 ```
 
 </Tabs>
@@ -123,5 +100,3 @@ pnpm dlx shadcn@latest add https://ui.codesnipet.dev/r/card-05.json -c ./apps/ww
 ---
 
 import { Tab, Tabs } from "fumadocs-ui/components/tabs";
-
-;

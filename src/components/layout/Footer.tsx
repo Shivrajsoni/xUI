@@ -44,7 +44,7 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Copyright Notice */}
+        {/* Copyright  ice */}
         <p className="text-sm text-zinc-500 dark:text-zinc-400">
           &copy; {new Date().getFullYear()} xUI. All rights reserved.
         </p>

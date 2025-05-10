@@ -62,6 +62,12 @@ const Header = () => {
                     >
                       Components
                     </ViewTransitionsLink>
+                    <ViewTransitionsLink
+                      href="https://xoder.vercel.app"
+                      className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
+                    >
+                      Live Editor
+                    </ViewTransitionsLink>
                   </div>
                 </div>
                 <div className="hidden sm:flex items-center gap-3">

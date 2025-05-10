@@ -24,20 +24,20 @@ export function HeaderPro() {
     if (random < 0.75) {
       setContent({
         text: "Built app fast",
-        productName: "xUI Boilerplate",
+        productName: "xUI",
         link: "#",
       });
     } else {
       setContent({
         text: "Explore new components",
-        productName: "xUI  Pro",
+        productName: " xUI Pro",
         link: "#",
       });
     }
   }, []);
 
   return (
-    <div className="flex items-center justify-end  gap-1 flex-1">
+    <div className="flex items-center justify-end gap-1 flex-1">
       <div className="flex items-center justify-start md:justify-end gap-1 flex-1">
         <Link
           href={content.link}
@@ -56,7 +56,7 @@ export function HeaderPro() {
           </span>
 
           <span className="flex md:hidden items-center gap-2">
-            {content.productName === " xUI Pro" ? (
+            {content.productName === " xUI " ? (
               <PartyPopper className="w-4 h-4 text-fuchsia-500" />
             ) : (
               <Rocket className="w-4 h-4 text-fuchsia-500" />
@@ -65,6 +65,7 @@ export function HeaderPro() {
               {content.text.split(" ")[0]}
             </span>
           </span>
+
           <div className="relative inline-flex items-center gap-2 px-1.5 py-0.5 text-sm rounded-lg bg-gradient-to-r from-zinc-900 to-zinc-800 dark:from-zinc-100/90 dark:to-zinc-200/90">
             <div className="flex items-center gap-1">
               <span className="text-white dark:text-zinc-900 group-hover:text-white dark:group-hover:text-zinc-900 tracking-tighter">
@@ -75,7 +76,7 @@ export function HeaderPro() {
           </div>
         </Link>
         <Link
-          href="https://github.com/Shivrajsoni"
+          href="#"
           target="_blank"
           className="hidden group relative md:inline-flex items-center gap-2 px-1.5 py-1.5 text-sm rounded-lg bg-zinc-900 dark:bg-zinc-100 transition-colors hover:bg-zinc-800 dark:hover:bg-zinc-200"
         >
@@ -91,7 +92,7 @@ export function HeaderPro() {
           </div>
         </Link>
         <Link
-          href="https://x.com/_callmeXavier_"
+          href="#"
           target="_blank"
           className="hidden group relative md:inline-flex items-center gap-2 px-1.5 py-1.5 text-sm rounded-lg bg-zinc-900 dark:bg-zinc-100 transition-colors hover:bg-zinc-800 dark:hover:bg-zinc-200"
         >

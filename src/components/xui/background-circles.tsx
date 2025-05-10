@@ -80,7 +80,7 @@ const AnimatedGrid = () => (
 
 export function BackgroundCircles({
   title = "Background Circles",
-  description = "Optional Description",
+  description = "Not Completely Round ",
   className,
   variant = "octonary",
 }: BackgroundCirclesProps) {
@@ -100,7 +100,7 @@ export function BackgroundCircles({
     >
       <AnimatedGrid />
       <motion.div className="absolute h-[480px] w-[480px]">
-        {[0, 1, 2].map((i) => (
+        {[0, 1, 2, 3].map((i) => (
           <motion.div
             key={i}
             className={clsx(
@@ -156,8 +156,8 @@ export function BackgroundCircles({
           transition={{ delay: 0.2 }}
         >
           {description}
-          <span className="mx-3 opacity-50">·</span>
-          CodeSnippet UI
+          <span className="mx-3 opacity-50"></span>
+          xUI
         </motion.p>
       </motion.div>
 
