@@ -1,8 +1,12 @@
 {
   "name": "card-01",
   "type": "registry:component",
-  "dependencies": [],
-  "registryDependencies": [],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "type": "registry:component",

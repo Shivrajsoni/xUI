@@ -10,6 +10,7 @@ import AIInput_01 from "../xui/ai-input/ai-input-01";
 import Btn03 from "../xui/button/btn-03";
 import LoaderHomePage from "../xui/loader-for-home-page";
 import VercelV0Chat from "../xui/vercel-chat";
+import Card_05 from "../xui/card/card-05";
 
 const HeroSection = () => {
   return (
@@ -87,6 +88,11 @@ const HeroSection = () => {
 
           <div className="w-full h-48 rounded-xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
             {/* <AIInput_04 /> */}
+            <Card_05
+              text="Msg for Harkirat Bhaiya "
+              revealText="Thnx for Guidance "
+              className="text-bold"
+            />
           </div>
         </motion.div>
         <motion.div
@@ -106,9 +112,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="w-full">
-            <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-              Input
-            </span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2"></span>
             {/* <Link href="/docs/components/input"><Input01 /></Link> */}
           </div>
         </motion.div>

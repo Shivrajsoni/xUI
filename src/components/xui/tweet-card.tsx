@@ -3,6 +3,7 @@
 import { VerifiedIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 interface ReplyProps {
   authorName: string;
@@ -100,7 +101,7 @@ export default function TweetCard({
                     @{authorHandle}
                   </span>
                 </div>
-                <button
+                <Button
                   type="button"
                   className="h-8 w-8 text-black dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg p-1 flex items-center justify-center"
                 >
@@ -118,7 +119,7 @@ export default function TweetCard({
                       d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
                     />
                   </svg>
-                </button>
+                </Button>
               </div>
             </div>
           </div>

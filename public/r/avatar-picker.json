@@ -5,7 +5,9 @@
     "lucide-react",
     "motion"
   ],
-  "registryDependencies": [],
+  "registryDependencies": [
+    "card"
+  ],
   "files": [
     {
       "type": "registry:component",

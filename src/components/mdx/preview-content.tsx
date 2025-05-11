@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Copy, Check, CheckCheck, Terminal } from "lucide-react";
 import { CopyComponent } from "@/lib/action";
 import { cn } from "@/lib/utils";
-import { OpenInV0Button } from "../vercel-v0-chat";
+//import { OpenInV0Button } from "../vercel-v0-chat";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function PreviewContent({
@@ -64,11 +64,11 @@ export default function PreviewContent({
     }, 2000);
   };
 
-  const openInV0 = () => {
-    const [folder, filename] = link.split("/");
+  // const openInV0 = () => {
+  //   const [folder, filename] = link.split("/");
 
-    return filename ? filename : folder;
-  };
+  //   return filename ? filename : folder;
+  // };
 
   useEffect(() => {
     if (state.error) {
@@ -167,7 +167,7 @@ export default function PreviewContent({
           </a>
 
           <div className="flex items-center gap-2">
-            <OpenInV0Button name={openInV0()} />
+            {/* <OpenInV0Button name={openInV0()} /> */}
             <Button
               ref={terminalButtonRef}
               onClick={handleTerminalClick}

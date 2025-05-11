@@ -1,7 +1,11 @@
 {
   "name": "faq-02",
   "type": "registry:component",
-  "registryDependencies": [],
+  "registryDependencies": [
+    "accordion",
+    "badge",
+    "input"
+  ],
   "dependencies": [
     "motion",
     "lucide-react"

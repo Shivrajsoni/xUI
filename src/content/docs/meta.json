@@ -27,6 +27,7 @@
     "components/list",
     "components/profile",
     "components/loader",
+    "components/svg",
 
     "---Hooks---",
     "hooks/use-auto-resize-textarea"

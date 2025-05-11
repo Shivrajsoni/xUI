@@ -5,7 +5,7 @@ export const component: Registry = [
     name: "ai-input-01",
     type: "registry:component",
     dependencies: ["lucide-react"],
-    registryDependencies: ["textarea"],
+    registryDependencies: ["button", "textarea"],
     files: [
       {
         path: "src/components/xui/ai-input/ai-input-01.tsx",
@@ -56,8 +56,8 @@ export const component: Registry = [
   {
     name: "card-01",
     type: "registry:component",
-    dependencies: [],
-    registryDependencies: [],
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
     files: [
       {
         path: "src/components/xui/card/card-01.tsx",
@@ -90,6 +90,18 @@ export const component: Registry = [
     ],
   },
   {
+    name: "card-05",
+    type: "registry:component",
+    dependencies: ["motion"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/components/xui/card/card-05.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "card-04",
     type: "registry:component",
     dependencies: ["lucide-react"],
@@ -101,6 +113,7 @@ export const component: Registry = [
       },
     ],
   },
+
   {
     name: "alert-01",
     type: "registry:component",
@@ -141,7 +154,7 @@ export const component: Registry = [
   {
     name: "faq-02",
     type: "registry:component",
-    registryDependencies: [],
+    registryDependencies: ["accordion", "badge", "input"],
     dependencies: ["motion", "lucide-react"],
     files: [
       {
@@ -178,6 +191,7 @@ export const component: Registry = [
     name: "profile-01",
     type: "registry:component",
     dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
     files: [
       {
         path: "src/components/xui/profile/profile-01.tsx",
@@ -202,7 +216,7 @@ export const component: Registry = [
     name: "tweet-card",
     type: "registry:component",
     dependencies: ["lucide-react"],
-    registryDependencies: [],
+    registryDependencies: ["button"],
     files: [
       {
         path: "src/components/xui/tweet-card.tsx",
@@ -307,7 +321,7 @@ export const component: Registry = [
     name: "avatar-picker",
     type: "registry:component",
     dependencies: ["lucide-react", "motion"],
-    registryDependencies: [],
+    registryDependencies: ["card"],
     files: [
       {
         path: "src/components/xui/avatar-picker.tsx",
@@ -318,7 +332,7 @@ export const component: Registry = [
   {
     name: "loader-01",
     type: "registry:component",
-    dependencies: ["lucide-react", "motion"],
+    dependencies: ["motion"],
     registryDependencies: [],
     files: [
       {
@@ -330,11 +344,23 @@ export const component: Registry = [
   {
     name: "loader-02",
     type: "registry:component",
-    dependencies: ["lucide-react", "motion"],
+    dependencies: ["motion"],
     registryDependencies: [],
     files: [
       {
         path: "src/components/xui/loader/loader-02.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "svg-01",
+    type: "registry:component",
+    dependencies: ["motion"],
+    registryDependencies: [],
+    files: [
+      {
+        path: "src/components/xui/svg/svg-01.tsx",
         type: "registry:component",
       },
     ],
