@@ -6,11 +6,13 @@ import BrowseComponentsButton from "../ui/BrowseComponentsButton";
 import Features from "./Features";
 import { Link } from "next-view-transitions";
 import Card_01 from "../xui/card/card-01";
-import AIInput_01 from "../xui/ai-input/ai-input-01";
 import Btn03 from "../xui/button/btn-03";
 import LoaderHomePage from "../xui/loader-for-home-page";
 import VercelV0Chat from "../xui/vercel-chat";
 import Card_05 from "../xui/card/card-05";
+import Profile01 from "../xui/profile/profile-02";
+import Profile02 from "../xui/profile/profile-01";
+import Card02 from "../xui/card/card-02";
 
 const HeroSection = () => {
   return (
@@ -65,11 +67,11 @@ const HeroSection = () => {
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
               {/* <Card_01 /> */}
             </span>
-            <Card_01 />
+            <Card02 />
           </div>
           <div className="w-full max-w-[600px] bg-transparent">
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-              <LoaderHomePage />
+              <Profile01 />
             </span>
             {/* <ActionSearchBar /> */}
             {/* <Card02 /> */}

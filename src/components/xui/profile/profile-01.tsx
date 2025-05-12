@@ -17,7 +17,7 @@ const defaultProfile = {
   role: "Product Researcher",
   avatar:
     "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
-  location: "San Francisco, CA",
+  location: "Chandigarh, India",
   email: "whothehellwasthatdev@gmail.com",
   website: "https://x-ui-self.vercel.app/",
   bio: "Designing interfaces that bridge the gap between complexity and simplicity.",

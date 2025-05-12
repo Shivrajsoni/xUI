@@ -1,4 +1,4 @@
-import { Calendar, Sparkles, Code2, ExternalLink, Share2 } from "lucide-react";
+import { Calendar, Code2, ExternalLink, Share2 } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -18,7 +18,7 @@ interface Card02Props {
 }
 
 const defaultProfile = {
-  name: "Eugene K",
+  name: "Shivraj Soni",
   role: "Senior Developer",
   image:
     "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png",

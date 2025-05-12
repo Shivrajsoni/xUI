@@ -26,7 +26,7 @@ export default function Alert02() {
                   Team Invitation
                 </p>
                 <p className="text-[13px] text-zinc-500 dark:text-zinc-400 mt-0.5">
-                  Kokonut invited you to join{" "}
+                  xUI invited you to join{" "}
                   <span className="font-medium text-zinc-700 dark:text-zinc-300">
                     Design Team
                   </span>
