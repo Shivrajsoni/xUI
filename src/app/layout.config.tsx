@@ -6,7 +6,7 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <div className="flex items-center">
-        <Snowflake className="mr-2 h-5 w-5 text-blue-600" />
+        <Snowflake className="mr-2 h-5 w-5 text-blue-400" />
         <span className="hidden md:inline-flex items-center text-lg font-bold tracking-tight text-black dark:text-white">
           xUI
         </span>
@@ -14,11 +14,6 @@ export const baseOptions: BaseLayoutProps = {
     ),
   },
   links: [
-    {
-      text: "Live Editor",
-      url: "https://xoder.vercel.app/",
-    },
-
     {
       type: "custom",
       children: <HeaderPro />,

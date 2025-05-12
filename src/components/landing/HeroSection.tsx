@@ -5,23 +5,22 @@ import { Sparkles } from "lucide-react";
 import BrowseComponentsButton from "../ui/BrowseComponentsButton";
 import Features from "./Features";
 import { Link } from "next-view-transitions";
-import Card_01 from "../xui/card/card-01";
 import Btn03 from "../xui/button/btn-03";
-import LoaderHomePage from "../xui/loader-for-home-page";
+
 import VercelV0Chat from "../xui/vercel-chat";
 import Card_05 from "../xui/card/card-05";
 import Profile01 from "../xui/profile/profile-02";
-import Profile02 from "../xui/profile/profile-01";
 import Card02 from "../xui/card/card-02";
 
 const HeroSection = () => {
   return (
     <div className="mx-auto w-full max-w-7xl min-h-screen flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-4 sm:px-6 py-12 md:py-16 lg:py-20">
-      <div className="w-full lg:w-[45%] flex flex-col items-start text-left space-y-8">
+      <div className="w-full lg:w-[45%] flex flex-col items-start text-left space-y-2 ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          className="mt-[-20rem]"
         >
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100">
             Designed with{" "}
@@ -63,10 +62,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center"
         >
-          <div className="w-full flex flex-col items-center justify-center ">
-            <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-              {/* <Card_01 /> */}
-            </span>
+          <div className="w-full flex flex-col items-center justify-center my-2 ">
             <Card02 />
           </div>
           <div className="w-full max-w-[600px] bg-transparent">
