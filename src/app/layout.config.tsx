@@ -18,5 +18,6 @@ export const baseOptions: BaseLayoutProps = {
       type: "custom",
       children: <HeaderPro />,
     },
+    
   ],
 };

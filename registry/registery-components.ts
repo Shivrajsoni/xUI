@@ -269,7 +269,7 @@ export const component: Registry = [
     name: "background-paths",
     type: "registry:component",
     dependencies: ["motion"],
-    registryDependencies: [],
+    registryDependencies: ["button"],
     files: [
       {
         path: "src/components/xui/background-paths.tsx",
