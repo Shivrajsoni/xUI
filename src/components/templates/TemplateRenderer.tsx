@@ -18,9 +18,15 @@ const MAP: Record<string, ComponentType> = {
   pricing: dynamic(() => import("@/templates/pricing")),
   billing: dynamic(() => import("@/templates/billing")),
   dashboard: dynamic(() => import("@/templates/dashboard")),
+  "saas-landing": dynamic(() => import("@/templates/saas-landing")),
+  login: dynamic(() => import("@/templates/login")),
+  settings: dynamic(() => import("@/templates/settings")),
+  blog: dynamic(() => import("@/templates/blog")),
   "r3f-hero": dynamic(() => import("@/templates/r3f-hero"), { ssr: false, loading: Loading }),
   "r3f-product": dynamic(() => import("@/templates/r3f-product"), { ssr: false, loading: Loading }),
   "r3f-orb": dynamic(() => import("@/templates/r3f-orb"), { ssr: false, loading: Loading }),
+  "r3f-text": dynamic(() => import("@/templates/r3f-text"), { ssr: false, loading: Loading }),
+  "r3f-card": dynamic(() => import("@/templates/r3f-card"), { ssr: false, loading: Loading }),
 };
 
 export default function TemplateRenderer({ slug }: { slug: string }) {

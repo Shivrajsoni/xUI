@@ -6,9 +6,9 @@ import { Link } from "next-view-transitions";
 import { ArrowLeft, Loader2, RotateCcw } from "lucide-react";
 import type { CatalogEntry } from "@/lib/studio/types";
 import { getControls, defaultPropsFor } from "@/lib/studio/controls";
+import { expandProps } from "@/lib/studio/props";
 import ControlsPanel, { type CanvasBg } from "./ControlsPanel";
 import ExportBar from "./ExportBar";
-import AuthButton from "./AuthButton";
 import { cn } from "@/lib/utils";
 
 export interface StudioEntry
@@ -86,8 +86,7 @@ export default function StudioWorkspace({
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <ExportBar name={entry.name} getProps={() => props} />
-          <AuthButton />
+          <ExportBar name={entry.name} />
         </div>
       </div>
 
@@ -100,7 +99,7 @@ export default function StudioWorkspace({
             CANVAS_CLASSES[canvasBg]
           )}
         >
-          <LiveComponent {...props} />
+          <LiveComponent {...expandProps(props)} />
         </div>
 
         {/* Controls card */}

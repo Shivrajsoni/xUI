@@ -4,8 +4,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { getTemplate, templates } from "@/lib/templates";
 import { siteConfig } from "@/config/site";
-import TemplateRenderer from "@/components/templates/TemplateRenderer";
-import TemplatePreviewBar from "@/components/templates/TemplatePreviewBar";
+import TemplateStudio from "@/components/templates/TemplateStudio";
 
 export function generateStaticParams() {
   return templates.map((t) => ({ slug: t.slug }));
@@ -45,11 +44,5 @@ export default async function TemplatePage(props: {
     source = "// source unavailable";
   }
 
-  return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950">
-      <TemplatePreviewBar title={template.title} source={source} />
-      {/* Templates are inspiration starting points — no Studio editing here. */}
-      <TemplateRenderer slug={slug} />
-    </div>
-  );
+  return <TemplateStudio slug={slug} title={template.title} source={source} />;
 }

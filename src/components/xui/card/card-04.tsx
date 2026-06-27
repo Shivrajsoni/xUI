@@ -256,18 +256,32 @@ export const useMouseEnter = () => {
   return context;
 };
 
-export default function Card04() {
+export default function Card04({
+  perspective = 1500,
+  rotationIntensity = 25,
+  showGlow = true,
+  showParticles = true,
+  particleCount = 25,
+}: {
+  perspective?: number;
+  rotationIntensity?: number;
+  showGlow?: boolean;
+  showParticles?: boolean;
+  particleCount?: number;
+} = {}) {
   return (
     <CardContainer
       className="group/card"
-      perspective={1500}
+      perspective={perspective}
+      rotationIntensity={rotationIntensity}
+      showGlow={showGlow}
       glowColor="rgba(125, 99, 255, 0.4)"
     >
       <CardBody
         className="bg-white dark:bg-gray-900 relative w-auto sm:w-[30rem] h-auto rounded-xl p-6 border border-black/[0.1] dark:border-white/[0.1] shadow-xl"
         bgClassName="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-indigo-950"
-        showParticles={true}
-        particleCount={25}
+        showParticles={showParticles}
+        particleCount={particleCount}
       >
         <div className="card-shine rounded-xl"></div>
 
