@@ -7,7 +7,6 @@ import { CornerRightUp, Mic } from "lucide-react";
 import React, { useState } from "react";
 
 export default function AIInput_01() {
-  //@ts-ignore
   const { textareaRef, adjustHeight } = useAutoResizeTextArea({
     minHeight: 52,
     maxHeight: 200,

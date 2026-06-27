@@ -1,0 +1,586 @@
+- generic [ref=e3]:
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - link "xUI" [ref=e10] [cursor=pointer]:
+        - /url: /
+        - img [ref=e11]
+        - generic [ref=e24]: xUI
+      - generic [ref=e25]: "|"
+      - generic [ref=e26]:
+        - link "Components" [ref=e27] [cursor=pointer]:
+          - /url: /docs/components/background-paths
+        - link "Studio" [ref=e28] [cursor=pointer]:
+          - /url: /studio
+    - generic [ref=e30]: "|"
+  - main [ref=e31]:
+    - main [ref=e32]:
+      - generic [ref=e34]:
+        - generic [ref=e36]:
+          - img [ref=e37]
+          - text: Built for Tailwind v4 & React 19
+        - heading "Beautiful components. Copy, paste, ship." [level=1] [ref=e39]:
+          - text: Beautiful components.
+          - text: Copy, paste, ship.
+        - paragraph [ref=e40]: Copy, paste, customize. A collection of modern, interactive, themeable React + Tailwind CSS UI components. Built for Tailwind v4 and React 19.
+        - generic [ref=e41]:
+          - link "Browse components" [ref=e42] [cursor=pointer]:
+            - /url: /docs
+            - text: Browse components
+            - img [ref=e43]
+          - link "Star on GitHub" [ref=e45] [cursor=pointer]:
+            - /url: https://github.com/Shivrajsoni/xui
+            - img [ref=e46]
+            - text: Star on GitHub
+        - button "Copy install command" [ref=e50] [cursor=pointer]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: $
+            - generic [ref=e53]: npx shadcn@latest add @xui/card-02
+          - img [ref=e55]
+        - generic [ref=e59]:
+          - paragraph [ref=e60]: Built with the tools you already use
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - img "Tailwind CSS" [ref=e63]
+              - generic [ref=e65]: Tailwind CSS
+            - generic [ref=e66]:
+              - img "Shadcn UI" [ref=e67]
+              - generic [ref=e70]: shadcn/ui
+            - generic [ref=e71]:
+              - img [ref=e72]
+              - generic [ref=e77]: Next.js
+            - generic [ref=e78]:
+              - img [ref=e79]
+              - generic [ref=e81]: React
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - heading "A growing library of components" [level=2] [ref=e84]
+          - paragraph [ref=e85]: Interactive, accessible, and themeable. Every component ships as copy-paste source you fully own.
+        - generic [ref=e86]:
+          - generic [ref=e87]:
+            - generic [ref=e88]:
+              - generic [ref=e89]: Card
+              - link "View" [ref=e90] [cursor=pointer]:
+                - /url: /docs/components/card
+                - text: View
+                - img [ref=e91]
+            - generic [ref=e96]:
+              - generic [ref=e98]:
+                - img "Alex Rivera" [ref=e101]
+                - generic [ref=e102]:
+                  - heading "Alex Rivera" [level=3] [ref=e103]
+                  - paragraph [ref=e104]: Senior Developer
+                  - generic [ref=e105]:
+                    - img [ref=e106]
+                    - text: Open to Work
+              - generic [ref=e109]:
+                - generic [ref=e110]:
+                  - img [ref=e111]
+                  - generic [ref=e117]: Frontend
+                - generic [ref=e124]:
+                  - img [ref=e125]
+                  - generic [ref=e131]: Backend
+                - generic [ref=e138]:
+                  - img [ref=e139]
+                  - generic [ref=e145]: DevOps
+              - generic [ref=e152]:
+                - link "View Portfolio" [ref=e153] [cursor=pointer]:
+                  - /url: https://github.com/
+                  - img
+                  - text: View Portfolio
+                - button "Share" [ref=e154] [cursor=pointer]:
+                  - img
+                  - generic [ref=e155]: Share
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - generic [ref=e158]: Profile
+              - link "View" [ref=e159] [cursor=pointer]:
+                - /url: /docs/components/profile
+                - text: View
+                - img [ref=e160]
+            - generic [ref=e166]:
+              - generic [ref=e167]:
+                - img "Alex Rivera" [ref=e169]
+                - generic [ref=e171]:
+                  - heading "Alex Rivera" [level=2] [ref=e172]
+                  - paragraph [ref=e173]: Product Designer
+              - generic [ref=e175]:
+                - link "Subscription Free Trial" [ref=e176] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e177]:
+                    - img [ref=e178]
+                    - generic [ref=e180]: Subscription
+                  - generic [ref=e182]: Free Trial
+                - link "Settings" [ref=e183] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e184]:
+                    - img [ref=e185]
+                    - generic [ref=e188]: Settings
+                - link "Terms & Policies" [ref=e189] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e190]:
+                    - img [ref=e191]
+                    - generic [ref=e194]: Terms & Policies
+                  - img [ref=e196]
+                - button "Logout" [ref=e199] [cursor=pointer]:
+                  - generic [ref=e200]:
+                    - img [ref=e201]
+                    - generic [ref=e204]: Logout
+          - generic [ref=e205]:
+            - generic [ref=e206]:
+              - generic [ref=e207]: Alert
+              - link "View" [ref=e208] [cursor=pointer]:
+                - /url: /docs/components/alert
+                - text: View
+                - img [ref=e209]
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - img "Sarah Chen" [ref=e217]
+                - generic [ref=e221]:
+                  - paragraph [ref=e222]: Team Invitation
+                  - paragraph [ref=e223]: xUI invited you to join Design Team
+                - generic [ref=e224]:
+                  - button [ref=e225] [cursor=pointer]:
+                    - img
+                  - button [ref=e226] [cursor=pointer]:
+                    - img
+              - paragraph [ref=e228]: Invited 5 minutes ago
+          - generic [ref=e229]:
+            - generic [ref=e230]:
+              - generic [ref=e231]: Profile
+              - link "View" [ref=e232] [cursor=pointer]:
+                - /url: /docs/components/profile
+                - text: View
+                - img [ref=e233]
+            - generic [ref=e238]:
+              - generic [ref=e239]:
+                - img "Alex Rivera" [ref=e240]
+                - generic [ref=e241]:
+                  - generic [ref=e242]:
+                    - generic [ref=e243]:
+                      - heading "Alex Rivera" [level=2] [ref=e244]
+                      - paragraph [ref=e245]: Product Researcher
+                    - link [ref=e246] [cursor=pointer]:
+                      - /url: mailto:alex@example.com
+                      - img
+                  - generic [ref=e247]:
+                    - generic [ref=e248]:
+                      - img [ref=e249]
+                      - text: San Francisco, CA
+                    - generic [ref=e252]:
+                      - img [ref=e253]
+                      - link "alex@example.com" [ref=e256] [cursor=pointer]:
+                        - /url: mailto:alex@example.com
+                    - generic [ref=e257]:
+                      - img [ref=e258]
+                      - link "example.com" [ref=e261] [cursor=pointer]:
+                        - /url: https://example.com
+                        - text: example.com
+                        - img [ref=e262]
+              - paragraph [ref=e267]: Designing interfaces that bridge the gap between complexity and simplicity.
+          - generic [ref=e268]:
+            - generic [ref=e269]:
+              - generic [ref=e270]: Button
+              - link "View" [ref=e271] [cursor=pointer]:
+                - /url: /docs/components/button
+                - text: View
+                - img [ref=e272]
+            - button "Hover me" [ref=e276] [cursor=pointer]:
+              - generic [ref=e277]:
+                - img
+                - text: Hover me
+          - generic [ref=e279]:
+            - generic [ref=e280]: Loader
+            - link "View" [ref=e281] [cursor=pointer]:
+              - /url: /docs/components/loader
+              - text: View
+              - img [ref=e282]
+        - generic [ref=e295]:
+          - generic [ref=e296]:
+            - generic [ref=e297]: Text reveal card
+            - link "View" [ref=e298] [cursor=pointer]:
+              - /url: /docs/components/card
+              - text: View
+              - img [ref=e299]
+          - generic [ref=e304]:
+            - paragraph [ref=e306]: You found me
+            - paragraph [ref=e309]: Hover over me
+        - generic [ref=e310]:
+          - link "Customize in Studio" [ref=e311] [cursor=pointer]:
+            - /url: /studio
+            - img [ref=e312]
+            - text: Customize in Studio
+          - link "Explore all components" [ref=e313] [cursor=pointer]:
+            - /url: /docs
+            - text: Explore all components
+            - img [ref=e314]
+      - generic [ref=e318]:
+        - generic [ref=e319]:
+          - generic [ref=e320]:
+            - img [ref=e321]
+            - text: Interactive 3D
+          - heading "Components with real depth" [level=2] [ref=e324]
+          - paragraph [ref=e325]: Pure CSS 3D — no WebGL, no heavy dependencies. Move your cursor over the card. Every layer parallaxes, and it ships as copy-paste source you can tweak live in Studio.
+          - generic [ref=e326]:
+            - link "Customize in Studio" [ref=e327] [cursor=pointer]:
+              - /url: /studio/card/card-06
+              - img [ref=e328]
+              - text: Customize in Studio
+            - link "View docs" [ref=e329] [cursor=pointer]:
+              - /url: /docs/components/card
+              - text: View docs
+              - img [ref=e330]
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - img "Alex Rivera" [ref=e339]
+            - generic [ref=e340]: Available
+          - generic [ref=e341]:
+            - heading "Alex Rivera" [level=3] [ref=e342]
+            - paragraph [ref=e343]: Product Designer & Developer
+            - paragraph [ref=e344]: I craft interfaces that feel as good as they look.
+            - generic [ref=e345]:
+              - generic [ref=e346]: Design
+              - generic [ref=e347]: React
+              - generic [ref=e348]: Motion
+              - generic [ref=e349]: 3D
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - link "GitHub" [ref=e352] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e353]
+              - link "Twitter" [ref=e356] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e357]
+              - link "Website" [ref=e359] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e360]
+            - link "View work" [ref=e363] [cursor=pointer]:
+              - /url: "#"
+              - text: View work
+              - img [ref=e364]
+      - generic [ref=e367]:
+        - generic [ref=e368]:
+          - generic [ref=e369]:
+            - img [ref=e370]
+            - text: Templates
+          - heading "Start from a template" [level=2] [ref=e374]
+          - paragraph [ref=e375]: Full-page layouts built from xUI components. Preview, copy the source, and make it yours.
+        - generic [ref=e376]:
+          - generic [ref=e377]:
+            - link "Preview 3D Portfolio template" [ref=e378] [cursor=pointer]:
+              - /url: /templates/portfolio-3d
+            - generic [ref=e379]:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: ALEX RIVERA
+                      - navigation:
+                        - link:
+                          - /url: "#work"
+                          - text: Work
+                        - link:
+                          - /url: "#about"
+                          - text: About
+                        - link:
+                          - /url: "#contact"
+                          - text: Contact
+                    - generic:
+                      - generic:
+                        - heading [level=1]: Designing & building delightful digital products.
+                        - paragraph: Product designer and developer focused on motion, 3D, and interfaces that feel alive.
+                        - generic:
+                          - link:
+                            - /url: "#contact"
+                            - img
+                            - text: Get in touch
+                          - link:
+                            - /url: "#work"
+                            - text: See work
+                            - img
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - img
+                                - generic: Available
+                              - generic:
+                                - heading [level=3]: Alex Rivera
+                                - paragraph: Product Designer & Developer
+                                - paragraph: I craft interfaces that feel as good as they look.
+                                - generic:
+                                  - generic: Design
+                                  - generic: React
+                                  - generic: Motion
+                                  - generic: 3D
+                              - generic:
+                                - generic:
+                                  - link:
+                                    - /url: "#"
+                                    - img
+                                  - link:
+                                    - /url: "#"
+                                    - img
+                                  - link:
+                                    - /url: "#"
+                                    - img
+                                - link:
+                                  - /url: "#"
+                                  - text: View work
+                                  - img
+                    - generic:
+                      - heading [level=2]: Selected work
+                      - generic:
+                        - link:
+                          - /url: "#"
+                          - generic:
+                            - heading [level=3]: Aurora Dashboard
+                            - paragraph: Product Design
+                          - generic:
+                            - generic: "2025"
+                            - img
+                        - link:
+                          - /url: "#"
+                          - generic:
+                            - heading [level=3]: Nimbus Mobile App
+                            - paragraph: iOS · React Native
+                          - generic:
+                            - generic: "2024"
+                            - img
+                        - link:
+                          - /url: "#"
+                          - generic:
+                            - heading [level=3]: Pulse Design System
+                            - paragraph: Design Eng
+                          - generic:
+                            - generic: "2024"
+                            - img
+            - generic [ref=e381]:
+              - generic [ref=e382]:
+                - heading "3D Portfolio" [level=3] [ref=e383]
+                - img [ref=e384]
+              - paragraph [ref=e387]: A dark, motion-rich portfolio landing built around the interactive 3D card.
+              - generic [ref=e388]:
+                - generic [ref=e389]: 3D
+                - generic [ref=e390]: Portfolio
+                - generic [ref=e391]: Dark
+          - generic [ref=e392]:
+            - link "Preview Pricing template" [ref=e393] [cursor=pointer]:
+              - /url: /templates/pricing
+            - generic [ref=e394]:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - heading [level=1]: Simple, transparent pricing
+                      - paragraph: Start free. Upgrade when you're ready. Cancel anytime.
+                    - generic:
+                      - generic:
+                        - heading [level=3]: Hobby
+                        - paragraph: For side projects and experiments.
+                        - generic:
+                          - generic: $0
+                          - generic: /mo
+                        - list:
+                          - listitem:
+                            - img
+                            - text: Up to 3 projects
+                          - listitem:
+                            - img
+                            - text: Community support
+                          - listitem:
+                            - img
+                            - text: Basic analytics
+                        - button: Get started
+                      - generic:
+                        - generic: Most popular
+                        - heading [level=3]: Pro
+                        - paragraph: For growing teams that ship fast.
+                        - generic:
+                          - generic: $19
+                          - generic: /mo
+                        - list:
+                          - listitem:
+                            - img
+                            - text: Unlimited projects
+                          - listitem:
+                            - img
+                            - text: Priority support
+                          - listitem:
+                            - img
+                            - text: Advanced analytics
+                          - listitem:
+                            - img
+                            - text: Custom domains
+                        - button: Get started
+                      - generic:
+                        - heading [level=3]: Enterprise
+                        - paragraph: For organizations at scale.
+                        - generic:
+                          - generic: Custom
+                        - list:
+                          - listitem:
+                            - img
+                            - text: SAML SSO
+                          - listitem:
+                            - img
+                            - text: Dedicated support
+                          - listitem:
+                            - img
+                            - text: Audit logs
+                          - listitem:
+                            - img
+                            - text: SLA
+                        - button: Contact sales
+            - generic [ref=e396]:
+              - generic [ref=e397]:
+                - heading "Pricing" [level=3] [ref=e398]
+                - img [ref=e399]
+              - paragraph [ref=e402]: A clean three-tier pricing section with a highlighted plan.
+              - generic [ref=e403]:
+                - generic [ref=e404]: Marketing
+                - generic [ref=e405]: Pricing
+          - generic [ref=e406]:
+            - link "Preview Analytics Dashboard template" [ref=e407] [cursor=pointer]:
+              - /url: /templates/dashboard
+            - generic [ref=e408]:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading [level=1]: Overview
+                        - paragraph: Welcome back — here's your store today.
+                      - button: Download report
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: Revenue
+                          - img
+                        - generic: $48,250
+                        - generic:
+                          - img
+                          - text: +12.4%
+                      - generic:
+                        - generic:
+                          - generic: Active users
+                          - img
+                        - generic: 8,942
+                        - generic:
+                          - img
+                          - text: +5.1%
+                      - generic:
+                        - generic:
+                          - generic: Conversion
+                          - img
+                        - generic: 3.6%
+                        - generic:
+                          - img
+                          - text: "-0.4%"
+                      - generic:
+                        - generic:
+                          - generic: Avg. order
+                          - img
+                        - generic: $126
+                        - generic:
+                          - img
+                          - text: +2.0%
+                    - generic:
+                      - generic:
+                        - heading [level=2]: Revenue
+                      - generic:
+                        - heading [level=2]: Recent sales
+                        - generic:
+                          - generic:
+                            - generic:
+                              - paragraph: Olivia Martin
+                              - paragraph: olivia@example.com
+                            - generic: +$1,999.00
+                          - generic:
+                            - generic:
+                              - paragraph: Jackson Lee
+                              - paragraph: jackson@example.com
+                            - generic: +$39.00
+                          - generic:
+                            - generic:
+                              - paragraph: Isabella Nguyen
+                              - paragraph: isabella@example.com
+                            - generic: +$299.00
+                          - generic:
+                            - generic:
+                              - paragraph: William Kim
+                              - paragraph: will@example.com
+                            - generic: +$99.00
+            - generic [ref=e410]:
+              - generic [ref=e411]:
+                - heading "Analytics Dashboard" [level=3] [ref=e412]
+                - img [ref=e413]
+              - paragraph [ref=e416]: A stats overview with chart and recent-activity panels.
+              - generic [ref=e417]:
+                - generic [ref=e418]: App
+                - generic [ref=e419]: Analytics
+  - contentinfo [ref=e420]:
+    - generic [ref=e421]:
+      - generic [ref=e422]:
+        - generic [ref=e423]:
+          - link "xUI" [ref=e424] [cursor=pointer]:
+            - /url: /
+            - img [ref=e425]
+            - generic [ref=e438]: xUI
+          - paragraph [ref=e439]: Modern, interactive React + Tailwind components. Copy, customize in Studio, and ship — code you fully own.
+          - generic [ref=e440]:
+            - link "GitHub" [ref=e441] [cursor=pointer]:
+              - /url: https://github.com/Shivrajsoni/xui
+              - img [ref=e442]
+            - link "X (Twitter)" [ref=e445] [cursor=pointer]:
+              - /url: https://x.com/_callmeXavier_
+              - img [ref=e446]
+        - generic [ref=e448]:
+          - heading "Product" [level=3] [ref=e449]
+          - list [ref=e450]:
+            - listitem [ref=e451]:
+              - link "Components" [ref=e452] [cursor=pointer]:
+                - /url: /docs/components/card
+            - listitem [ref=e453]:
+              - link "Studio" [ref=e454] [cursor=pointer]:
+                - /url: /studio
+            - listitem [ref=e455]:
+              - link "Templates" [ref=e456] [cursor=pointer]:
+                - /url: /#templates
+            - listitem [ref=e457]:
+              - link "Documentation" [ref=e458] [cursor=pointer]:
+                - /url: /docs
+        - generic [ref=e459]:
+          - heading "Components" [level=3] [ref=e460]
+          - list [ref=e461]:
+            - listitem [ref=e462]:
+              - link "Cards" [ref=e463] [cursor=pointer]:
+                - /url: /docs/components/card
+            - listitem [ref=e464]:
+              - link "Buttons" [ref=e465] [cursor=pointer]:
+                - /url: /docs/components/button
+            - listitem [ref=e466]:
+              - link "AI Input" [ref=e467] [cursor=pointer]:
+                - /url: /docs/components/ai-input
+            - listitem [ref=e468]:
+              - link "Profiles" [ref=e469] [cursor=pointer]:
+                - /url: /docs/components/profile
+        - generic [ref=e470]:
+          - heading "Resources" [level=3] [ref=e471]
+          - list [ref=e472]:
+            - listitem [ref=e473]:
+              - link "Installation" [ref=e474] [cursor=pointer]:
+                - /url: /docs
+            - listitem [ref=e475]:
+              - link "Hooks" [ref=e476] [cursor=pointer]:
+                - /url: /docs/hooks/use-auto-resize-textarea
+            - listitem [ref=e477]:
+              - link "GitHub" [ref=e478] [cursor=pointer]:
+                - /url: https://github.com/Shivrajsoni/xui
+            - listitem [ref=e479]:
+              - link "Open in Studio" [ref=e480] [cursor=pointer]:
+                - /url: /studio
+      - generic [ref=e481]:
+        - paragraph [ref=e482]: © 2026 xUI. All rights reserved.
+        - paragraph [ref=e483]: Built with Next.js, Tailwind CSS & shadcn/ui.

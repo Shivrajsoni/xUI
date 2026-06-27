@@ -1,0 +1,92 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Templates" [ref=e7] [cursor=pointer]:
+          - /url: /#templates
+          - img [ref=e8]
+          - text: Templates
+        - generic [ref=e10]: /
+        - generic [ref=e11]: 3D Portfolio
+      - button "Copy code" [ref=e12] [cursor=pointer]:
+        - img [ref=e13]
+        - text: Copy code
+    - generic [ref=e17]:
+      - banner [ref=e18]:
+        - generic [ref=e19]: ALEX RIVERA
+        - navigation [ref=e20]:
+          - link "Work" [ref=e21] [cursor=pointer]:
+            - /url: "#work"
+          - link "About" [ref=e22] [cursor=pointer]:
+            - /url: "#about"
+          - link "Contact" [ref=e23] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - heading "Designing & building delightful digital products." [level=1] [ref=e26]
+          - paragraph [ref=e27]: Product designer and developer focused on motion, 3D, and interfaces that feel alive.
+          - generic [ref=e28]:
+            - link "Get in touch" [ref=e29] [cursor=pointer]:
+              - /url: "#contact"
+              - img [ref=e30]
+              - text: Get in touch
+            - link "See work" [ref=e33] [cursor=pointer]:
+              - /url: "#work"
+              - text: See work
+              - img [ref=e34]
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - img "Alex Rivera" [ref=e43]
+            - generic [ref=e44]: Available
+          - generic [ref=e45]:
+            - heading "Alex Rivera" [level=3] [ref=e46]
+            - paragraph [ref=e47]: Product Designer & Developer
+            - paragraph [ref=e48]: I craft interfaces that feel as good as they look.
+            - generic [ref=e49]:
+              - generic [ref=e50]: Design
+              - generic [ref=e51]: React
+              - generic [ref=e52]: Motion
+              - generic [ref=e53]: 3D
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - link "GitHub" [ref=e56] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e57]
+              - link "Twitter" [ref=e60] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e61]
+              - link "Website" [ref=e63] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e64]
+            - link "View work" [ref=e67] [cursor=pointer]:
+              - /url: "#"
+              - text: View work
+              - img [ref=e68]
+      - generic [ref=e71]:
+        - heading "Selected work" [level=2] [ref=e72]
+        - generic [ref=e73]:
+          - link "Aurora Dashboard Product Design 2025" [ref=e74] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e75]:
+              - heading "Aurora Dashboard" [level=3] [ref=e76]
+              - paragraph [ref=e77]: Product Design
+            - generic [ref=e78]:
+              - generic [ref=e79]: "2025"
+              - img [ref=e80]
+          - link "Nimbus Mobile App iOS · React Native 2024" [ref=e83] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e84]:
+              - heading "Nimbus Mobile App" [level=3] [ref=e85]
+              - paragraph [ref=e86]: iOS · React Native
+            - generic [ref=e87]:
+              - generic [ref=e88]: "2024"
+              - img [ref=e89]
+          - link "Pulse Design System Design Eng 2024" [ref=e92] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e93]:
+              - heading "Pulse Design System" [level=3] [ref=e94]
+              - paragraph [ref=e95]: Design Eng
+            - generic [ref=e96]:
+              - generic [ref=e97]: "2024"
+              - img [ref=e98]
+  - alert [ref=e101]

@@ -9,10 +9,9 @@ import {
   type RefObject,
 } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Copy, Check, CheckCheck, Terminal } from "lucide-react";
+import { ArrowUpRight, Copy, CheckCheck, Terminal, SlidersHorizontal } from "lucide-react";
 import { CopyComponent } from "@/lib/action";
 import { cn } from "@/lib/utils";
-//import { OpenInV0Button } from "../vercel-v0-chat";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function PreviewContent({
@@ -30,9 +29,7 @@ export default function PreviewContent({
     content: "",
     success: false,
   });
-  const [showLoginDialog, setShowLoginDialog] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [isTerminalCopied, setIsTerminalCopied] = useState(false);
 
   const handleCopyClick = async () => {
@@ -64,16 +61,7 @@ export default function PreviewContent({
     }, 2000);
   };
 
-  // const openInV0 = () => {
-  //   const [folder, filename] = link.split("/");
-
-  //   return filename ? filename : folder;
-  // };
-
   useEffect(() => {
-    if (state.error) {
-      setShowLoginDialog(true);
-    }
     if (state.success && state.content) {
       setIsCopied(true);
       navigator.clipboard.writeText(state.content);
@@ -139,11 +127,7 @@ export default function PreviewContent({
         />
       )}
 
-      <div
-        className={cn("relative mt-4", "rounded-xl p-3")}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+      <div className={cn("relative mt-4", "rounded-xl p-3")}>
         <div className="relative flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <a
             href={`${prePath}/preview/${link}`}
@@ -166,8 +150,21 @@ export default function PreviewContent({
             />
           </a>
 
+          <a
+            href={`/studio/${getFileName()}`}
+            className={cn(
+              "flex items-center gap-1.5",
+              "text-sm font-medium",
+              "text-zinc-800 dark:text-zinc-200",
+              "hover:text-zinc-600 dark:hover:text-zinc-400",
+              "transition-all duration-200 no-underline"
+            )}
+          >
+            <SlidersHorizontal className="h-4 w-4" />
+            Open in Studio
+          </a>
+
           <div className="flex items-center gap-2">
-            {/* <OpenInV0Button name={openInV0()} /> */}
             <Button
               ref={terminalButtonRef}
               onClick={handleTerminalClick}

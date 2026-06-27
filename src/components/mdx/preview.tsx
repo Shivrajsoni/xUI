@@ -24,10 +24,8 @@ const Preview = ({
   link = "",
   useIframe = false,
   isBlock = false,
-  isPremium,
   comment = [],
   compact = false,
-  height,
 }: PreviewProps) => {
   return (
     <div className={cn("w-full overflow-hidden", className)}>

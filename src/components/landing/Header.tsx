@@ -30,7 +30,6 @@ const Header = () => {
       </div>
       <div className="sticky left-0 right-0 top-0 z-50">
         <div className="bg-white dark:bg-black/5 w-full">
-          {/* Rest Content Of header */}
           <div className="flex items-center justify-center w-full flex-col">
             <div
               className={`flex items-center justify-between 
@@ -63,10 +62,10 @@ const Header = () => {
                       Components
                     </ViewTransitionsLink>
                     <ViewTransitionsLink
-                      href="https://xoder.vercel.app"
+                      href="/studio"
                       className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
                     >
-                      Live Editor
+                      Studio
                     </ViewTransitionsLink>
                   </div>
                 </div>

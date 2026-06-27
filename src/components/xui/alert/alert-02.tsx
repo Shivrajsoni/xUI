@@ -10,7 +10,7 @@ export default function Alert02() {
         <div className="flex items-center gap-4">
           <div className="relative h-10 w-10 shrink-0">
             <Image
-              src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png"
+              src="/avatars/avatar-01.svg"
               alt="Sarah Chen"
               sizes="40px"
               fill

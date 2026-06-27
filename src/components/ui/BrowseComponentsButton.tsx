@@ -1,6 +1,5 @@
 import { Link } from 'next-view-transitions'
 import {motion} from "framer-motion";
-import React from 'react'
 import { Button } from './button';
 import { cn } from '@/lib/utils';
 import { ArrowDownRight } from 'lucide-react';

@@ -23,19 +23,18 @@ const config: NextConfig = {
     ];
   },
   images: {
-    remotePatterns: [
-      {
-        hostname: "*",
-      },
-    ],
+    // All demo images are self-hosted under /public — no remote hosts allowed.
+    remotePatterns: [],
+    // Demo avatars/cover art are first-party SVGs. Allow them through the
+    // optimizer with a strict CSP so they can't execute scripts.
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   experimental: {
     viewTransition: true,
   },
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 export default withMDX(config);

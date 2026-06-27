@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 import {
@@ -40,14 +41,13 @@ interface Card01Props {
 
 const defaultProps: Card01Props = {
   author: {
-    name: "Shivraj Soni",
-    username: " Xavier ",
-    avatar:
-      "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-04-uuYHWIRvVPi01gEt6NwnGyjqLeeZhz.png",
+    name: "Alex Rivera",
+    username: "alexrivera",
+    avatar: "/avatars/avatar-04.svg",
     timeAgo: "2h ago",
   },
   content: {
-    text: "Just launched xUI! Check out the documentation and let me know what you think 🎨",
+    text: "Just shipped a new component library! Check out the docs and let me know what you think 🎨",
     link: {
       title: "xUI Documentation",
       description: "A comprehensive guide to xUI",
@@ -89,10 +89,12 @@ export default function Card_01({
         <div className="p-7">
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-4">
-              <div className="relative">
-                <img
-                  src={author?.avatar}
-                  alt={author?.name}
+              <div className="relative group">
+                <Image
+                  src={author?.avatar ?? "/avatars/avatar-04.svg"}
+                  alt={author?.name ?? "Avatar"}
+                  width={44}
+                  height={44}
                   className={cn(
                     "w-11 h-11 rounded-full",
                     "ring-2 ring-white dark:ring-zinc-800",

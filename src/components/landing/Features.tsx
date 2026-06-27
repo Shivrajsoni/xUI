@@ -1,152 +1,62 @@
 "use client";
 
-import React from 'react'
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Nextjs from "@/components/icons/nextjs";
 import ReactIcon from "@/components/icons/react";
 import ShadcnIcon from "@/components/icons/shadcn";
-import { useState } from "react";
-const Features = () => {
-    const [hoveredItem,setHoveredItem] = useState<string | null>(null);
-    const handleMouseEnter = (iconName:string) =>{
-        setHoveredItem(iconName);
-    }
-    const handleMouseLeave = () => {
-        setHoveredItem(null);
-    }
-  
-    return (
-    <div className='w-full max-w-none flex flex-col justify-start items-center z-10 mx-auto'>
-        <div className='grid grid-cols-3 md:flex md:flex-wrap items-center justify-start gap-6 md:gap-8 w-[95%] mx-auto py-4'>
+
+const TailwindIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 54 33" className={className} role="img" aria-labelledby="tw-title">
+    <title id="tw-title">Tailwind CSS</title>
+    <path
+      fill="#38bdf8"
+      fillRule="evenodd"
+      d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+const stack = [
+  { name: "Tailwind CSS", icon: TailwindIcon },
+  { name: "shadcn/ui", icon: ShadcnIcon },
+  { name: "Next.js", icon: Nextjs },
+  { name: "React", icon: ReactIcon },
+];
+
+export default function Features() {
+  return (
+    <div className="w-full">
+      <p className="mb-5 text-center text-xs font-medium uppercase tracking-widest text-zinc-400 dark:text-zinc-600">
+        Built with the tools you already use
+      </p>
+      <div className="mx-auto grid max-w-md grid-cols-4 items-start gap-4 sm:gap-8">
+        {stack.map((item, i) => {
+          const Icon = item.icon;
+          return (
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                    duration: 0.3,
-                    delay: 0.1,
-                    ease: [0.23, 1, 0.32, 1],
-                 }}
-                className = {cn(
-                    "text-blue-600 dark:text-blue-400 relative flex flex-col items-center gap-2"
-                )}
-                onMouseEnter = {()=>handleMouseEnter("TailwindCSS")}
-                onMouseLeave = {()=>handleMouseLeave()}
+              key={item.name}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -3 }}
+              className="group flex flex-col items-center gap-2 text-zinc-700 dark:text-zinc-300"
             >
-                 <svg
-                        viewBox="0 0 54 33"
-                        className="w-8 h-8"
-                        aria-labelledby="tailwindcss-icon-title"
-                        role="img"
-                    >
-                        <title id="tailwindcss-icon-title">TailwindCSS</title>
-                        <g clipPath="url(#prefix__clip0)">
-                            <path
-                                fill="#38bdf8"
-                                fillRule="evenodd"
-                                d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
-                                clipRule="evenodd"
-                            />
-                        </g>
-                </svg>
-                <motion.span
-                        animate={{
-                            scale: hoveredItem === "TailwindCSS" ? 1.1 : 1,
-                            fontWeight:
-                                hoveredItem === "TailwindCSS" ? 500 : 400,
-                        }}
-                        className="text-xs text-center mt-1 whitespace-nowrap text-black dark:text-white"
-                    >
-                        TailwindCSS
-                </motion.span>
+              <Icon
+                className={cn(
+                  "h-7 w-7 transition-transform duration-200 group-hover:scale-110",
+                  "text-black dark:text-white"
+                )}
+              />
+              <span className="text-center text-[11px] font-medium text-zinc-500 dark:text-zinc-400 sm:text-xs">
+                {item.name}
+              </span>
             </motion.div>
-            <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                        duration: 0.3,
-                        delay: 0.5,
-                        ease: [0.23, 1, 0.32, 1],
-                    }}
-                    className={cn(
-                        "text-black dark:text-white flex flex-col items-center gap-2 relative"
-                    )}
-                    onMouseEnter={() => handleMouseEnter("Shadcn UI")}
-                    onMouseLeave={handleMouseLeave}
-                >
-                    <ShadcnIcon
-                        className="w-8 h-8 text-black dark:text-white"
-                        aria-label="Shadcn/ui"
-                    />
-                    <motion.span
-                        animate={{
-                            scale: hoveredItem === "Shadcn UI" ? 1.1 : 1,
-                            fontWeight: hoveredItem === "Shadcn UI" ? 500 : 400,
-                        }}
-                        className="text-xs text-center mt-1 whitespace-nowrap"
-                    >
-                        shadcn/ui
-                    </motion.span>
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                        duration: 0.3,
-                        delay: 0.6,
-                        ease: [0.23, 1, 0.32, 1],
-                    }}
-                    className={cn(
-                        "text-black dark:text-white flex flex-col items-center gap-2 relative col-span-1 col-start-1 md:col-auto"
-                    )}
-                    onMouseEnter={() => handleMouseEnter("Next.js")}
-                    onMouseLeave={handleMouseLeave}
-                >
-                    <Nextjs className="w-8 h-8" aria-label="Next.js" />
-                    <motion.span
-                        animate={{
-                            scale: hoveredItem === "Next.js" ? 1.1 : 1,
-                            fontWeight: hoveredItem === "Next.js" ? 500 : 400,
-                        }}
-                        className="text-xs text-center mt-1 whitespace-nowrap"
-                    >
-                        Next.js
-                    </motion.span>
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                        duration: 0.3,
-                        delay: 0.7,
-                        ease: [0.23, 1, 0.32, 1],
-                    }}
-                    className={cn(
-                        "text-black dark:text-white flex flex-col items-center gap-2 relative col-span-1 col-start-3 md:col-auto"
-                    )}
-                    onMouseEnter={() => handleMouseEnter("React")}
-                    onMouseLeave={handleMouseLeave}
-                >
-                    <ReactIcon className="w-8 h-8" aria-label="React" />
-                    <motion.span
-                        animate={{
-                            scale: hoveredItem === "React" ? 1.1 : 1,
-                            fontWeight: hoveredItem === "React" ? 500 : 400,
-                        }}
-                        className="text-xs text-center mt-1 whitespace-nowrap"
-                    >
-                        React
-                    </motion.span>
-                </motion.div>
-        </div>
-    
+          );
+        })}
+      </div>
     </div>
-  )
+  );
 }
-
-export default Features

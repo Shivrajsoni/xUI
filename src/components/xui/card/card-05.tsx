@@ -2,12 +2,11 @@
 
 import React, { useEffect, useRef, useState, memo } from "react";
 import { motion } from "framer-motion";
-import { twMerge } from "tailwind-merge";
 import { cn } from "@/lib/utils";
 
 const Card_05 = ({
-  text = "Hover Over Me Again",
-  revealText = "This One is Copied",
+  text = "Hover over me",
+  revealText = "You found me",
   children,
   className,
 }: {
@@ -17,7 +16,7 @@ const Card_05 = ({
   className?: string;
 }) => {
   const [widthPercentage, setWidthPercentage] = useState(0);
-  const cardRef = useRef<HTMLDivElement | any>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   const [left, setLeft] = useState(0);
   const [localWidth, setLocalWidth] = useState(0);
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -31,7 +30,7 @@ const Card_05 = ({
     }
   }, []);
 
-  function mouseMoveHandler(event: any) {
+  function mouseMoveHandler(event: React.MouseEvent<HTMLDivElement>) {
     event.preventDefault();
 
     const { clientX } = event;
@@ -119,32 +118,6 @@ const Card_05 = ({
         </div>
       </div>
     </div>
-  );
-};
-
-const TextRevealCardTitle = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <h2 className={twMerge("text-white text-lg mb-2", className)}>
-      {children}
-    </h2>
-  );
-};
-
-const TextRevealCardDescription = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <p className={twMerge("text-[#a9a9a9] text-sm", className)}>{children}</p>
   );
 };
 

@@ -86,10 +86,6 @@ export function BackgroundCircles({
 }: BackgroundCirclesProps) {
   const variantStyles = COLOR_VARIANTS[variant];
 
-  const variants = Object.keys(
-    COLOR_VARIANTS
-  ) as (keyof typeof COLOR_VARIANTS)[];
-
   return (
     <div
       className={clsx(

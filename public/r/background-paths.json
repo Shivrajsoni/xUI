@@ -4,7 +4,9 @@
   "dependencies": [
     "motion"
   ],
-  "registryDependencies": [],
+  "registryDependencies": [
+    "button"
+  ],
   "files": [
     {
       "type": "registry:component",

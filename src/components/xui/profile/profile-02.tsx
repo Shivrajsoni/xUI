@@ -16,7 +16,7 @@ interface MenuItem {
   external?: boolean;
 }
 
-interface Profile01Props {
+interface Profile02Props {
   name: string;
   role: string;
   avatar: string;
@@ -24,19 +24,18 @@ interface Profile01Props {
 }
 
 const defaultProfile = {
-  name: "Shivraj Soni ",
-  role: "Prompt Engineer",
-  avatar:
-    "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
+  name: "Alex Rivera",
+  role: "Product Designer",
+  avatar: "/avatars/avatar-02.svg",
   subscription: "Free Trial",
-} satisfies Required<Profile01Props>;
+} satisfies Required<Profile02Props>;
 
-export default function Profile01({
+export default function Profile02({
   name = defaultProfile.name,
   role = defaultProfile.role,
   avatar = defaultProfile.avatar,
   subscription = defaultProfile.subscription,
-}: Partial<Profile01Props> = defaultProfile) {
+}: Partial<Profile02Props> = defaultProfile) {
   const menuItems: MenuItem[] = [
     {
       label: "Subscription",

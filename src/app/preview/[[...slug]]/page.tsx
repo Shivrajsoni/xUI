@@ -25,8 +25,6 @@ const CENTERED_COMPONENTS = [
   // Add more small components here
 ];
 
-// const FULL_WIDTH_COMPONENTS = ["hero"];
-
 export default async function PreviewPage({
   params,
 }: {

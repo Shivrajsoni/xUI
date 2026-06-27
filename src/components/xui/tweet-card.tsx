@@ -2,6 +2,7 @@
 
 import { VerifiedIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
@@ -25,32 +26,29 @@ interface TweetCardProps {
 }
 
 export default function TweetCard({
-  authorName = "Dorian",
-  authorHandle = "dorian_baffier",
-  authorImage = "https://pbs.twimg.com/profile_images/1854916060807675904/KtBJsyWr_400x400.jpg",
+  authorName = "Alex Rivera",
+  authorHandle = "alexrivera",
+  authorImage = "/avatars/avatar-04.svg",
   content = [
-    "All components from xUI can now be open in @v0 🎉",
-    "1. Click on 'Open in V0'",
-    "2. Customize with prompts",
-    "3. Deploy to your app",
+    "Just rebuilt our UI with this component library 🎉",
+    "1. Copy the component",
+    "2. Customize with your tokens",
+    "3. Ship it",
   ],
   isVerified = true,
   timestamp = "Jan 18, 2025",
   reply = {
-    authorName: "shadcn",
-    authorHandle: "shadcn",
-    authorImage:
-      "https://pbs.twimg.com/profile_images/1593304942210478080/TUYae5z7_400x400.jpg",
+    authorName: "Sam Lee",
+    authorHandle: "samlee",
+    authorImage: "/avatars/avatar-03.svg",
     content: "Awesome.",
     isVerified: true,
     timestamp: "Jan 18",
   },
 }: TweetCardProps) {
   return (
-    <Link
-      href="https://x.com/dorian_baffier/status/1880291036410572934"
-      target="_blank"
-    >
+    <Link href="#" target="_blank">
+
       <div
         className={cn(
           "w-full min-w-[400px] md:min-w-[500px] max-w-xl p-1.5 rounded-2xl relative isolate overflow-hidden",
@@ -78,9 +76,11 @@ export default function TweetCard({
           <div className="flex gap-3">
             <div className="shrink-0">
               <div className="h-10 w-10 rounded-full overflow-hidden">
-                <img
+                <Image
                   src={authorImage}
                   alt={authorName}
+                  width={40}
+                  height={40}
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -143,9 +143,11 @@ export default function TweetCard({
               <div className="flex gap-3">
                 <div className="shrink-0">
                   <div className="h-10 w-10 rounded-full overflow-hidden">
-                    <img
+                    <Image
                       src={reply.authorImage}
                       alt={reply.authorName}
+                      width={40}
+                      height={40}
                       className="h-full w-full object-cover"
                     />
                   </div>

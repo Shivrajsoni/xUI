@@ -1,0 +1,4 @@
+[    8814ms] [WARNING] Mixed Content: The page at 'https://2-19-8-sandpack.codesandbox.io/' was loaded over HTTPS, but requested an insecure element 'http://localhost:3140/avatars/avatar-01.svg'. This request was not upgraded to HTTPS because it is a local network request. @ https://2-19-8-sandpack.codesandbox.io/:0
+[    8816ms] [ERROR] Access to image at 'http://localhost:3140/avatars/avatar-01.svg' from origin 'https://2-19-8-sandpack.codesandbox.io' has been blocked by CORS policy: Permission was denied for this request to access the `loopback` address space. @ https://2-19-8-sandpack.codesandbox.io/:0
+[    8816ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3140/avatars/avatar-01.svg:0
+[   83790ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://col.csbops.io/data/sandpack:0

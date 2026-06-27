@@ -37,8 +37,8 @@ const Loader02 = ({
     >
       {/* Liquid Container */}
       <div
-        className={`relative w-[64px] h-[64px]
-        } overflow-hidden rounded-full border-4 border-slate-300 dark:border-slate-600 shadow-inner`}
+        style={{ width: size, height: size }}
+        className="relative overflow-hidden rounded-full border-4 border-slate-300 dark:border-slate-600 shadow-inner"
       >
         {/* Liquid */}
         <motion.div
@@ -158,21 +158,3 @@ const Bubbles = ({ count }: { count: number }) => {
   );
 };
 export default Loader02;
-
-// export const DemoLoader02 = () => {
-//   return (
-//     <Loader02
-//       size={40}
-//       colorLight="from-blue-400 to-blue-500"
-//       colorDark="from-purple-600 to-indigo-800"
-//       bubbleCount={10}
-//     />
-//   );
-// };
-
-// <Loader02
-// size={40}
-//  colorLight="from-pink-400 to-rose-500"
-//  colorDark="from-purple-600 to-indigo-800"
-//  bubbleCount={10}
-// />

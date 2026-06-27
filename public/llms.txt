@@ -1,0 +1,33 @@
+# xUI
+
+> xUI is an open-source collection of modern, interactive, themeable React + Tailwind CSS UI components. Copy, paste, and customize — every component ships as source you fully own. Built for Tailwind CSS v4 and React 19, installable via the shadcn CLI.
+
+## Install
+
+Components are distributed as a shadcn-compatible registry. Add any component with:
+
+```
+npx shadcn@latest add https://x-ui-self.vercel.app/r/<component>.json
+```
+
+## Components
+
+- Cards: https://x-ui-self.vercel.app/docs/components/card
+- Buttons: https://x-ui-self.vercel.app/docs/components/button
+- Alerts: https://x-ui-self.vercel.app/docs/components/alert
+- Profiles: https://x-ui-self.vercel.app/docs/components/profile
+- FAQ: https://x-ui-self.vercel.app/docs/components/faq
+- Lists: https://x-ui-self.vercel.app/docs/components/list
+- AI Input: https://x-ui-self.vercel.app/docs/components/ai-input
+
+## Hooks
+
+- useAutoResizeTextarea: https://x-ui-self.vercel.app/docs/hooks/use-auto-resize-textarea
+
+## Docs
+
+- Installation & getting started: https://x-ui-self.vercel.app/docs
+
+## Tech
+
+React 19, Next.js 15, Tailwind CSS v4, Framer Motion, Radix UI, lucide-react.

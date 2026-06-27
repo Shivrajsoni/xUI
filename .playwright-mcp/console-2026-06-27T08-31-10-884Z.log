@@ -1,0 +1,31 @@
+[    1329ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://data.jsdelivr.com/v1/package/npm/next@16.2.9/flat:0
+[    1329ms] [ERROR] Error: Could not fetch https://data.jsdelivr.com/v1/package/npm/next@16.2.9/flat
+    at https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:208929 @ https://2-19-8-sandpack.codesandbox.io/static/js/vendors~sandbox-startup.ca8a95b40.chunk.js:0
+[    4279ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://data.jsdelivr.com/v1/package/npm/next@16.2.9/flat:0
+[    4280ms] [ERROR] Error: Could not fetch https://data.jsdelivr.com/v1/package/npm/next@16.2.9/flat
+    at https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:208929 @ https://2-19-8-sandpack.codesandbox.io/static/js/vendors~sandbox-startup.ca8a95b40.chunk.js:0
+[    6580ms] [LOG] Error in sandbox: @ https://2-19-8-sandpack.codesandbox.io/static/js/vendors~sandbox-startup.ca8a95b40.chunk.js:0
+[    6580ms] [ERROR] ModuleNotFoundError: Could not find module in path: 'next/image' relative to '/Component.tsx'
+    at je.resolveModule (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:189680)
+    at je.resolveTranspiledModuleSync (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:190571)
+    at c (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:171333)
+    at $csb$eval (https://2-19-8-sandpack.codesandbox.io/Component.tsx:9:37)
+    at J (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:159097)
+    at K.evaluate (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:171816)
+    at je.evaluateTranspiledModule (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:182197)
+    at c (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:171431)
+    at $csb$eval (https://2-19-8-sandpack.codesandbox.io/App.tsx:9:41)
+    at J (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:159097)
+    at K.evaluate (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:171816)
+    at je.evaluateTranspiledModule (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:182197)
+    at c (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:171431)
+    at $csb$eval (https://2-19-8-sandpack.codesandbox.io/index.tsx:7:35)
+    at J (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:159097)
+    at K.evaluate (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:171816)
+    at je.evaluateTranspiledModule (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:182197)
+    at je.evaluateModule (https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:181696)
+    at https://2-19-8-sandpack.codesandbox.io/static/js/sandbox.8a7d01a44.js:1:354442
+    at Generator.next (<anonymous>)
+    at n (https://2-19-8-sandpack.codesandbox.io/static/js/vendors~sandbox.ecbcf4e6a.chunk.js:1:607)
+    at u (https://2-19-8-sandpack.codesandbox.io/static/js/vendors~sandbox.ecbcf4e6a.chunk.js:1:818) @ https://2-19-8-sandpack.codesandbox.io/static/js/vendors~sandbox-startup.ca8a95b40.chunk.js:0
+[   19997ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_TIMED_OUT @ https://col.csbops.io/data/sandpack:0

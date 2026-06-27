@@ -17,7 +17,6 @@ import {
 
 export function VercelV0Chat() {
   const [value, setValue] = useState("");
-  //@ts-ignore
   const { textareaRef, adjustHeight } = useAutoResizeTextArea({
     minHeight: 60,
     maxHeight: 200,

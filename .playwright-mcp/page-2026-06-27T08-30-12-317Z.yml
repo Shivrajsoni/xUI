@@ -1,0 +1,15 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link "xUI" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img [ref=e8]
+        - generic [ref=e21]: xUI
+      - generic [ref=e22]: /
+      - generic [ref=e23]: Studio
+    - link "Docs" [ref=e25] [cursor=pointer]:
+      - /url: /docs
+  - main [ref=e26]:
+    - generic [ref=e27]:
+      - img [ref=e28]
+      - generic [ref=e30]: Loading editor…

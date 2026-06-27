@@ -113,6 +113,18 @@ export const component: Registry = [
       },
     ],
   },
+  {
+    name: "card-06",
+    type: "registry:component",
+    description: "Interactive 3D portfolio card with mouse-tracked tilt and parallax depth.",
+    dependencies: ["lucide-react"],
+    files: [
+      {
+        path: "src/components/xui/card/card-06.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
 
   {
     name: "alert-01",

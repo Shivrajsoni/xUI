@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Link as LinkIcon, MapPin, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
-interface Profile02Props {
+interface Profile01Props {
   name?: string;
   role?: string;
   avatar?: string;
@@ -13,17 +13,16 @@ interface Profile02Props {
 }
 
 const defaultProfile = {
-  name: "Shivraj Soni",
+  name: "Alex Rivera",
   role: "Product Researcher",
-  avatar:
-    "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
-  location: "Chandigarh, India",
-  email: "whothehellwasthatdev@gmail.com",
-  website: "https://x-ui-self.vercel.app/",
+  avatar: "/avatars/avatar-02.svg",
+  location: "San Francisco, CA",
+  email: "alex@example.com",
+  website: "example.com",
   bio: "Designing interfaces that bridge the gap between complexity and simplicity.",
-} satisfies Required<Profile02Props>;
+} satisfies Required<Profile01Props>;
 
-export default function Profile02({
+export default function Profile01({
   name = defaultProfile.name,
   role = defaultProfile.role,
   avatar = defaultProfile.avatar,
@@ -31,7 +30,7 @@ export default function Profile02({
   email = defaultProfile.email,
   website = defaultProfile.website,
   bio = defaultProfile.bio,
-}: Partial<Profile02Props> = defaultProfile) {
+}: Partial<Profile01Props> = defaultProfile) {
   return (
     <div className="w-full max-w-md mx-auto">
       <div className="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-xs">

@@ -1,0 +1,611 @@
+[
+  {
+    "name": "ai-input-01",
+    "type": "registry:component",
+    "category": "ai-input",
+    "title": "Ai Input 01",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button",
+      "textarea"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/ai-input/ai-input-01.tsx",
+        "target": "@/components/xui/ai-input-01.tsx"
+      },
+      {
+        "path": "/src/hooks/use-auto-resize-textarea.tsx",
+        "target": "@/hooks/use-auto-resize-textarea.tsx"
+      }
+    ]
+  },
+  {
+    "name": "btn-01",
+    "type": "registry:component",
+    "category": "button",
+    "title": "Btn 01",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/button/btn-01.tsx",
+        "target": "@/components/xui/btn-01.tsx"
+      }
+    ]
+  },
+  {
+    "name": "btn-02",
+    "type": "registry:component",
+    "category": "button",
+    "title": "Btn 02",
+    "description": "",
+    "dependencies": [],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/button/btn-02.tsx",
+        "target": "@/components/xui/btn-02.tsx"
+      }
+    ]
+  },
+  {
+    "name": "btn-03",
+    "type": "registry:component",
+    "category": "button",
+    "title": "Btn 03",
+    "description": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/button/btn-03.tsx",
+        "target": "@/components/xui/btn-03.tsx"
+      }
+    ]
+  },
+  {
+    "name": "card-01",
+    "type": "registry:component",
+    "category": "card",
+    "title": "Card 01",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/card/card-01.tsx",
+        "target": "@/components/xui/card-01.tsx"
+      }
+    ]
+  },
+  {
+    "name": "card-02",
+    "type": "registry:component",
+    "category": "card",
+    "title": "Card 02",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/card/card-02.tsx",
+        "target": "@/components/xui/card-02.tsx"
+      }
+    ]
+  },
+  {
+    "name": "card-03",
+    "type": "registry:component",
+    "category": "card",
+    "title": "Card 03",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/card/card-03.tsx",
+        "target": "@/components/xui/card-03.tsx"
+      }
+    ]
+  },
+  {
+    "name": "card-05",
+    "type": "registry:component",
+    "category": "card",
+    "title": "Card 05",
+    "description": "",
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/card/card-05.tsx",
+        "target": "@/components/xui/card-05.tsx"
+      }
+    ]
+  },
+  {
+    "name": "card-04",
+    "type": "registry:component",
+    "category": "card",
+    "title": "Card 04",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "badge",
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/card/card-04.tsx",
+        "target": "@/components/xui/card-04.tsx"
+      }
+    ]
+  },
+  {
+    "name": "card-06",
+    "type": "registry:component",
+    "category": "card",
+    "title": "Card 06",
+    "description": "Interactive 3D portfolio card with mouse-tracked tilt and parallax depth.",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/card/card-06.tsx",
+        "target": "@/components/xui/card-06.tsx"
+      }
+    ]
+  },
+  {
+    "name": "alert-01",
+    "type": "registry:component",
+    "category": "alert",
+    "title": "Alert 01",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/alert/alert-01.tsx",
+        "target": "@/components/xui/alert-01.tsx"
+      }
+    ]
+  },
+  {
+    "name": "alert-02",
+    "type": "registry:component",
+    "category": "alert",
+    "title": "Alert 02",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "alert"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/alert/alert-02.tsx",
+        "target": "@/components/xui/alert-02.tsx"
+      }
+    ]
+  },
+  {
+    "name": "faq-01",
+    "type": "registry:component",
+    "category": "faq",
+    "title": "Faq 01",
+    "description": "",
+    "dependencies": [],
+    "registryDependencies": [
+      "accordion"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/faq/faq-01.tsx",
+        "target": "@/components/xui/faq-01.tsx"
+      }
+    ]
+  },
+  {
+    "name": "faq-02",
+    "type": "registry:component",
+    "category": "faq",
+    "title": "Faq 02",
+    "description": "",
+    "dependencies": [
+      "motion",
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "accordion",
+      "badge",
+      "input"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/faq/faq-02.tsx",
+        "target": "@/components/xui/faq-02.tsx"
+      }
+    ]
+  },
+  {
+    "name": "list-01",
+    "type": "registry:component",
+    "category": "list",
+    "title": "List 01",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/list/list-01.tsx",
+        "target": "@/components/xui/list-01.tsx"
+      }
+    ]
+  },
+  {
+    "name": "list-02",
+    "type": "registry:component",
+    "category": "list",
+    "title": "List 02",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/list/list-02.tsx",
+        "target": "@/components/xui/list-02.tsx"
+      }
+    ]
+  },
+  {
+    "name": "profile-01",
+    "type": "registry:component",
+    "category": "profile",
+    "title": "Profile 01",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/profile/profile-01.tsx",
+        "target": "@/components/xui/profile-01.tsx"
+      }
+    ]
+  },
+  {
+    "name": "profile-02",
+    "type": "registry:component",
+    "category": "profile",
+    "title": "Profile 02",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/profile/profile-02.tsx",
+        "target": "@/components/xui/profile-02.tsx"
+      }
+    ]
+  },
+  {
+    "name": "tweet-card",
+    "type": "registry:component",
+    "category": "tweet-card",
+    "title": "Tweet Card",
+    "description": "",
+    "dependencies": [
+      "lucide-react"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/tweet-card.tsx",
+        "target": "@/components/xui/tweet-card.tsx"
+      }
+    ]
+  },
+  {
+    "name": "action-search-bar",
+    "type": "registry:component",
+    "category": "action-search-bar",
+    "title": "Action Search Bar",
+    "description": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "registryDependencies": [
+      "input"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/action-search-bar.tsx",
+        "target": "@/components/xui/action-search-bar.tsx"
+      },
+      {
+        "path": "/src/hooks/use-debounce.ts",
+        "target": "@/hooks/use-debounce.ts"
+      }
+    ]
+  },
+  {
+    "name": "bento-grid",
+    "type": "registry:component",
+    "category": "bento-grid",
+    "title": "Bento Grid",
+    "description": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/bento-grid.tsx",
+        "target": "@/components/xui/bento-grid.tsx"
+      }
+    ]
+  },
+  {
+    "name": "background-circles",
+    "type": "registry:component",
+    "category": "background-circles",
+    "title": "Background Circles",
+    "description": "",
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/background-circles.tsx",
+        "target": "@/components/xui/background-circles.tsx"
+      }
+    ]
+  },
+  {
+    "name": "background-paths",
+    "type": "registry:component",
+    "category": "background-paths",
+    "title": "Background Paths",
+    "description": "",
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/background-paths.tsx",
+        "target": "@/components/xui/background-paths.tsx"
+      }
+    ]
+  },
+  {
+    "name": "vercel-chat",
+    "type": "registry:component",
+    "category": "vercel-chat",
+    "title": "Vercel Chat",
+    "description": "",
+    "dependencies": [
+      "lucide-react",
+      "textarea"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/vercel-chat.tsx",
+        "target": "@/components/xui/vercel-chat.tsx"
+      },
+      {
+        "path": "/src/hooks/use-auto-resize-textarea.tsx",
+        "target": "@/hooks/use-auto-resize-textarea.tsx"
+      }
+    ]
+  },
+  {
+    "name": "toolbar",
+    "type": "registry:component",
+    "category": "toolbar",
+    "title": "Toolbar",
+    "description": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/toolbar.tsx",
+        "target": "@/components/xui/toolbar.tsx"
+      }
+    ]
+  },
+  {
+    "name": "beams-background",
+    "type": "registry:component",
+    "category": "beams-background",
+    "title": "Beams Background",
+    "description": "",
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/beams-background.tsx",
+        "target": "@/components/xui/beams-background.tsx"
+      }
+    ]
+  },
+  {
+    "name": "avatar-picker",
+    "type": "registry:component",
+    "category": "avatar-picker",
+    "title": "Avatar Picker",
+    "description": "",
+    "dependencies": [
+      "lucide-react",
+      "motion"
+    ],
+    "registryDependencies": [
+      "card"
+    ],
+    "files": [
+      {
+        "path": "/src/components/xui/avatar-picker.tsx",
+        "target": "@/components/xui/avatar-picker.tsx"
+      }
+    ]
+  },
+  {
+    "name": "loader-01",
+    "type": "registry:component",
+    "category": "loader",
+    "title": "Loader 01",
+    "description": "",
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/loader/loader-01.tsx",
+        "target": "@/components/xui/loader-01.tsx"
+      }
+    ]
+  },
+  {
+    "name": "loader-02",
+    "type": "registry:component",
+    "category": "loader",
+    "title": "Loader 02",
+    "description": "",
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/loader/loader-02.tsx",
+        "target": "@/components/xui/loader-02.tsx"
+      }
+    ]
+  },
+  {
+    "name": "svg-01",
+    "type": "registry:component",
+    "category": "svg",
+    "title": "Svg 01",
+    "description": "",
+    "dependencies": [
+      "motion"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/components/xui/svg/svg-01.tsx",
+        "target": "@/components/xui/svg-01.tsx"
+      }
+    ]
+  },
+  {
+    "name": "use-auto-resize-textarea",
+    "type": "registry:hook",
+    "category": "hooks",
+    "title": "Use Auto Resize Textarea",
+    "description": "",
+    "dependencies": [],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/hooks/use-auto-resize-textarea.tsx",
+        "target": "@/hooks/use-auto-resize-textarea.tsx"
+      }
+    ]
+  },
+  {
+    "name": "use-debounce",
+    "type": "registry:hook",
+    "category": "hooks",
+    "title": "Use Debounce",
+    "description": "",
+    "dependencies": [],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/hooks/use-debounce.ts",
+        "target": "@/hooks/use-debounce.ts"
+      }
+    ]
+  },
+  {
+    "name": "utils",
+    "type": "registry:lib",
+    "category": "lib",
+    "title": "Utils",
+    "description": "",
+    "dependencies": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "registryDependencies": [],
+    "files": [
+      {
+        "path": "/src/lib/utils.ts",
+        "target": "@/lib/utils.ts"
+      }
+    ]
+  }
+]
