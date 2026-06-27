@@ -2,20 +2,19 @@
 
 import { useState } from "react";
 import { Check, Copy, Save, Share2, Terminal } from "lucide-react";
-import { siteConfig } from "@/config/site";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { savePlayground } from "@/lib/studio/playgrounds";
+import { fetchRegistryItem } from "@/lib/studio/client";
 import { cn } from "@/lib/utils";
 
 interface ExportBarProps {
   name: string;
-  getCode: () => string;
   getProps: () => Record<string, unknown>;
 }
 
 type Flash = "" | "copied" | "cmd" | "saved" | "shared" | "error";
 
-export default function ExportBar({ name, getCode, getProps }: ExportBarProps) {
+export default function ExportBar({ name, getProps }: ExportBarProps) {
   const [flash, setFlash] = useState<Flash>("");
   const [busy, setBusy] = useState(false);
   const configured = isSupabaseConfigured();
@@ -26,14 +25,17 @@ export default function ExportBar({ name, getCode, getProps }: ExportBarProps) {
   };
 
   const copyCode = async () => {
-    await navigator.clipboard.writeText(getCode());
-    ping("copied");
+    try {
+      const item = await fetchRegistryItem(name);
+      await navigator.clipboard.writeText(item.files[0]?.content ?? "");
+      ping("copied");
+    } catch {
+      ping("error");
+    }
   };
 
   const copyCmd = async () => {
-    await navigator.clipboard.writeText(
-      `npx shadcn@latest add ${siteConfig.url}/r/${name}.json`
-    );
+    await navigator.clipboard.writeText(`npx shadcn@latest add @xui/${name}`);
     ping("cmd");
   };
 
@@ -44,10 +46,11 @@ export default function ExportBar({ name, getCode, getProps }: ExportBarProps) {
     }
     setBusy(true);
     try {
+      const item = await fetchRegistryItem(name);
       const id = await savePlayground({
         componentName: name,
         title: name,
-        code: getCode(),
+        code: item.files[0]?.content ?? "",
         props: getProps(),
         isPublic: share,
       });

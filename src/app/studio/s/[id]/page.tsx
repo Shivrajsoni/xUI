@@ -6,7 +6,12 @@ import { Loader2 } from "lucide-react";
 import { loadPlayground } from "@/lib/studio/playgrounds";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import type { CatalogEntry } from "@/lib/studio/types";
-import StudioWorkspaceLoader from "@/components/studio/StudioWorkspaceLoader";
+import StudioWorkspace, { type StudioEntry } from "@/components/studio/StudioWorkspace";
+
+function importPathFor(entry: CatalogEntry): string {
+  const p = entry.files[0]?.path ?? "";
+  return p.replace(/^\/?src\/components\/xui\//, "").replace(/\.(tsx|ts)$/, "");
+}
 
 export default function SharedPlaygroundPage(props: {
   params: Promise<{ id: string }>;
@@ -15,12 +20,7 @@ export default function SharedPlaygroundPage(props: {
   const [state, setState] = useState<
     | { status: "loading" }
     | { status: "error"; message: string }
-    | {
-        status: "ready";
-        entry: Pick<CatalogEntry, "name" | "category" | "title">;
-        code: string;
-        propsValues: Record<string, unknown>;
-      }
+    | { status: "ready"; entry: StudioEntry; propsValues: Record<string, unknown> }
   >({ status: "loading" });
 
   useEffect(() => {
@@ -43,8 +43,12 @@ export default function SharedPlaygroundPage(props: {
         }
         setState({
           status: "ready",
-          entry: { name: entry.name, category: entry.category, title: entry.title },
-          code: record.code,
+          entry: {
+            name: entry.name,
+            category: entry.category,
+            title: entry.title,
+            importPath: importPathFor(entry),
+          },
           propsValues: record.props ?? {},
         });
       } catch (e) {
@@ -73,11 +77,5 @@ export default function SharedPlaygroundPage(props: {
     );
   }
 
-  return (
-    <StudioWorkspaceLoader
-      entry={state.entry}
-      initialCode={state.code}
-      initialProps={state.propsValues}
-    />
-  );
+  return <StudioWorkspace entry={state.entry} initialProps={state.propsValues} />;
 }

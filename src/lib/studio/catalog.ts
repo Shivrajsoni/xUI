@@ -42,3 +42,11 @@ export async function findEntryBySlug(
   const name = slug[slug.length - 1];
   return items.find((e) => e.name === name);
 }
+
+/** Import path under @/components/xui (no extension), e.g. "card/card-02". */
+export function importPathFor(entry: CatalogEntry): string {
+  const p = entry.files[0]?.path ?? "";
+  return p
+    .replace(/^\/?src\/components\/xui\//, "")
+    .replace(/\.(tsx|ts)$/, "");
+}

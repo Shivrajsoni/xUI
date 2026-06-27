@@ -1,0 +1,17 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Templates" [ref=e7] [cursor=pointer]:
+          - /url: /#templates
+          - img [ref=e8]
+          - text: Templates
+        - generic [ref=e10]: /
+        - generic [ref=e11]: 3D Hero
+      - button "Copy code" [ref=e12] [cursor=pointer]:
+        - img [ref=e13]
+        - text: Copy code
+    - generic [ref=e16]:
+      - img [ref=e17]
+      - generic [ref=e19]: Loading template…
+  - alert [ref=e20]

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { findEntryBySlug, loadCatalog } from "@/lib/studio/catalog";
-import StudioWorkspaceLoader from "@/components/studio/StudioWorkspaceLoader";
+import { findEntryBySlug, importPathFor, loadCatalog } from "@/lib/studio/catalog";
+import StudioWorkspace from "@/components/studio/StudioWorkspace";
 
 export async function generateStaticParams() {
   const items = await loadCatalog();
@@ -28,8 +28,13 @@ export default async function StudioComponentPage(props: {
   if (!entry) return notFound();
 
   return (
-    <StudioWorkspaceLoader
-      entry={{ name: entry.name, category: entry.category, title: entry.title }}
+    <StudioWorkspace
+      entry={{
+        name: entry.name,
+        category: entry.category,
+        title: entry.title,
+        importPath: importPathFor(entry),
+      }}
     />
   );
 }

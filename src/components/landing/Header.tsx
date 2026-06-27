@@ -1,6 +1,5 @@
 import { ArrowUpRight, PartyPopper, Snowflake } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 import { Link as ViewTransitionsLink } from "next-view-transitions";
 import ThemeToggle from "@/lib/ThemeToggle";
 
@@ -9,8 +8,7 @@ const Header = () => {
     <>
       <div className="sm:hidden w-full p-2.5 bg-white dark:bg-black/5">
         <Link
-          href="#"
-          target="_blank"
+          href="/studio"
           className="flex items-center justify-center gap-2"
         >
           <span className="flex items-center gap-2">
@@ -62,6 +60,12 @@ const Header = () => {
                       Components
                     </ViewTransitionsLink>
                     <ViewTransitionsLink
+                      href="/templates"
+                      className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
+                    >
+                      Templates
+                    </ViewTransitionsLink>
+                    <ViewTransitionsLink
                       href="/studio"
                       className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
                     >
@@ -79,6 +83,12 @@ const Header = () => {
                     className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
                   >
                     Components
+                  </ViewTransitionsLink>
+                  <ViewTransitionsLink
+                    href="/templates"
+                    className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
+                  >
+                    Templates
                   </ViewTransitionsLink>
                   <ThemeToggle />
                 </div>

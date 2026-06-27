@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import type React from "react";
-import { createContext, useState, useContext, useRef, useEffect } from "react";
+import { createContext, createElement, useState, useContext, useRef, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Clock, Heart } from "lucide-react";
@@ -238,14 +238,12 @@ export const CardItem = ({
     }
   };
 
-  return (
-    <Tag
-      ref={ref}
-      className={cn(`w-fit transition ${transition}`, className)}
-      {...rest}
-    >
-      {children}
-    </Tag>
+  // Rendered via createElement so the dynamic `Tag` element isn't affected by
+  // global JSX augmentation from other libraries (e.g. react-three-fiber).
+  return createElement(
+    Tag,
+    { ref, className: cn(`w-fit transition ${transition}`, className), ...rest },
+    children
   );
 };
 

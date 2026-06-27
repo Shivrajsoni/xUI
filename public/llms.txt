@@ -1,18 +1,50 @@
 # xUI
 
-> xUI is an open-source collection of modern, interactive, themeable React + Tailwind CSS UI components. Copy, paste, and customize — every component ships as source you fully own. Built for Tailwind CSS v4 and React 19, installable via the shadcn CLI.
+> xUI is an open-source collection of modern, interactive, themeable React + Tailwind CSS UI components. Copy, paste, and customize — every component ships as source you fully own. Built for Tailwind CSS v4 and React 19, installable via the shadcn CLI. Includes xUI Studio (a live in-browser component customizer) and a gallery of full-page templates, including real-time three.js 3D pages.
 
 ## Install
 
-Components are distributed as a shadcn-compatible registry. Add any component with:
+Components are distributed as a shadcn-compatible registry. Register the namespace once in your components.json:
 
 ```
-npx shadcn@latest add https://x-ui-self.vercel.app/r/<component>.json
+{ "registries": { "@xui": "https://x-ui-self.vercel.app/r/{name}.json" } }
 ```
+
+Then add any component:
+
+```
+npx shadcn@latest add @xui/card-02
+```
+
+Or use the full URL without setup:
+
+```
+npx shadcn@latest add https://x-ui-self.vercel.app/r/card-02.json
+```
+
+## Studio (live component customizer)
+
+Open any component in Studio to edit its text, colors, size, and background with live controls (instant, no setup) and copy or export the result:
+
+- Studio home: https://x-ui-self.vercel.app/studio
+- Example: https://x-ui-self.vercel.app/studio/card/card-06
+
+## Templates (full-page layouts)
+
+Copy-ready page templates, including real-time WebGL (three.js) pages:
+
+- Browse: https://x-ui-self.vercel.app/templates
+- 3D Hero (three.js): https://x-ui-self.vercel.app/templates/r3f-hero
+- 3D Product (three.js): https://x-ui-self.vercel.app/templates/r3f-product
+- 3D Particle Orb (three.js): https://x-ui-self.vercel.app/templates/r3f-orb
+- 3D Portfolio: https://x-ui-self.vercel.app/templates/portfolio-3d
+- Pricing: https://x-ui-self.vercel.app/templates/pricing
+- Billing: https://x-ui-self.vercel.app/templates/billing
+- Dashboard: https://x-ui-self.vercel.app/templates/dashboard
 
 ## Components
 
-- Cards: https://x-ui-self.vercel.app/docs/components/card
+- Cards (incl. card-06, an interactive 3D portfolio card): https://x-ui-self.vercel.app/docs/components/card
 - Buttons: https://x-ui-self.vercel.app/docs/components/button
 - Alerts: https://x-ui-self.vercel.app/docs/components/alert
 - Profiles: https://x-ui-self.vercel.app/docs/components/profile
@@ -30,4 +62,4 @@ npx shadcn@latest add https://x-ui-self.vercel.app/r/<component>.json
 
 ## Tech
 
-React 19, Next.js 15, Tailwind CSS v4, Framer Motion, Radix UI, lucide-react.
+React 19, Next.js 16, Tailwind CSS v4, Framer Motion, three.js / React Three Fiber, Radix UI, lucide-react.

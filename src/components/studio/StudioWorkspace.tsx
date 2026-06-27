@@ -1,132 +1,69 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import {
-  SandpackProvider,
-  SandpackCodeEditor,
-  SandpackPreview,
-  SandpackConsole,
-  useSandpack,
-} from "@codesandbox/sandpack-react";
-import { useTheme } from "next-themes";
+import { useMemo, useState, type ComponentType } from "react";
+import dynamic from "next/dynamic";
 import { Link } from "next-view-transitions";
-import { ArrowLeft, Loader2, SlidersHorizontal, Terminal as TerminalIcon } from "lucide-react";
-import type { CatalogEntry, RegistryItem, SandboxBundle } from "@/lib/studio/types";
-import { buildSandbox, buildAppSource } from "@/lib/studio/build-sandbox";
-import { fetchInternalDeps, fetchRegistryItem } from "@/lib/studio/client";
+import { ArrowLeft, Loader2, RotateCcw } from "lucide-react";
+import type { CatalogEntry } from "@/lib/studio/types";
 import { getControls, defaultPropsFor } from "@/lib/studio/controls";
-import ControlsPanel from "./ControlsPanel";
+import ControlsPanel, { type CanvasBg } from "./ControlsPanel";
 import ExportBar from "./ExportBar";
 import AuthButton from "./AuthButton";
+import { cn } from "@/lib/utils";
 
-interface StudioWorkspaceProps {
-  entry: Pick<CatalogEntry, "name" | "category" | "title">;
-  /** Optional initial overrides (used by shared playgrounds). */
-  initialCode?: string;
-  initialProps?: Record<string, unknown>;
+export interface StudioEntry
+  extends Pick<CatalogEntry, "name" | "category" | "title"> {
+  /** Import path under @/components/xui (no extension), e.g. "card/card-02". */
+  importPath: string;
 }
+
+const CANVAS_CLASSES: Record<CanvasBg, string> = {
+  light: "bg-white",
+  subtle: "bg-zinc-50 dark:bg-zinc-900",
+  dark: "bg-zinc-950",
+  dots: "bg-white dark:bg-zinc-950 [background-image:radial-gradient(theme(colors.zinc.300)_1px,transparent_1px)] dark:[background-image:radial-gradient(theme(colors.zinc.700)_1px,transparent_1px)] [background-size:16px_16px]",
+  gradient:
+    "bg-gradient-to-br from-violet-100 via-fuchsia-50 to-rose-100 dark:from-violet-950/40 dark:via-zinc-950 dark:to-rose-950/40",
+};
 
 export default function StudioWorkspace({
   entry,
-  initialCode,
   initialProps,
-}: StudioWorkspaceProps) {
-  const { resolvedTheme } = useTheme();
-  const dark = resolvedTheme === "dark";
-  const [item, setItem] = useState<RegistryItem | null>(null);
-  const [deps, setDeps] = useState<Record<string, string> | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    setItem(null);
-    setError(null);
-    Promise.all([fetchRegistryItem(entry.name), fetchInternalDeps()])
-      .then(([it, dp]) => {
-        if (cancelled) return;
-        if (initialCode) it.files[0] = { ...it.files[0], content: initialCode };
-        setItem(it);
-        setDeps(dp);
-      })
-      .catch((e) => !cancelled && setError(String(e?.message ?? e)));
-    return () => {
-      cancelled = true;
-    };
-  }, [entry.name, initialCode]);
-
-  const initProps = useMemo(
-    () => initialProps ?? defaultPropsFor(entry.name),
-    [entry.name, initialProps]
-  );
-
-  const bundle: SandboxBundle | null = useMemo(() => {
-    if (!item || !deps) return null;
-    const assetBase =
-      typeof window !== "undefined" ? window.location.origin : "";
-    return buildSandbox(item, deps, { props: initProps, dark, assetBase });
-  }, [item, deps, initProps, dark]);
-
-  if (error) {
-    return (
-      <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
-        <p className="text-sm text-rose-500">Failed to load component.</p>
-        <p className="text-xs text-zinc-500">{error}</p>
-        <Link href="/studio" className="text-sm underline">
-          Back to Studio
-        </Link>
-      </div>
-    );
-  }
-
-  if (!bundle) {
-    return (
-      <div className="flex h-full items-center justify-center gap-2 text-zinc-500">
-        <Loader2 className="h-4 w-4 animate-spin" />
-        <span className="text-sm">Loading {entry.title}…</span>
-      </div>
-    );
-  }
-
-  return (
-    <SandpackProvider
-      key={`${entry.name}-${dark ? "dark" : "light"}`}
-      template="react-ts"
-      theme={dark ? "dark" : "light"}
-      files={bundle.files}
-      customSetup={{ dependencies: bundle.dependencies }}
-      options={{
-        activeFile: "/Component.tsx",
-        visibleFiles: ["/Component.tsx"],
-        recompileMode: "delayed",
-        recompileDelay: 400,
-      }}
-    >
-      <StudioInner entry={entry} dark={dark} initProps={initProps} />
-    </SandpackProvider>
-  );
-}
-
-function StudioInner({
-  entry,
-  dark,
-  initProps,
 }: {
-  entry: StudioWorkspaceProps["entry"];
-  dark: boolean;
-  initProps: Record<string, unknown>;
+  entry: StudioEntry;
+  initialProps?: Record<string, unknown>;
 }) {
-  const { sandpack } = useSandpack();
   const controls = getControls(entry.name);
-  const [props, setProps] = useState<Record<string, unknown>>(initProps);
-  const [showControls, setShowControls] = useState(true);
-  const [showConsole, setShowConsole] = useState(false);
+  const [props, setProps] = useState<Record<string, unknown>>(
+    () => initialProps ?? defaultPropsFor(entry.name)
+  );
+  const [canvasBg, setCanvasBg] = useState<CanvasBg>("subtle");
 
-  const onControlsChange = (next: Record<string, unknown>) => {
-    setProps(next);
-    sandpack.updateFile("/App.tsx", buildAppSource(next, dark));
+  // Render the REAL component live in-app — instant, free, pixel-perfect.
+  const LiveComponent = useMemo<ComponentType<Record<string, unknown>>>(
+    () =>
+      dynamic(
+        () =>
+          import(`@/components/xui/${entry.importPath}`).then(
+            (m) => m.default ?? m
+          ),
+        {
+          ssr: false,
+          loading: () => (
+            <div className="flex items-center gap-2 text-zinc-400">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              <span className="text-sm">Loading preview…</span>
+            </div>
+          ),
+        }
+      ),
+    [entry.importPath]
+  );
+
+  const reset = () => {
+    setProps(defaultPropsFor(entry.name));
+    setCanvasBg("subtle");
   };
-
-  const getCode = () => sandpack.files["/Component.tsx"]?.code ?? "";
 
   return (
     <div className="flex h-[calc(100vh-3.5rem)] flex-col">
@@ -149,66 +86,46 @@ function StudioInner({
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <ExportBar name={entry.name} getCode={getCode} getProps={() => props} />
+          <ExportBar name={entry.name} getProps={() => props} />
           <AuthButton />
         </div>
       </div>
 
-      {/* Body: editor | preview (+controls) */}
+      {/* Body: live preview | controls */}
       <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
-        <div className="min-h-0 flex-1 border-b lg:border-b-0 lg:border-r border-zinc-200 dark:border-zinc-800">
-          <SandpackCodeEditor
-            showLineNumbers
-            showTabs={false}
-            style={{ height: "100%" }}
-          />
+        {/* Preview canvas */}
+        <div
+          className={cn(
+            "relative flex min-h-0 flex-1 items-center justify-center overflow-auto p-8 transition-colors",
+            CANVAS_CLASSES[canvasBg]
+          )}
+        >
+          <LiveComponent {...props} />
         </div>
 
-        <div className="flex min-h-0 flex-1 flex-col">
-          <div className="relative min-h-0 flex-1 bg-white dark:bg-zinc-950">
-            <SandpackPreview
-              showOpenInCodeSandbox={false}
-              showRefreshButton
-              style={{ height: "100%" }}
-            />
-            {controls && (
-              <button
-                type="button"
-                onClick={() => setShowControls((v) => !v)}
-                className="absolute right-3 top-3 z-10 inline-flex items-center gap-1.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/90 dark:bg-zinc-900/90 px-2.5 py-1.5 text-xs font-medium backdrop-blur"
-              >
-                <SlidersHorizontal className="h-3.5 w-3.5" />
-                {showControls ? "Hide" : "Controls"}
-              </button>
-            )}
-          </div>
-
-          {controls && showControls && (
-            <div className="max-h-[42%] overflow-y-auto border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30">
-              <ControlsPanel
-                controls={controls}
-                values={props}
-                onChange={onControlsChange}
-              />
-            </div>
-          )}
-
-          <div className="shrink-0 border-t border-zinc-200 dark:border-zinc-800">
+        {/* Controls card */}
+        <aside className="w-full shrink-0 overflow-y-auto border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 lg:w-[340px] lg:border-l lg:border-t-0">
+          <div className="flex items-center justify-between px-5 pt-5">
+            <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              Customize
+            </h2>
             <button
               type="button"
-              onClick={() => setShowConsole((v) => !v)}
-              className="flex w-full items-center gap-2 px-4 py-1.5 font-mono text-[11px] uppercase tracking-wider text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200"
+              onClick={reset}
+              className="inline-flex items-center gap-1 text-xs text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
             >
-              <TerminalIcon className="h-3.5 w-3.5" />
-              Console
+              <RotateCcw className="h-3.5 w-3.5" />
+              Reset
             </button>
-            {showConsole && (
-              <div className="h-32 border-t border-zinc-200 dark:border-zinc-800">
-                <SandpackConsole style={{ height: "100%" }} />
-              </div>
-            )}
           </div>
-        </div>
+          <ControlsPanel
+            controls={controls}
+            values={props}
+            onChange={setProps}
+            canvasBg={canvasBg}
+            onCanvasBgChange={setCanvasBg}
+          />
+        </aside>
       </div>
     </div>
   );

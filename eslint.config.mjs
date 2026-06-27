@@ -19,6 +19,7 @@ const eslintConfig = [
       "react-hooks/error-boundaries": "warn",
       "react-hooks/immutability": "warn",
       "react-hooks/exhaustive-deps": "warn",
+      "react-hooks/refs": "warn",
     },
   },
 ];

@@ -23,7 +23,7 @@ export function HeaderPro() {
     setContent({
       text: "Built app fast",
       productName: "xUI",
-      link: "#",
+      link: "/studio",
     });
   }, []);
 

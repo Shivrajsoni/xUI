@@ -292,8 +292,8 @@ export const component: Registry = [
   {
     name: "vercel-chat",
     type: "registry:component",
-    dependencies: ["lucide-react", "textarea"],
-    registryDependencies: [],
+    dependencies: ["lucide-react"],
+    registryDependencies: ["textarea"],
     files: [
       {
         path: "src/components/xui/vercel-chat.tsx",

@@ -106,38 +106,6 @@ const deriveCatalogMeta = (component: (typeof registry)[number]) => {
   return { category, title };
 };
 
-// Collect the source of every internal `@/` module the Studio sandbox might need
-// (cn util, shadcn ui components, hooks), keyed by import specifier. The Studio
-// resolves `@/...` imports against this map when seeding a sandbox.
-const collectInternalDeps = async () => {
-  const map: Record<string, string> = {};
-  const root = REGISTRY_BASE_PATH;
-
-  const addDir = async (dir: string, prefix: string) => {
-    let entries: string[] = [];
-    try {
-      entries = await fs.readdir(path.join(root, dir));
-    } catch {
-      return;
-    }
-    for (const entry of entries) {
-      if (!/\.(tsx?|ts)$/.test(entry)) continue;
-      const content = await fs.readFile(path.join(root, dir, entry), "utf-8");
-      const base = entry.replace(/\.(tsx|ts)$/, "");
-      map[`${prefix}/${base}`] = content;
-    }
-  };
-
-  await addDir("src/components/ui", "@/components/ui");
-  await addDir("src/hooks", "@/hooks");
-  map["@/lib/utils"] = await fs.readFile(
-    path.join(root, "src/lib/utils.ts"),
-    "utf-8"
-  );
-
-  return map;
-};
-
 const main = async () => {
   const catalog: Array<Record<string, unknown>> = [];
 
@@ -178,16 +146,6 @@ const main = async () => {
     JSON.stringify(catalog, null, 2)
   );
   console.log(`Wrote catalog index with ${catalog.length} entries`);
-
-  // Internal `@/` module source map for the Studio sandbox resolver.
-  const internalDeps = await collectInternalDeps();
-  await writeFileRecursive(
-    `${PUBLIC_FOLDER_BASE_PATH}/_deps.json`,
-    JSON.stringify(internalDeps, null, 2)
-  );
-  console.log(
-    `Wrote internal deps map with ${Object.keys(internalDeps).length} modules`
-  );
 };
 
 main()

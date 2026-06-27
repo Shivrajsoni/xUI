@@ -1,0 +1,103 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - link "xUI" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e8]
+          - generic [ref=e21]: xUI
+        - generic [ref=e22]: /
+        - generic [ref=e23]: Studio
+      - generic [ref=e24]:
+        - link "Docs" [ref=e25] [cursor=pointer]:
+          - /url: /docs
+        - img [ref=e27] [cursor=pointer]
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - link "Studio" [ref=e33] [cursor=pointer]:
+              - /url: /studio
+              - img [ref=e34]
+              - text: Studio
+            - generic [ref=e36]: /
+            - generic [ref=e37]: Card 06
+            - generic [ref=e38]: card
+          - generic [ref=e40]:
+            - button "Copy code" [ref=e41] [cursor=pointer]:
+              - img [ref=e42]
+              - text: Copy code
+            - button "shadcn add" [ref=e45] [cursor=pointer]:
+              - img [ref=e46]
+              - text: shadcn add
+            - button "Save" [ref=e48] [cursor=pointer]:
+              - img [ref=e49]
+              - text: Save
+            - button "Share" [ref=e53] [cursor=pointer]:
+              - img [ref=e54]
+              - text: Share
+        - generic [ref=e60]:
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - img "Alex Rivera" [ref=e67]
+              - generic [ref=e68]: Available
+            - generic [ref=e69]:
+              - heading "Alex Rivera" [level=3] [ref=e70]
+              - paragraph [ref=e71]: Product Designer & Developer
+              - paragraph [ref=e72]: I craft interfaces that feel as good as they look.
+              - generic [ref=e73]:
+                - generic [ref=e74]: Design
+                - generic [ref=e75]: React
+                - generic [ref=e76]: Motion
+                - generic [ref=e77]: 3D
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - link "GitHub" [ref=e80] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e81]
+                - link "Twitter" [ref=e84] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e85]
+                - link "Website" [ref=e87] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e88]
+              - link "View work" [ref=e91] [cursor=pointer]:
+                - /url: "#"
+                - text: View work
+                - img [ref=e92]
+          - complementary [ref=e95]:
+            - generic [ref=e96]:
+              - heading "Customize" [level=2] [ref=e97]
+              - button "Reset" [ref=e98] [cursor=pointer]:
+                - img [ref=e99]
+                - text: Reset
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - generic [ref=e105]: Background
+                - generic [ref=e107]:
+                  - button "Light" [ref=e108] [cursor=pointer]: Light
+                  - button "Subtle" [ref=e110] [cursor=pointer]: Subtle
+                  - button "Dark" [ref=e112] [cursor=pointer]: Dark
+                  - button "Dots" [ref=e114] [cursor=pointer]: Dots
+                  - button "Gradient" [ref=e116] [cursor=pointer]: Gradient
+              - generic [ref=e118]:
+                - generic [ref=e120]: Properties
+                - generic [ref=e122]:
+                  - generic [ref=e123]:
+                    - generic [ref=e124]: Name
+                    - textbox "Name" [ref=e125]: Alex Rivera
+                  - generic [ref=e126]:
+                    - generic [ref=e127]: Role
+                    - textbox "Role" [ref=e128]: Product Designer & Developer
+                  - generic [ref=e129]:
+                    - generic [ref=e130]: Tagline
+                    - textbox "Tagline" [ref=e131]: I craft interfaces that feel as good as they look.
+                  - generic [ref=e132]:
+                    - generic [ref=e133]: Accent
+                    - generic [ref=e134]:
+                      - button "Violet" [ref=e135] [cursor=pointer]
+                      - button "Rose" [ref=e136] [cursor=pointer]
+                      - button "Emerald" [ref=e137] [cursor=pointer]
+                      - button "Amber" [ref=e138] [cursor=pointer]
+                      - button "Sky" [ref=e139] [cursor=pointer]
+  - alert [ref=e140]

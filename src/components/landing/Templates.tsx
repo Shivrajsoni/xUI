@@ -1,5 +1,5 @@
 import { Link } from "next-view-transitions";
-import { ArrowUpRight, LayoutTemplate } from "lucide-react";
+import { ArrowUpRight, Box, LayoutTemplate } from "lucide-react";
 import { templates } from "@/lib/templates";
 import { cn } from "@/lib/utils";
 import TemplateRenderer from "@/components/templates/TemplateRenderer";
@@ -35,22 +35,37 @@ export default function Templates() {
               className="absolute inset-0 z-10"
             />
 
-            {/* Scaled, non-interactive live preview */}
-            <div
-              className={cn(
-                "relative h-52 overflow-hidden border-b border-zinc-100 dark:border-zinc-800",
-                t.dark ? "bg-zinc-950" : "bg-zinc-50 dark:bg-zinc-900"
-              )}
-            >
+            {/* WebGL templates use a poster (avoid loading three.js in the gallery);
+                lightweight templates show a scaled, non-interactive live preview. */}
+            {t.webgl ? (
               <div
-                aria-hidden
-                className="pointer-events-none absolute left-0 top-0 origin-top-left"
-                style={{ width: "250%", height: "250%", transform: "scale(0.4)" }}
+                className={cn(
+                  "relative flex h-52 items-center justify-center overflow-hidden border-b border-zinc-100 dark:border-zinc-800 bg-gradient-to-br",
+                  t.poster ?? "from-violet-600 to-fuchsia-600"
+                )}
               >
-                <TemplateRenderer slug={t.slug} />
+                <Box className="h-12 w-12 text-white/90" />
+                <span className="absolute right-3 top-3 rounded-full bg-black/30 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur">
+                  three.js
+                </span>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent dark:from-black/30" />
-            </div>
+            ) : (
+              <div
+                className={cn(
+                  "relative h-52 overflow-hidden border-b border-zinc-100 dark:border-zinc-800",
+                  t.dark ? "bg-zinc-950" : "bg-zinc-50 dark:bg-zinc-900"
+                )}
+              >
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute left-0 top-0 origin-top-left"
+                  style={{ width: "250%", height: "250%", transform: "scale(0.4)" }}
+                >
+                  <TemplateRenderer slug={t.slug} />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent dark:from-black/30" />
+              </div>
+            )}
 
             <div className="flex flex-1 flex-col p-5">
               <div className="flex items-center justify-between">

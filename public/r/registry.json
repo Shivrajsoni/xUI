@@ -439,10 +439,11 @@
     "title": "Vercel Chat",
     "description": "",
     "dependencies": [
-      "lucide-react",
+      "lucide-react"
+    ],
+    "registryDependencies": [
       "textarea"
     ],
-    "registryDependencies": [],
     "files": [
       {
         "path": "/src/components/xui/vercel-chat.tsx",
