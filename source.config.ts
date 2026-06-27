@@ -1,13 +1,7 @@
-import { defineCollections, defineDocs, frontmatterSchema, metaSchema } from 'fumadocs-mdx/config';
+import { defineDocs, frontmatterSchema, metaSchema } from "fumadocs-mdx/config";
 
-export const docs = defineCollections({
-  type:"doc",
-  dir:"src/content/docs",
-  schema:frontmatterSchema
+export const docs = defineDocs({
+  dir: "src/content/docs",
+  docs: { schema: frontmatterSchema },
+  meta: { schema: metaSchema },
 });
-
-export const meta = defineCollections({
-    type:"meta",
-    dir:"src/content/docs",
-    schema:metaSchema
-})
