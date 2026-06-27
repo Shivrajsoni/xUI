@@ -3,7 +3,6 @@
 import { VerifiedIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "../ui/button";
 
 interface ReplyProps {
@@ -47,7 +46,7 @@ export default function TweetCard({
   },
 }: TweetCardProps) {
   return (
-    <Link href="#" target="_blank">
+    <div>
 
       <div
         className={cn(
@@ -179,6 +178,6 @@ export default function TweetCard({
           )}
         </div>
       </div>
-    </Link>
+    </div>
   );
 }

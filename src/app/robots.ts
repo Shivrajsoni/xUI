@@ -7,11 +7,15 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        // /preview renders raw component iframes (duplicates docs content);
+        // /studio/s are ephemeral shared playgrounds.
+        disallow: ["/preview/", "/studio/s/"],
       },
       // Explicitly welcome AI crawlers (GEO / agent discovery).
       {
         userAgent: ["GPTBot", "ClaudeBot", "Claude-Web", "PerplexityBot", "Google-Extended"],
         allow: "/",
+        disallow: ["/preview/", "/studio/s/"],
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,

@@ -2,11 +2,22 @@ import type { Metadata } from "next";
 import { Snowflake } from "lucide-react";
 import { Link } from "next-view-transitions";
 import ThemeToggle from "@/lib/ThemeToggle";
+import { siteConfig } from "@/config/site";
+
+const description =
+  "Open any xUI component in a live editor, tweak text, colors and size with controls, and export production-ready code. No setup required.";
 
 export const metadata: Metadata = {
   title: "Studio — Customize components live",
-  description:
-    "Open any xUI component in a live editor, tweak it with controls, and export production-ready code. No setup required.",
+  description,
+  alternates: { canonical: `${siteConfig.url}/studio` },
+  openGraph: {
+    title: "xUI Studio — Customize components live",
+    description,
+    url: `${siteConfig.url}/studio`,
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "xUI Studio" }],
+  },
 };
 
 export default function StudioLayout({

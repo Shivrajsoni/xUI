@@ -73,21 +73,9 @@ const Loader02 = ({
               viewBox="0 0 100 20"
               preserveAspectRatio="none"
             >
-              <motion.path
+              <path
                 d="M0 10 Q 25 0, 50 10 Q 75 20, 100 10 V 30 H 0 Z"
                 fill="url(#liquid-gradient)"
-                animate={{
-                  d: [
-                    "M0 10 Q 25 0, 50 10 Q 75 20, 100 10 V 30 H 0 Z",
-                    "M0 10 Q 25 20, 50 10 Q 75 0, 100 10 V 30 H 0 Z",
-                    "M0 10 Q 25 0, 50 10 Q 75 20, 100 10 V 30 H 0 Z",
-                  ],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                }}
               />
               <defs>
                 <linearGradient
