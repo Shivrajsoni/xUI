@@ -9,7 +9,7 @@ import {
   type RefObject,
 } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Copy, CheckCheck, Terminal, SlidersHorizontal } from "lucide-react";
+import { ArrowUpRight, Copy, CheckCheck, Terminal } from "lucide-react";
 import { CopyComponent } from "@/lib/action";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
@@ -130,7 +130,7 @@ export default function PreviewContent({
       <div className={cn("relative mt-4", "rounded-xl p-3")}>
         <div className="relative flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <a
-            href={`${prePath}/preview/${link}`}
+            href={`/preview/${link}`}
             target="_blank"
             rel="noreferrer"
             className={cn(
@@ -150,20 +150,6 @@ export default function PreviewContent({
             />
           </a>
 
-          <a
-            href={`/studio/${getFileName()}`}
-            className={cn(
-              "flex items-center gap-1.5",
-              "text-sm font-medium",
-              "text-zinc-800 dark:text-zinc-200",
-              "hover:text-zinc-600 dark:hover:text-zinc-400",
-              "transition-all duration-200 no-underline"
-            )}
-          >
-            <SlidersHorizontal className="h-4 w-4" />
-            Open in Studio
-          </a>
-
           <div className="flex items-center gap-2">
             <Button
               ref={terminalButtonRef}
@@ -173,10 +159,10 @@ export default function PreviewContent({
               className={cn(
                 "relative overflow-hidden",
                 "h-7 px-3 text-xs font-medium",
-                "bg-black dark:bg-white",
-                "text-white dark:text-black",
-                "hover:bg-black/90 dark:hover:bg-white/90",
-                "hover:text-white dark:hover:text-black",
+                "border border-zinc-200 bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800",
+                "text-zinc-800 dark:text-zinc-100",
+                "hover:bg-zinc-200/70 dark:hover:bg-zinc-700",
+                "hover:text-zinc-900 dark:hover:text-white",
                 "transition-all duration-200",
                 "group flex items-center gap-1",
                 "rounded-lg",
@@ -185,7 +171,7 @@ export default function PreviewContent({
             >
               {isTerminalCopied ? (
                 <>
-                  <CheckCheck className="h-3.5 w-3.5 text-white dark:text-black" />
+                  <CheckCheck className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
                 </>
               ) : (
                 <Terminal
@@ -215,10 +201,10 @@ export default function PreviewContent({
                   className={cn(
                     "relative overflow-hidden",
                     "h-7 px-3 text-xs font-medium",
-                    "bg-black dark:bg-white",
-                    "text-white dark:text-black",
-                    "hover:bg-black/90 dark:hover:bg-white/90",
-                    "hover:text-white dark:hover:text-black",
+                    "border border-zinc-200 bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800",
+                    "text-zinc-800 dark:text-zinc-100",
+                    "hover:bg-zinc-200/70 dark:hover:bg-zinc-700",
+                    "hover:text-zinc-900 dark:hover:text-white",
                     "transition-all duration-200",
                     "group flex items-center gap-1",
                     "rounded-lg",
@@ -227,7 +213,7 @@ export default function PreviewContent({
                 >
                   {isCopied ? (
                     <>
-                      <CheckCheck className="h-3.5 w-3.5 text-white dark:text-black" />
+                      <CheckCheck className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
                     </>
                   ) : (
                     <Copy

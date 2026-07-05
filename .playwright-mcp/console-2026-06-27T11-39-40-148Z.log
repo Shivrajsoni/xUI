@@ -1,8 +1,0 @@
-[  111963ms] [ERROR] Error: <path> attribute d: Expected moveto path command ('M' or 'm'), "undefined". @ http://localhost:3145/_next/static/chunks/3fw1h8n2pbnn_.js:0
-[  119810ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3145/_next/static/chunks/0pclps3g2zgfj.js:0
-[  120822ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3145/_next/static/chunks/0pclps3g2zgfj.js:0
-[  121801ms] [WARNING] THREE.WebGLShadowMap: PCFSoftShadowMap has been deprecated. Using PCFShadowMap instead. @ http://localhost:3145/_next/static/chunks/0pclps3g2zgfj.js:0
-[  122854ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3145/_next/static/chunks/0pclps3g2zgfj.js:0
-[  475944ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3146/_next/static/chunks/0pclps3g2zgfj.js:0
-[  477954ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3146/_next/static/chunks/0pclps3g2zgfj.js:0
-[  478926ms] [WARNING] THREE.WebGLShadowMap: PCFSoftShadowMap has been deprecated. Using PCFShadowMap instead. @ http://localhost:3146/_next/static/chunks/0pclps3g2zgfj.js:0

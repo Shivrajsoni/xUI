@@ -116,8 +116,10 @@ export default function Card_01({
             </div>
             <Button
               type="button"
+              aria-label="More options"
               className={cn(
                 "p-2 rounded-full",
+                "bg-transparent shadow-none",
                 "transition-all duration-200",
                 "hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80",
                 "active:bg-zinc-200 dark:active:bg-zinc-700",
@@ -231,8 +233,10 @@ export default function Card_01({
             <Button
               type="button"
               onClick={onBookmark}
+              aria-label="Bookmark post"
               className={cn(
                 "p-2.5 rounded-full",
+                "bg-transparent shadow-none",
                 "transition-all duration-300",
                 "hover:bg-zinc-100/80 dark:hover:bg-zinc-800/80",
                 "active:bg-zinc-200 dark:active:bg-zinc-700",

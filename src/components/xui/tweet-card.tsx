@@ -50,7 +50,7 @@ export default function TweetCard({
 
       <div
         className={cn(
-          "w-full min-w-[400px] md:min-w-[500px] max-w-xl p-1.5 rounded-2xl relative isolate overflow-hidden",
+          "w-full max-w-xl p-1.5 rounded-2xl relative isolate overflow-hidden",
           "bg-white/5 dark:bg-black/90",
           "bg-linear-to-br from-black/5 to-black/[0.02] dark:from-white/5 dark:to-white/[0.02]",
           "backdrop-blur-xl backdrop-saturate-[180%]",
@@ -102,7 +102,8 @@ export default function TweetCard({
                 </div>
                 <Button
                   type="button"
-                  className="h-8 w-8 text-black dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg p-1 flex items-center justify-center"
+                  aria-label="View on X"
+                  className="h-8 w-8 bg-transparent shadow-none text-black dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-lg p-1 flex items-center justify-center"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

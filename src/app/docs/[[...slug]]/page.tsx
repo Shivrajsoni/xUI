@@ -22,12 +22,25 @@ export default async function Page(props: {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    headline: page.data.title,
-    description: page.data.description,
-    url: `${siteConfig.url}${page.url}`,
-    author: { "@type": "Person", name: siteConfig.author },
-    publisher: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        headline: page.data.title,
+        description: page.data.description,
+        url: `${siteConfig.url}${page.url}`,
+        author: { "@type": "Person", name: siteConfig.author },
+        publisher: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
+      },
+      {
+        // Breadcrumbs help Google render the docs hierarchy in results.
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "xUI", item: siteConfig.url },
+          { "@type": "ListItem", position: 2, name: "Docs", item: `${siteConfig.url}/docs` },
+          { "@type": "ListItem", position: 3, name: page.data.title, item: `${siteConfig.url}${page.url}` },
+        ],
+      },
+    ],
   };
 
   return (

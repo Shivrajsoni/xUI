@@ -1,50 +1,56 @@
 import { Link } from "next-view-transitions";
-import { ArrowUpRight, Box, SlidersHorizontal } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Card06 from "@/components/xui/card/card-06";
+
+const facts = [
+  { label: "Renderer", value: "Pure CSS 3D" },
+  { label: "Dependencies", value: "None" },
+  { label: "Delivery", value: "Copy-paste source" },
+];
 
 export default function Showcase3D() {
   return (
-    <section className="relative overflow-hidden border-y border-zinc-200 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-950/40">
-      {/* atmospheric glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(60% 50% at 70% 30%, rgba(139,92,246,0.16), transparent 70%), radial-gradient(50% 40% at 20% 80%, rgba(244,63,94,0.12), transparent 70%)",
-        }}
-      />
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 sm:py-28 lg:grid-cols-2">
+    <section className="border-t border-zinc-200/70 bg-zinc-50/60 dark:border-zinc-800/70 dark:bg-zinc-950/50">
+      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 py-20 sm:py-28 lg:grid-cols-2">
         <div>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900/60 px-3 py-1 font-mono text-xs text-zinc-600 dark:text-zinc-400 backdrop-blur">
-            <Box className="h-3 w-3 text-violet-500" />
-            Interactive 3D
-          </span>
-          <h2 className="mt-5 text-balance text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
+          <h2 className="text-balance text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
             Components with{" "}
-            <span className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="font-display italic font-normal text-zinc-500 dark:text-zinc-400">
               real depth
             </span>
+            .
           </h2>
-          <p className="mt-4 max-w-md text-pretty text-lg text-zinc-600 dark:text-zinc-400">
-            Pure CSS 3D — no WebGL, no heavy dependencies. Move your cursor over
-            the card. Every layer parallaxes, and it ships as copy-paste source
-            you can tweak live in Studio.
+          <p className="mt-5 max-w-md text-pretty leading-relaxed text-zinc-600 dark:text-zinc-400">
+            Move your cursor over the card — every layer parallaxes in pure
+            CSS. No WebGL, no heavy dependencies, and the whole thing ships as
+            source you can read in one sitting.
           </p>
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/studio/card/card-06"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-zinc-900 px-6 text-sm font-medium text-white transition-transform hover:-translate-y-0.5 dark:bg-zinc-100 dark:text-zinc-900"
-            >
-              <SlidersHorizontal className="h-4 w-4" />
-              Customize in Studio
-            </Link>
+
+          <dl className="mt-8 grid max-w-md grid-cols-3 gap-px overflow-hidden rounded-xl border border-zinc-200/80 bg-zinc-200/80 dark:border-zinc-800/80 dark:bg-zinc-800/80">
+            {facts.map((f) => (
+              <div
+                key={f.label}
+                className="bg-white px-4 py-3 dark:bg-zinc-950"
+              >
+                <dt className="font-mono text-[10px] uppercase tracking-[0.15em] text-zinc-400 dark:text-zinc-500">
+                  {f.label}
+                </dt>
+                <dd className="mt-1 text-[13px] font-medium text-zinc-800 dark:text-zinc-200">
+                  {f.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+
+          <div className="mt-8">
             <Link
               href="/docs/components/card"
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-zinc-200 dark:border-zinc-800 px-6 text-sm font-medium text-zinc-700 dark:text-zinc-300 transition-colors hover:bg-white dark:hover:bg-zinc-900"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
             >
-              View docs
-              <ArrowUpRight className="h-4 w-4" />
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em]">
+                Get the source
+              </span>
+              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>

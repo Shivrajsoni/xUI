@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "Documentation | xUI — React + Tailwind UI components",
   },
   description:
-    "Copy, paste, and customize modern React + Tailwind CSS components, with full source and a live Studio.",
+    "Copy, paste, and customize modern React + Tailwind CSS components, with full source.",
   alternates: { canonical: `${siteConfig.url}/docs` },
   openGraph: {
     title: "Documentation — xUI",

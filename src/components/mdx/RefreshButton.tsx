@@ -13,7 +13,7 @@ const RefreshButton = ({onRefresh}:RefreshButtonProps) => {
     <Button
     type="button"
     onClick={onRefresh}
-    className="group absolute top-24 right-2 p-2 rounded-lg text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors z-10 flex items-center gap-2 bg-black dark:bg-white h-7 px-3"
+    className="group absolute top-24 right-2 p-2 rounded-lg border border-zinc-200 bg-zinc-100 text-zinc-800 hover:bg-zinc-200/70 hover:text-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 dark:hover:text-white shadow-none transition-colors z-10 flex items-center gap-2 h-7 px-3"
     aria-label="Refresh preview"
     >
         <RefreshCw 

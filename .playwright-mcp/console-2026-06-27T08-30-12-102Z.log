@@ -1,1 +1,0 @@
-[    3474ms] [ERROR] Error: <path> attribute d: Expected moveto path command ('M' or 'm'), "undefined". @ https://2-19-8-sandpack.codesandbox.io/node_modules/framer-motion/dist/cjs/create-VyaVgJv2.js:6096

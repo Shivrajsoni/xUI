@@ -1,0 +1,17 @@
+{
+  "name": "nav-02",
+  "type": "registry:component",
+  "description": "Floating pill navigation with an animated thumb that springs between active links via layoutId.",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport React, { useId, useState } from \"react\";\nimport { motion } from \"framer-motion\";\nimport { cn } from \"@/lib/utils\";\n\nconst Nav_02 = ({\n  links = [\"Overview\", \"Features\", \"Pricing\", \"Blog\"],\n  defaultActive = 0,\n  onChange,\n  className,\n}: {\n  links?: string[];\n  defaultActive?: number;\n  onChange?: (index: number, link: string) => void;\n  className?: string;\n}) => {\n  const [active, setActive] = useState(defaultActive);\n  const layoutId = useId();\n\n  return (\n    <div className={cn(\"flex w-full max-w-xl justify-center py-4\", className)}>\n      <nav\n        aria-label=\"Primary\"\n        className=\"relative flex max-w-full flex-wrap items-center justify-center gap-1 rounded-[26px] border border-zinc-200 bg-white/90 p-1.5 shadow-[0_12px_40px_-16px_rgba(24,24,27,0.3)] backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-900/90 dark:shadow-[0_16px_50px_-16px_rgba(0,0,0,0.8)]\"\n      >\n        {links.map((link, i) => {\n          const isActive = i === active;\n          return (\n            <motion.button\n              key={link}\n              type=\"button\"\n              whileTap={{ scale: 0.96 }}\n              aria-current={isActive ? \"page\" : undefined}\n              onClick={() => {\n                setActive(i);\n                onChange?.(i, link);\n              }}\n              className={cn(\n                \"relative rounded-full px-3 py-1.5 text-[13px] font-medium transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 sm:px-4\",\n                isActive\n                  ? \"text-white dark:text-white\"\n                  : \"text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100\"\n              )}\n            >\n              {isActive && (\n                <motion.span\n                  layoutId={layoutId}\n                  aria-hidden\n                  transition={{ type: \"spring\", stiffness: 400, damping: 32 }}\n                  className=\"absolute inset-0 rounded-full bg-sky-600 shadow-[0_4px_12px_-2px_rgba(2,132,199,0.45)] dark:bg-sky-500 dark:shadow-[0_4px_16px_-2px_rgba(56,189,248,0.35)]\"\n                />\n              )}\n              <span className=\"relative z-10\">{link}</span>\n            </motion.button>\n          );\n        })}\n        {/* Hairline top highlight */}\n        <span\n          aria-hidden\n          className=\"pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-zinc-300 to-transparent dark:via-white/20\"\n        />\n      </nav>\n    </div>\n  );\n};\n\nexport default Nav_02;\n",
+      "path": "/src/components/xui/nav/nav-02.tsx",
+      "target": "components/xui/nav-02.tsx"
+    }
+  ]
+}

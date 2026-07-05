@@ -139,10 +139,10 @@ export default function Card02({
             size="sm"
             className={cn(
               "w-full",
-              "bg-zinc-900 dark:bg-zinc-100",
-              "hover:bg-zinc-700 dark:hover:bg-zinc-300",
-              "text-white dark:text-zinc-900",
-              "shadow-xs"
+              "border border-zinc-200 bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800",
+              "hover:bg-zinc-200 dark:hover:bg-zinc-700",
+              "text-zinc-900 dark:text-zinc-100",
+              "shadow-none"
             )}
           >
             <a href={portfolio} target="_blank" rel="noopener noreferrer">

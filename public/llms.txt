@@ -1,6 +1,12 @@
 # xUI
 
-> xUI is an open-source collection of modern, interactive, themeable React + Tailwind CSS UI components. Copy, paste, and customize — every component ships as source you fully own. Built for Tailwind CSS v4 and React 19, installable via the shadcn CLI. Includes xUI Studio (a live in-browser component customizer) and a gallery of full-page templates, including real-time three.js 3D pages.
+> xUI is an open-source collection of modern, interactive, themeable React + Tailwind CSS UI components. Copy, paste, and customize — every component ships as source you fully own. Built for Tailwind CSS v4 and React 19, installable via the shadcn CLI.
+## For AI agents
+
+- Full machine-readable component index: https://x-ui-self.vercel.app/llms-full.txt
+- Catalog JSON (name, category, files, deps): https://x-ui-self.vercel.app/r/registry.json
+- Any component's full source as JSON: https://x-ui-self.vercel.app/r/{name}.json
+- Install without human setup: `npx shadcn@latest add https://x-ui-self.vercel.app/r/{name}.json`
 
 ## Install
 
@@ -22,35 +28,34 @@ Or use the full URL without setup:
 npx shadcn@latest add https://x-ui-self.vercel.app/r/card-02.json
 ```
 
-## Studio (live component customizer)
-
-Open any component in Studio to edit its text, colors, size, and background with live controls (instant, no setup) and copy or export the result:
-
-- Studio home: https://x-ui-self.vercel.app/studio
-- Example: https://x-ui-self.vercel.app/studio/card/card-06
-
-## Templates (full-page layouts)
-
-Copy-ready page templates, including real-time WebGL (three.js) pages:
-
-- Browse: https://x-ui-self.vercel.app/templates
-- 3D Hero (three.js): https://x-ui-self.vercel.app/templates/r3f-hero
-- 3D Product (three.js): https://x-ui-self.vercel.app/templates/r3f-product
-- 3D Particle Orb (three.js): https://x-ui-self.vercel.app/templates/r3f-orb
-- 3D Portfolio: https://x-ui-self.vercel.app/templates/portfolio-3d
-- Pricing: https://x-ui-self.vercel.app/templates/pricing
-- Billing: https://x-ui-self.vercel.app/templates/billing
-- Dashboard: https://x-ui-self.vercel.app/templates/dashboard
-
 ## Components
 
+- AI Tooling (agent trace, model picker, usage dashboard, prompt library, diff review): https://x-ui-self.vercel.app/docs/components/ai
+- Headers (SaaS, announcement, docs, e-commerce, glass floating — importable site headers): https://x-ui-self.vercel.app/docs/components/header
+- Glass / macOS (control center, music player, notification stack, widgets, spotlight): https://x-ui-self.vercel.app/docs/components/glass
+- Flow / motion (voice wave, logo marquee, word ribbon, card stream, breathing hero): https://x-ui-self.vercel.app/docs/components/flow
+- Tables & data (data table, kanban, calendar, file browser, code diff): https://x-ui-self.vercel.app/docs/components/table
+- Modals (confirm delete, share sheet, paywall, keyboard confirm, tour): https://x-ui-self.vercel.app/docs/components/modal
+- Widgets (weather, world clock, habit heatmap, pomodoro, system status): https://x-ui-self.vercel.app/docs/components/widget
+- Commerce (product card, cart, reviews, variant picker, order tracking): https://x-ui-self.vercel.app/docs/components/shop
+- Media (music player, video controls, podcast list, gallery, waveform): https://x-ui-self.vercel.app/docs/components/media
+- Status (presence, uptime, deploy pipeline, changelog, live activity): https://x-ui-self.vercel.app/docs/components/status
+- AI Chat (chatbot panel, streaming response, prompt input, voice orb): https://x-ui-self.vercel.app/docs/components/chat
+- Payment (3D credit card, checkout summary, transactions, pricing, usage meter): https://x-ui-self.vercel.app/docs/components/payment
+- Navigation (glass navbar, pill nav, sidebar, dock, command palette): https://x-ui-self.vercel.app/docs/components/nav
+- Inputs (OTP, file upload, filter search, tags, auth card): https://x-ui-self.vercel.app/docs/components/input
+- Stats (KPI cards, activity rings, leaderboard): https://x-ui-self.vercel.app/docs/components/stat
+- Notifications (notification center, toast stack): https://x-ui-self.vercel.app/docs/components/notification
+- Testimonials (marquee wall, spotlight quote): https://x-ui-self.vercel.app/docs/components/testimonial
+- Onboarding (setup checklist, wizard steps): https://x-ui-self.vercel.app/docs/components/onboarding
+- User menu (profile dropdown): https://x-ui-self.vercel.app/docs/components/user
 - Cards (incl. card-06, an interactive 3D portfolio card): https://x-ui-self.vercel.app/docs/components/card
 - Buttons: https://x-ui-self.vercel.app/docs/components/button
 - Alerts: https://x-ui-self.vercel.app/docs/components/alert
 - Profiles: https://x-ui-self.vercel.app/docs/components/profile
 - FAQ: https://x-ui-self.vercel.app/docs/components/faq
 - Lists: https://x-ui-self.vercel.app/docs/components/list
-- AI Input: https://x-ui-self.vercel.app/docs/components/ai-input
+- AI Input: https://x-ui-self.vercel.app/docs/components/input
 
 ## Hooks
 

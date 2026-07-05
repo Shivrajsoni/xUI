@@ -1,4 +1,3 @@
-import { HeaderPro } from "@/components/landing/HeaderPro";
 import { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 import { Snowflake } from "lucide-react";
 
@@ -13,11 +12,4 @@ export const baseOptions: BaseLayoutProps = {
       </div>
     ),
   },
-  links: [
-    {
-      type: "custom",
-      children: <HeaderPro />,
-    },
-    
-  ],
 };

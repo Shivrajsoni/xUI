@@ -6,7 +6,7 @@
       "type": "registry:hook",
       "content": "import { useEffect, useState } from \"react\";\n\nfunction useDebounce<T>(value: T, delay: number = 500): T {\n  const [debouncedValue, setDebouncedValue] = useState<T>(value);\n\n  useEffect(() => {\n    const timer = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n\n    return () => {\n      clearTimeout(timer);\n    };\n  }, [value, delay]);\n\n  return debouncedValue;\n}\n\nexport default useDebounce;\n",
       "path": "/src/hooks/use-debounce.ts",
-      "target": "@/hooks/use-debounce.ts"
+      "target": "hooks/use-debounce.ts"
     }
   ]
 }

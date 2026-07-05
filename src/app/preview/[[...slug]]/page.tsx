@@ -2,27 +2,12 @@ import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
 import NotFound from "@/app/notFound";
 
-// Arrays to categorize components
-const CENTERED_COMPONENTS = [
-  "alert",
-  "ai-input",
-  "button",
-  "card",
-  "faq",
-  "input",
-  "list",
-  "pricing",
-  "profile",
-  "text",
-  "checkout",
-  "particle-button",
-  "currency-transfer",
-  "hand-written-title",
-  "tweet-card",
-  "action-search-bar",
-  "blocks/ai-card-generation",
-  "vercel-v0-chat",
-  // Add more small components here
+// Components that paint their own full-page canvas; everything else is centered.
+const FULL_BLEED_COMPONENTS = [
+  "background-circles",
+  "background-paths",
+  "beams-background",
+  "bento-grid",
 ];
 
 export default async function PreviewPage({
@@ -41,17 +26,16 @@ export default async function PreviewPage({
       { ssr: true }
     );
 
-    // Check if component should be centered
-    const shouldCenter = CENTERED_COMPONENTS.some((component) =>
+    const isFullBleed = FULL_BLEED_COMPONENTS.some((component) =>
       componentName.startsWith(component)
     );
 
-    return shouldCenter ? (
-      <div className="min-h-screen flex items-center justify-center">
+    return isFullBleed ? (
+      <Component />
+    ) : (
+      <div className="flex min-h-screen items-center justify-center p-6">
         <Component />
       </div>
-    ) : (
-      <Component />
     );
   } catch (error) {
     console.error("Error loading component:", error);

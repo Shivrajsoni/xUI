@@ -1,7 +1,7 @@
 import Hero from "@/components/landing/Hero";
 import ComponentShowcase from "@/components/landing/ComponentShowcase";
 import Showcase3D from "@/components/landing/Showcase3D";
-import Templates from "@/components/landing/Templates";
+import ClosingCta from "@/components/landing/ClosingCta";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <ComponentShowcase />
       <Showcase3D />
-      <Templates />
+      <ClosingCta />
     </main>
   );
 }

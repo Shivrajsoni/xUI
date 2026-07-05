@@ -83,13 +83,26 @@ npx shadcn@latest add @xui/card-02
 
 - **Namespaced CLI** — `npx shadcn@latest add @xui/card-02` (after the one-time `components.json` setup above). Shortest.
 - **Direct CLI** — `npx shadcn@latest add https://x-ui-self.vercel.app/r/card-02.json`. No setup, works anywhere.
-- **Copy** — grab the source from any component's docs preview or from Studio.
-- **Studio** — open a component in [Studio](/studio), customize it live, then copy or export.
+- **Copy** — grab the source from any component's docs preview.
 
 <Callout>
   Prefer the CLI over copy-paste — it pulls in every required file and
   dependency for you.
 </Callout>
+
+### For AI agents
+
+xUI is built to be installed by coding agents without any human setup:
+
+- **Full component index:** [`/llms-full.txt`](/llms-full.txt) — every component with its description, dependencies, and source URL.
+- **Catalog JSON:** [`/r/registry.json`](/r/registry.json) — machine-readable list of names, categories, files, and deps.
+- **Per-component source:** `/r/{name}.json` — complete file contents, ready for `npx shadcn@latest add <url>`.
+
+An agent can go from "user wants a pricing section" to installed code with one command — no browsing required:
+
+```bash
+npx shadcn@latest add https://x-ui-self.vercel.app/r/payment-04.json
+```
 
 ### Using a monorepo
 
