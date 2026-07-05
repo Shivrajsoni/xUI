@@ -11,35 +11,25 @@ const Loader01 = () => {
         "bg-white dark:bg-black/5"
       )}
     >
-      <motion.div className="absolute h-[38px] w-[38px]">
+      <motion.div className="absolute h-[60px] w-[60px]">
         {[0, 1, 2, 3, 4, 5, 6].map((i) => (
           <motion.div
             key={i}
             className={clsx(
-              "items-center jusify-center",
               "absolute inset-0 rounded-full",
-              "border-2 border-bg-linear-to-br via-gray-500 to-transparent "
+              "border-2 border-transparent border-t-zinc-900 dark:border-t-zinc-100"
             )}
-            animate={{
-              rotate: 360,
-              scale: [1, 1.05 + i * 0.05, 1],
-              opacity: [0.8, 1, 0.8],
+            style={{
+              inset: `${i * 4}px`,
+              opacity: 1 - i * 0.1,
             }}
+            animate={{ rotate: 360 }}
             transition={{
-              duration: 5,
+              duration: 1.4 + i * 0.15,
               repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
+              ease: "linear",
             }}
-          >
-            <div
-              className={clsx(
-                "absolute inset-0 rounded-full mix-blend-screen",
-                "items-center justify-center",
-                `bg-[radial-gradient(ellipse_at_center
-                )}/10%,transparent_70%)]`
-              )}
-            />
-          </motion.div>
+          />
         ))}
       </motion.div>
     </div>

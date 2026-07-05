@@ -1,4 +1,3 @@
-
 import { source } from '@/lib/source';
 import {
   DocsBody,
@@ -10,7 +9,7 @@ import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import Preview from '@/components/mdx/preview';
 import PreviewClient from "@/components/mdx/previewClient";
-
+import { siteConfig } from '@/config/site';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -21,8 +20,35 @@ export default async function Page(props: {
 
   const MDX = page.data.body;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        headline: page.data.title,
+        description: page.data.description,
+        url: `${siteConfig.url}${page.url}`,
+        author: { "@type": "Person", name: siteConfig.author },
+        publisher: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
+      },
+      {
+        // Breadcrumbs help Google render the docs hierarchy in results.
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "xUI", item: siteConfig.url },
+          { "@type": "ListItem", position: 2, name: "Docs", item: `${siteConfig.url}/docs` },
+          { "@type": "ListItem", position: 3, name: page.data.title, item: `${siteConfig.url}${page.url}` },
+        ],
+      },
+    ],
+  };
+
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
@@ -47,8 +73,17 @@ export async function generateMetadata(props: {
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
+  const url = `${siteConfig.url}${page.url}`;
+
   return {
     title: page.data.title,
     description: page.data.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: page.data.title,
+      description: page.data.description,
+      url,
+      type: "article",
+    },
   };
 }

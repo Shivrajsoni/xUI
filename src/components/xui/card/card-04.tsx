@@ -1,11 +1,12 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import type React from "react";
-import { createContext, useState, useContext, useRef, useEffect } from "react";
+import { createContext, createElement, useState, useContext, useRef, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Star, Clock, Heart } from "lucide-react";
+import { ArrowRight, Star, Clock, Heart } from "lucide-react";
 const MouseEnterContext = createContext<
   [boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined
 >(undefined);
@@ -30,7 +31,6 @@ export const CardContainer = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
@@ -41,10 +41,9 @@ export const CardContainer = ({
     const x = (e.clientX - left - width / 2) / rotationIntensity;
     const y = (e.clientY - top - height / 2) / rotationIntensity;
 
-    // Update position for glow effect
+    // Calculate normalized mouse position for the glow effect
     const mouseX = (e.clientX - left) / width;
     const mouseY = (e.clientY - top) / height;
-    setPosition({ x: mouseX, y: mouseY });
 
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
 
@@ -221,7 +220,7 @@ export const CardItem = ({
   rotateZ?: number | string;
   scale?: number | string;
   transition?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
@@ -239,14 +238,12 @@ export const CardItem = ({
     }
   };
 
-  return (
-    <Tag
-      ref={ref}
-      className={cn(`w-fit transition ${transition}`, className)}
-      {...rest}
-    >
-      {children}
-    </Tag>
+  // Rendered via createElement so the dynamic `Tag` element isn't affected by
+  // global JSX augmentation from other libraries (e.g. react-three-fiber).
+  return createElement(
+    Tag,
+    { ref, className: cn(`w-fit transition ${transition}`, className), ...rest },
+    children
   );
 };
 
@@ -259,18 +256,32 @@ export const useMouseEnter = () => {
   return context;
 };
 
-export default function Card04() {
+export default function Card04({
+  perspective = 1500,
+  rotationIntensity = 25,
+  showGlow = true,
+  showParticles = true,
+  particleCount = 25,
+}: {
+  perspective?: number;
+  rotationIntensity?: number;
+  showGlow?: boolean;
+  showParticles?: boolean;
+  particleCount?: number;
+} = {}) {
   return (
     <CardContainer
       className="group/card"
-      perspective={1500}
+      perspective={perspective}
+      rotationIntensity={rotationIntensity}
+      showGlow={showGlow}
       glowColor="rgba(125, 99, 255, 0.4)"
     >
       <CardBody
         className="bg-white dark:bg-gray-900 relative w-auto sm:w-[30rem] h-auto rounded-xl p-6 border border-black/[0.1] dark:border-white/[0.1] shadow-xl"
         bgClassName="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-indigo-950"
-        showParticles={true}
-        particleCount={25}
+        showParticles={showParticles}
+        particleCount={particleCount}
       >
         <div className="card-shine rounded-xl"></div>
 
@@ -292,12 +303,12 @@ export default function Card04() {
         </CardItem>
 
         <CardItem translateZ="100" className="w-full mt-4">
-          <img
-            src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2822&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            height="1000"
-            width="1000"
+          <Image
+            src="/images/cosmic.svg"
+            height={600}
+            width={1000}
             className="h-60 w-full object-cover rounded-xl shadow-md group-hover/card:shadow-xl transition-all duration-300"
-            alt="Space landscape"
+            alt="Cosmic landscape"
           />
         </CardItem>
 

@@ -1,44 +1,47 @@
 ---
 title: Installation
-description: Getting started with xUI
+description: Getting started with xUI — install components via the shadcn CLI.
 icon: ListStart
 ---
 
-### 1. Install utilities
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 
-All xUI components use [Tailwind CSS v4](https://tailwindcss.com/docs/installation/framework-guides/nextjs), so make sure it's set up in your project.
+## Getting started
 
-We also use the `cn` utility function for classNames—you can install it like this:
+All xUI components are built with [Tailwind CSS v4](https://tailwindcss.com/docs/installation/framework-guides/nextjs) and [React 19](https://react.dev/). Make sure Tailwind is set up in your project before adding components.
 
-<Tabs items={["bun", "npx", "pnpm"]}>
+### 1. Install the `cn` utility
 
-```bash tab="bun"
-bunx shadcn@latest add  https://x-ui-self.vercel.app/r/utils.json
-```
+Every component uses the `cn` helper for class names. Add it with the shadcn CLI:
+
+<Tabs items={["npx", "bun", "pnpm"]}>
 
 ```bash tab="npx"
 npx shadcn@latest add https://x-ui-self.vercel.app/r/utils.json
 ```
 
-````bash tab="pnpm"
+```bash tab="bun"
+bunx shadcn@latest add https://x-ui-self.vercel.app/r/utils.json
+```
+
+```bash tab="pnpm"
 pnpm dlx shadcn@latest add https://x-ui-self.vercel.app/r/utils.json
+```
 
 </Tabs>
 
-### 2. Importing components 🎉
+### 2. Add a component
 
-We use [lucide-icons](https://lucide.dev/guide/installation) for icons, and most UI elements come from [shadcn/ui](https://ui.shadcn.com/). These will be handled automatically when using our CLI.
+We use [lucide-react](https://lucide.dev/guide/installation) for icons and primitives from [shadcn/ui](https://ui.shadcn.com/). The CLI installs any required dependencies automatically. For example, to add the `card-01` component:
 
-For example, to add the `card-01` component:
-
-<Tabs items={["bun", "npx", "pnpm"]}>
-
-```bash tab="bun"
-bunx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json
-````
+<Tabs items={["npx", "bun", "pnpm"]}>
 
 ```bash tab="npx"
 npx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json
+```
+
+```bash tab="bun"
+bunx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json
 ```
 
 ```bash tab="pnpm"
@@ -47,48 +50,72 @@ pnpm dlx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json
 
 </Tabs>
 
-And then use it in your code like this:
+### 3. Use it
 
-```jsx
-import Card01 from "@/components/xui/card/Card01";
+```tsx
+import Card01 from "@/components/xui/card/card-01";
 
 export default function Page() {
   return <Card01 />;
 }
 ```
 
-_Note: CLI ensures all required files are included. Don't skip it unless you're a fan of chaos._
+## Shorter installs with a namespace
 
-Now use it like this:
+Tired of pasting long URLs? Register xUI once in your `components.json` and
+install any component with a short `@xui/<name>` handle:
 
-```jsx
-/**
- * BackgroundPaths depends on 1 other components,
- * all auto-installed via CLI.
- */
-import BackgroundPaths from "@/components/xui/background-paths";
-
-export default function Page() {
-  return <AICardGeneration />;
+```json title="components.json"
+{
+  "registries": {
+    "@xui": "https://x-ui-self.vercel.app/r/{name}.json"
+  }
 }
 ```
 
-### 4. Optional dependencies
+Then:
 
-Some components might require extra packages (e.g. `@radix-ui/react-slot`, `clsx`, etc.). These will be mentioned in the docs for each component—don’t skip them unless you enjoy debugging at 2AM.
+```bash
+npx shadcn@latest add @xui/card-02
+```
 
-### 5. Using with Monorepo
+### Ways to add a component
 
-If you're using a monorepo, pass the path to your app using `-c` like so:
+- **Namespaced CLI** — `npx shadcn@latest add @xui/card-02` (after the one-time `components.json` setup above). Shortest.
+- **Direct CLI** — `npx shadcn@latest add https://x-ui-self.vercel.app/r/card-02.json`. No setup, works anywhere.
+- **Copy** — grab the source from any component's docs preview.
 
-<Tabs items={["bun", "npx", "pnpm"]}>
+<Callout>
+  Prefer the CLI over copy-paste — it pulls in every required file and
+  dependency for you.
+</Callout>
+
+### For AI agents
+
+xUI is built to be installed by coding agents without any human setup:
+
+- **Full component index:** [`/llms-full.txt`](/llms-full.txt) — every component with its description, dependencies, and source URL.
+- **Catalog JSON:** [`/r/registry.json`](/r/registry.json) — machine-readable list of names, categories, files, and deps.
+- **Per-component source:** `/r/{name}.json` — complete file contents, ready for `npx shadcn@latest add <url>`.
+
+An agent can go from "user wants a pricing section" to installed code with one command — no browsing required:
+
+```bash
+npx shadcn@latest add https://x-ui-self.vercel.app/r/payment-04.json
+```
+
+### Using a monorepo
+
+If you're in a monorepo, point the CLI at your app with `-c`:
+
+<Tabs items={["npx", "bun", "pnpm"]}>
+
+```bash tab="npx"
+npx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json -c ./apps/www
+```
 
 ```bash tab="bun"
 bunx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json -c ./apps/www
-```
-
-```bash tab="npx"
-npx shadcn@latest addhttps://x-ui-self.vercel.app/r/card-01.json -c ./apps/www
 ```
 
 ```bash tab="pnpm"
@@ -96,7 +123,3 @@ pnpm dlx shadcn@latest add https://x-ui-self.vercel.app/r/card-01.json -c ./apps
 ```
 
 </Tabs>
-
----
-
-import { Tab, Tabs } from "fumadocs-ui/components/tabs";

@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 import PreviewContent from "./preview-content";
 
 interface PreviewProps {
@@ -14,9 +15,8 @@ interface PreviewProps {
   isBlock?: boolean;
 }
 
-const prePath = process.env.VERCEL_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PRODUCTION_URL}`
-  : "http://localhost:3000/";
+// Canonical production URL for install commands; same-site links stay relative.
+const prePath = siteConfig.url;
 
 const Preview = ({
   children,
@@ -24,10 +24,8 @@ const Preview = ({
   link = "",
   useIframe = false,
   isBlock = false,
-  isPremium,
   comment = [],
   compact = false,
-  height,
 }: PreviewProps) => {
   return (
     <div className={cn("w-full overflow-hidden", className)}>
@@ -37,7 +35,7 @@ const Preview = ({
           <div className="relative w-full h-[1000dvh] overflow-hidden ">
             <iframe
               title={link}
-              src={`${prePath}/preview/${link}`}
+              src={`/preview/${link}`}
               className="w-full h-full overflow-y-auto list-none"
               style={{ border: "none", transform: "scale(0.95)" }}
             />

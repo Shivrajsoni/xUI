@@ -1,12 +1,26 @@
 export const siteConfig = {
     name: "xUI",
-    url: "https://xoder.vercel.app/",
-    ogImage: "#",
+    // Canonical production URL (no trailing slash).
+    url: "https://x-ui-self.vercel.app",
+    ogImage: "https://x-ui-self.vercel.app/opengraph-image",
     description:
-        "Copy, Paste, Customize. A collection of modern, interactive, customizable UI components. Quick and easy to use.",
+        "Copy, paste, customize. A collection of modern, interactive, themeable React + Tailwind CSS UI components. Built for Tailwind v4 and React 19.",
+    keywords: [
+        "UI components",
+        "React components",
+        "Tailwind CSS",
+        "Tailwind v4",
+        "shadcn",
+        "component library",
+        "Next.js",
+        "copy paste components",
+        "Framer Motion",
+        "design system",
+    ],
+    author: "Shivraj Soni",
     links: {
-        twitter: "#",
-        github: "#",
+        twitter: "https://x.com/_callmeXavier_",
+        github: "https://github.com/Shivrajsoni/xui",
     },
 };
 

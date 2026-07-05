@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type Variants, type Transition } from "framer-motion";
 import { cn } from "@/lib/utils";
 import {
   Filter,
@@ -54,7 +54,7 @@ const notificationVariants = {
   exit: { opacity: 0, y: -20 },
 };
 
-const lineVariants = {
+const lineVariants: Variants = {
   initial: { scaleX: 0, x: "-50%" },
   animate: {
     scaleX: 1,
@@ -68,13 +68,9 @@ const lineVariants = {
   },
 };
 
-const transition = { type: "spring", bounce: 0, duration: 0.4 };
+const transition: Transition = { type: "spring", bounce: 0, duration: 0.4 };
 
-export function Toolbar({
-  className,
-  activeColor = "text-primary",
-  onSearch,
-}: ToolbarProps) {
+export function Toolbar({ className }: ToolbarProps) {
   const [selected, setSelected] = React.useState<string | null>("filter");
   const [isToggled, setIsToggled] = React.useState(false);
   const [activeNotification, setActiveNotification] = React.useState<

@@ -64,13 +64,6 @@ export const navigationSections: NavSection[] = [
                 description: "Frequently asked questions",
                 count: 2,
             },
-            // {
-            //     id: 6,
-            //     title: "Input",
-            //     href: "/docs/components/input",
-            //     description: "More components coming soon",
-            //     count: "10",
-            // },
             {
                 id: 7,
                 title: "List",
@@ -78,14 +71,6 @@ export const navigationSections: NavSection[] = [
                 description: "List components and layouts",
                 count: 2,
             },
-            // {
-            //     id: 8,
-            //     title: "Pricing",
-            //     href: "/docs/components/pricing",
-            //     description: "Pricing components and layouts",
-            //     count: 4,
-            //     isNew: true,
-            // },
             {
                 id: 9,
                 title: "Profile",
@@ -94,14 +79,6 @@ export const navigationSections: NavSection[] = [
                 count: 2,
                 isNew: true,
             },
-            // {
-            //     id: 10,
-            //     title: "Text",
-            //     href: "/docs/components/text",
-            //     description: "Typography and text animation components",
-            //     count: 6,
-            //     isNew: true,
-            // },
         ],
     },
     {
@@ -110,19 +87,8 @@ export const navigationSections: NavSection[] = [
             {
                 id: 1,
                 title: "useAutoResizeTextarea",
-                href: "/docs/hooks/useAutoResizeTextarea",
+                href: "/docs/hooks/use-auto-resize-textarea",
             },
         ],
     },
-    // {
-    //     title: "Blocks",
-    //     items: [
-    //         {
-    //             id: 1,
-    //             title: "Block - 01",
-    //             href: "/docs/components/block",
-    //             isLab: true,
-    //         },
-    //     ],
-    // },
 ];

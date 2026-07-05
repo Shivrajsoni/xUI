@@ -1,198 +1,90 @@
 "use client";
 
-import { useState } from "react";
-import { Search } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
-interface FAQItemProps {
+interface FAQItem {
   id: string;
   question: string;
-  answer: string | React.ReactNode;
-  category: FAQCategory;
+  answer: string;
 }
 
-type FAQCategory = "getting-started" | "billing" | "features" | "support";
-
-const CATEGORIES: Record<FAQCategory, { label: string; color: string }> = {
-  "getting-started": {
-    label: "Getting Started",
-    color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
-  },
-  billing: {
-    label: "Billing",
-    color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
-  },
-  features: {
-    label: "Features",
-    color:
-      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
-  },
-  support: {
-    label: "Support",
-    color:
-      "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300",
-  },
-};
-
-const FAQ_ITEMS: FAQItemProps[] = [
+const FAQ_ITEMS: FAQItem[] = [
   {
-    id: "getting-started-1",
-    category: "getting-started",
-    question: "How do I get started with the platform?",
+    id: "faq-1",
+    question: "How do I get started?",
     answer:
-      "Getting started is easy! Simply sign up for an account and follow our quick setup guide. We'll walk you through each step of the process.",
+      "Sign up for a free account and follow the quick setup guide. You'll be up and running in just a few minutes.",
   },
   {
-    id: "billing-1",
-    category: "billing",
-    question: "What payment methods do you accept?",
+    id: "faq-2",
+    question: "Can I cancel anytime?",
     answer:
-      "We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through our payment partners.",
+      "Yes. There are no long-term contracts — you can upgrade, downgrade, or cancel your plan whenever you like.",
   },
   {
-    id: "features-1",
-    category: "features",
-    question: "What are the key features?",
+    id: "faq-3",
+    question: "Do you offer a free trial?",
     answer:
-      "Our platform includes real-time analytics, team collaboration tools, automated workflows, and customizable dashboards.",
+      "Every paid plan comes with a 14-day free trial. No credit card required to get started.",
   },
   {
-    id: "support-1",
-    category: "support",
-    question: "How can I get help?",
+    id: "faq-4",
+    question: "Is my data secure?",
     answer:
-      "Our support team is available 24/7 through our help center, email support, or live chat. We typically respond within 2 hours.",
+      "We use industry-standard encryption in transit and at rest, and never share your data with third parties.",
   },
 ];
 
-function CategoryBadge({ category }: { category: FAQCategory }) {
+export default function Faq02() {
   return (
-    <Badge
-      variant="secondary"
-      className={cn("mr-2 font-normal", CATEGORIES[category].color)}
-    >
-      {CATEGORIES[category].label}
-    </Badge>
-  );
-}
-
-function FAQItem({ id, question, answer, category }: FAQItemProps) {
-  return (
-    <AccordionItem
-      value={id}
-      className="bg-white dark:bg-gray-800/50 rounded-lg shadow-xs border border-gray-200 dark:border-gray-700 px-4"
-    >
-      <AccordionTrigger className="hover:no-underline py-4">
-        <div className="flex flex-col items-start gap-2 text-left">
-          <CategoryBadge category={category} />
-          <span className="text-lg font-medium text-gray-900 dark:text-white hover:text-primary transition-colors">
-            {question}
-          </span>
-        </div>
-      </AccordionTrigger>
-      <AccordionContent className="text-gray-700 dark:text-gray-300 leading-relaxed prose dark:prose-invert max-w-none pb-4">
-        {answer}
-      </AccordionContent>
-    </AccordionItem>
-  );
-}
-
-function Faq01() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<FAQCategory | "all">(
-    "all"
-  );
-
-  const filteredFAQs = FAQ_ITEMS.filter((faq) => {
-    const matchesSearch =
-      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      String(faq.answer).toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory =
-      selectedCategory === "all" || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  return (
-    <section
-      className="py-16 bg-gray-50 dark:bg-black/5 w-full"
-      aria-labelledby="faq-heading"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <div className="text-center mb-12">
+    <section className="py-16 w-full" aria-labelledby="faq-02-heading">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+        <div className="text-center mb-10">
           <h2
-            id="faq-heading"
-            className="text-4xl font-bold text-gray-900 dark:text-white mb-4"
+            id="faq-02-heading"
+            className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-3"
           >
-            Frequently Asked Questions
+            Questions & answers
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            Find answers to common questions about our platform
+          <p className="text-zinc-600 dark:text-zinc-400">
+            Everything you need to know before getting started.
           </p>
         </div>
 
-        <div className="mb-8 space-y-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-            <Input
-              type="search"
-              placeholder="Search FAQs..."
-              className="pl-10"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            <Badge
-              variant="secondary"
-              className={cn(
-                "cursor-pointer",
-                selectedCategory === "all"
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-gray-100 text-gray-800"
-              )}
-              onClick={() => setSelectedCategory("all")}
-            >
-              All
-            </Badge>
-            {Object.entries(CATEGORIES).map(([key, { label, color }]) => (
-              <Badge
-                key={key}
-                variant="secondary"
-                className={cn(
-                  "cursor-pointer",
-                  selectedCategory === key ? color : "bg-gray-100 text-gray-800"
-                )}
-                onClick={() => setSelectedCategory(key as FAQCategory)}
-              >
-                {label}
-              </Badge>
-            ))}
-          </div>
-        </div>
-
-        <Accordion type="single" collapsible className="space-y-4">
-          {filteredFAQs.map((faq) => (
-            <FAQItem key={faq.id} {...faq} />
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full divide-y divide-zinc-200 dark:divide-zinc-800 border-y border-zinc-200 dark:border-zinc-800"
+        >
+          {FAQ_ITEMS.map((faq) => (
+            <AccordionItem key={faq.id} value={faq.id} className="border-none">
+              <AccordionTrigger className="hover:no-underline py-5 text-left text-base font-medium text-zinc-900 dark:text-zinc-100">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="pb-5 text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
           ))}
         </Accordion>
 
-        {filteredFAQs.length === 0 && (
-          <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-            No FAQs found matching your search criteria
-          </div>
-        )}
+        <div className="mt-10 flex flex-col items-center gap-3 text-center">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            Still have questions?
+          </p>
+          <Button variant="outline" className="gap-2">
+            <MessageCircle className="w-4 h-4" />
+            Contact support
+          </Button>
+        </div>
       </div>
     </section>
   );
 }
-
-export default Faq01;

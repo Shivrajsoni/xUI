@@ -37,8 +37,8 @@ const Loader02 = ({
     >
       {/* Liquid Container */}
       <div
-        className={`relative w-[64px] h-[64px]
-        } overflow-hidden rounded-full border-4 border-slate-300 dark:border-slate-600 shadow-inner`}
+        style={{ width: size, height: size }}
+        className="relative overflow-hidden rounded-full border-4 border-slate-300 dark:border-slate-600 shadow-inner"
       >
         {/* Liquid */}
         <motion.div
@@ -73,21 +73,9 @@ const Loader02 = ({
               viewBox="0 0 100 20"
               preserveAspectRatio="none"
             >
-              <motion.path
+              <path
                 d="M0 10 Q 25 0, 50 10 Q 75 20, 100 10 V 30 H 0 Z"
                 fill="url(#liquid-gradient)"
-                animate={{
-                  d: [
-                    "M0 10 Q 25 0, 50 10 Q 75 20, 100 10 V 30 H 0 Z",
-                    "M0 10 Q 25 20, 50 10 Q 75 0, 100 10 V 30 H 0 Z",
-                    "M0 10 Q 25 0, 50 10 Q 75 20, 100 10 V 30 H 0 Z",
-                  ],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                }}
               />
               <defs>
                 <linearGradient
@@ -158,21 +146,3 @@ const Bubbles = ({ count }: { count: number }) => {
   );
 };
 export default Loader02;
-
-// export const DemoLoader02 = () => {
-//   return (
-//     <Loader02
-//       size={40}
-//       colorLight="from-blue-400 to-blue-500"
-//       colorDark="from-purple-600 to-indigo-800"
-//       bubbleCount={10}
-//     />
-//   );
-// };
-
-// <Loader02
-// size={40}
-//  colorLight="from-pink-400 to-rose-500"
-//  colorDark="from-purple-600 to-indigo-800"
-//  bubbleCount={10}
-// />

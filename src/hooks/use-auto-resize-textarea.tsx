@@ -7,11 +7,11 @@ interface useAutoResizeTextAreaProps{
 }
 
 export function useAutoResizeTextArea ({minHeight,maxHeight}:useAutoResizeTextAreaProps){
-    const textAreaRef = useRef<HTMLTextAreaElement>(null);
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
     
     const adjustHeight = useCallback(
         (reset?:boolean)=> {
-            const textarea = textAreaRef.current;
+            const textarea = textareaRef.current;
             if(!textarea) return;
 
             if(reset){
@@ -35,7 +35,7 @@ export function useAutoResizeTextArea ({minHeight,maxHeight}:useAutoResizeTextAr
     
     useEffect(() => {
         // Set initial height
-        const textarea = textAreaRef.current;
+        const textarea = textareaRef.current;
         if (textarea) {
             textarea.style.height = `${minHeight}px`;
         }
@@ -47,5 +47,5 @@ export function useAutoResizeTextArea ({minHeight,maxHeight}:useAutoResizeTextAr
         return () => window.removeEventListener("resize", handleResize);
     }, [adjustHeight]);
 
-    return {textAreaRef,adjustHeight};
+    return {textareaRef,adjustHeight};
 }

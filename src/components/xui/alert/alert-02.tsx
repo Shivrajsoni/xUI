@@ -10,7 +10,7 @@ export default function Alert02() {
         <div className="flex items-center gap-4">
           <div className="relative h-10 w-10 shrink-0">
             <Image
-              src="https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png"
+              src="/avatars/avatar-01.svg"
               alt="Sarah Chen"
               sizes="40px"
               fill
@@ -37,17 +37,18 @@ export default function Alert02() {
           <div className="flex items-center gap-2">
             <Button
               type="button"
-              className="rounded-lg flex items-center justify-center h-8 w-8 p-0 hover:bg-red-50 dark:hover:bg-red-950/50 text-zinc-400 hover:text-red-600 dark:text-zinc-500 dark:hover:text-red-400 transition-colors"
+              aria-label="Decline invitation"
+              className="rounded-lg flex items-center justify-center h-8 w-8 p-0 border border-zinc-200 bg-white shadow-none hover:bg-red-50 hover:border-red-200 text-zinc-400 hover:text-red-600 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-red-950/50 dark:hover:border-red-900 dark:text-zinc-400 dark:hover:text-red-400 transition-colors"
             >
               <X className="h-4 w-4" />
             </Button>
             <Button
               type="button"
+              aria-label="Accept invitation"
               className={cn(
-                "rounded-lg flex items-center justify-center h-8 w-8 p-0",
-                "hover:bg-emerald-50 dark:hover:bg-emerald-950/50",
-                "text-zinc-400 hover:text-emerald-600",
-                "dark:text-zinc-500 dark:hover:text-emerald-400",
+                "rounded-lg flex items-center justify-center h-8 w-8 p-0 shadow-none",
+                "bg-emerald-600 text-white hover:bg-emerald-500",
+                "dark:bg-emerald-500 dark:text-white dark:hover:bg-emerald-400",
                 "transition-colors"
               )}
             >

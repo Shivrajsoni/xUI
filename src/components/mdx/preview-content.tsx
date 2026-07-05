@@ -9,10 +9,9 @@ import {
   type RefObject,
 } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Copy, Check, CheckCheck, Terminal } from "lucide-react";
+import { ArrowUpRight, Copy, CheckCheck, Terminal } from "lucide-react";
 import { CopyComponent } from "@/lib/action";
 import { cn } from "@/lib/utils";
-//import { OpenInV0Button } from "../vercel-v0-chat";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function PreviewContent({
@@ -30,9 +29,7 @@ export default function PreviewContent({
     content: "",
     success: false,
   });
-  const [showLoginDialog, setShowLoginDialog] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [isTerminalCopied, setIsTerminalCopied] = useState(false);
 
   const handleCopyClick = async () => {
@@ -64,16 +61,7 @@ export default function PreviewContent({
     }, 2000);
   };
 
-  // const openInV0 = () => {
-  //   const [folder, filename] = link.split("/");
-
-  //   return filename ? filename : folder;
-  // };
-
   useEffect(() => {
-    if (state.error) {
-      setShowLoginDialog(true);
-    }
     if (state.success && state.content) {
       setIsCopied(true);
       navigator.clipboard.writeText(state.content);
@@ -139,14 +127,10 @@ export default function PreviewContent({
         />
       )}
 
-      <div
-        className={cn("relative mt-4", "rounded-xl p-3")}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+      <div className={cn("relative mt-4", "rounded-xl p-3")}>
         <div className="relative flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <a
-            href={`${prePath}/preview/${link}`}
+            href={`/preview/${link}`}
             target="_blank"
             rel="noreferrer"
             className={cn(
@@ -167,7 +151,6 @@ export default function PreviewContent({
           </a>
 
           <div className="flex items-center gap-2">
-            {/* <OpenInV0Button name={openInV0()} /> */}
             <Button
               ref={terminalButtonRef}
               onClick={handleTerminalClick}
@@ -176,10 +159,10 @@ export default function PreviewContent({
               className={cn(
                 "relative overflow-hidden",
                 "h-7 px-3 text-xs font-medium",
-                "bg-black dark:bg-white",
-                "text-white dark:text-black",
-                "hover:bg-black/90 dark:hover:bg-white/90",
-                "hover:text-white dark:hover:text-black",
+                "border border-zinc-200 bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800",
+                "text-zinc-800 dark:text-zinc-100",
+                "hover:bg-zinc-200/70 dark:hover:bg-zinc-700",
+                "hover:text-zinc-900 dark:hover:text-white",
                 "transition-all duration-200",
                 "group flex items-center gap-1",
                 "rounded-lg",
@@ -188,7 +171,7 @@ export default function PreviewContent({
             >
               {isTerminalCopied ? (
                 <>
-                  <CheckCheck className="h-3.5 w-3.5 text-white dark:text-black" />
+                  <CheckCheck className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
                 </>
               ) : (
                 <Terminal
@@ -218,10 +201,10 @@ export default function PreviewContent({
                   className={cn(
                     "relative overflow-hidden",
                     "h-7 px-3 text-xs font-medium",
-                    "bg-black dark:bg-white",
-                    "text-white dark:text-black",
-                    "hover:bg-black/90 dark:hover:bg-white/90",
-                    "hover:text-white dark:hover:text-black",
+                    "border border-zinc-200 bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800",
+                    "text-zinc-800 dark:text-zinc-100",
+                    "hover:bg-zinc-200/70 dark:hover:bg-zinc-700",
+                    "hover:text-zinc-900 dark:hover:text-white",
                     "transition-all duration-200",
                     "group flex items-center gap-1",
                     "rounded-lg",
@@ -230,7 +213,7 @@ export default function PreviewContent({
                 >
                   {isCopied ? (
                     <>
-                      <CheckCheck className="h-3.5 w-3.5 text-white dark:text-black" />
+                      <CheckCheck className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
                     </>
                   ) : (
                     <Copy

@@ -4,10 +4,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { useAutoResizeTextArea } from "@/hooks/use-auto-resize-textarea";
 import { cn } from "@/lib/utils";
 import { CornerRightUp, Mic } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
-export default function AIInput_01() {
-  //@ts-ignore
+export default function AIInput_01({
+  placeholder = "Type your message...",
+}: { placeholder?: string } = {}) {
   const { textareaRef, adjustHeight } = useAutoResizeTextArea({
     minHeight: 52,
     maxHeight: 200,
@@ -24,7 +25,7 @@ export default function AIInput_01() {
       <div className="relative max-w-xl w-full mx-auto">
         <Textarea
           id="ai-input-01"
-          placeholder="Type your message..."
+          placeholder={placeholder}
           className={cn(
             "max-w-xl bg-black/5 dark:bg-white/5 rounded-3xl pl-6 pr-16",
             "placeholder:text-black/50 dark:placeholder:text-white/50",

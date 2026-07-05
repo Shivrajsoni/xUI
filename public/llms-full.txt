@@ -1,0 +1,204 @@
+# xUI — full component index (for AI agents)
+
+> Copy, paste, customize. A collection of modern, interactive, themeable React + Tailwind CSS UI components. Built for Tailwind v4 and React 19.
+
+Every component ships as source via a shadcn-compatible registry.
+
+## How to install any component
+```
+npx shadcn@latest add https://x-ui-self.vercel.app/r/{name}.json
+```
+Or register the namespace once in components.json — { "registries": { "@xui": "https://x-ui-self.vercel.app/r/{name}.json" } } — then: npx shadcn@latest add @xui/{name}
+
+Machine-readable catalog (name, category, files, dependencies): https://x-ui-self.vercel.app/r/registry.json
+Raw source for any item (JSON with embedded file contents): https://x-ui-self.vercel.app/r/{name}.json
+
+## action-search-bar
+- action-search-bar (deps: lucide-react, motion) — https://x-ui-self.vercel.app/r/action-search-bar.json
+
+## ai
+- ai-01 — Agent run trace timeline with sequential tool steps, duration chips, collapsible outputs, and replay. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/ai-01.json
+- ai-02 — Model picker grouped by provider with capability chips, context labels, speed/quality dot meters, and search. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/ai-02.json
+- ai-03 — Token usage dashboard with count-up total, per-model stacked bar, 14-day mini chart, and budget warning. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/ai-03.json
+- ai-04 — Prompt template gallery with category filters, layout-animated grid, variable pills, copy and favorite actions. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/ai-04.json
+- ai-05 — AI code-review card with before/after diff, explanation callout, confidence meter, and animated accept merge. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/ai-05.json
+
+## ai-input
+- ai-input-01 (deps: lucide-react) — https://x-ui-self.vercel.app/r/ai-input-01.json
+
+## alert
+- alert-01 (deps: lucide-react) — https://x-ui-self.vercel.app/r/alert-01.json
+- alert-02 (deps: lucide-react) — https://x-ui-self.vercel.app/r/alert-02.json
+
+## avatar-picker
+- avatar-picker (deps: lucide-react, motion) — https://x-ui-self.vercel.app/r/avatar-picker.json
+
+## background-circles
+- background-circles (deps: motion) — https://x-ui-self.vercel.app/r/background-circles.json
+
+## background-paths
+- background-paths (deps: motion) — https://x-ui-self.vercel.app/r/background-paths.json
+
+## beams-background
+- beams-background (deps: motion) — https://x-ui-self.vercel.app/r/beams-background.json
+
+## bento-grid
+- bento-grid (deps: lucide-react, motion) — https://x-ui-self.vercel.app/r/bento-grid.json
+
+## button
+- btn-01 (deps: lucide-react) — https://x-ui-self.vercel.app/r/btn-01.json
+- btn-02 — https://x-ui-self.vercel.app/r/btn-02.json
+- btn-03 (deps: lucide-react, motion) — https://x-ui-self.vercel.app/r/btn-03.json
+
+## card
+- card-01 (deps: lucide-react) — https://x-ui-self.vercel.app/r/card-01.json
+- card-02 (deps: lucide-react) — https://x-ui-self.vercel.app/r/card-02.json
+- card-03 (deps: lucide-react) — https://x-ui-self.vercel.app/r/card-03.json
+- card-05 (deps: motion) — https://x-ui-self.vercel.app/r/card-05.json
+- card-04 (deps: lucide-react) — https://x-ui-self.vercel.app/r/card-04.json
+- card-06 — Interactive 3D portfolio card with mouse-tracked tilt and parallax depth. (deps: lucide-react) — https://x-ui-self.vercel.app/r/card-06.json
+
+## chat
+- chat-01 — Complete AI chat panel with model badge, user/assistant bubbles, spring typing indicator, and a controlled input row with attach, mic, and send. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/chat-01.json
+- chat-02 — Assistant message that typewriter-streams an answer with an inline code block, blinking caret, then fades in copy/retry/vote actions and a token-count label. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/chat-02.json
+- chat-03 — Hero AI prompt box with glowing focus ring, model-switch chip, attach and web-search toggles, and suggestion chips that fill the input. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/chat-03.json
+- chat-04 — Voice-assistant mic orb that breathes when idle and shows equalizer bars with expanding pulse rings while listening. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/chat-04.json
+
+## faq
+- faq-01 — https://x-ui-self.vercel.app/r/faq-01.json
+- faq-02 (deps: motion, lucide-react) — https://x-ui-self.vercel.app/r/faq-02.json
+
+## flow
+- flow-01 — Live voice waveform strip with a traveling sine wave, sweeping gradient tint, mic pause toggle, and typing transcript. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/flow-01.json
+- flow-02 — Infinite logo cloud marquee that eases to a slower speed on hover, with edge fades and grayscale-to-color wordmarks. (deps: framer-motion) — https://x-ui-self.vercel.app/r/flow-02.json
+- flow-03 — Full-width ribbon of rotating capability words with blur-crossfade morphs and a continuously flowing gradient underline. (deps: framer-motion) — https://x-ui-self.vercel.app/r/flow-03.json
+- flow-04 — Auto-drifting horizontal stream of feature cards with pause on hover, drag-to-scrub momentum, and seamless looping. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/flow-04.json
+- flow-05 — Calm hero panel with a slowly breathing gradient blob field whose copy lifts gently on each inhale. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/flow-05.json
+
+## glass
+- glass-01 — macOS-style Control Center glass panel with working connectivity toggles, draggable brightness and volume sliders, and a music mini-row. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/glass-01.json
+- glass-02 — Frosted now-playing music card with clickable seek scrubber, transport controls with press physics, and an AirPlay volume row. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/glass-02.json
+- glass-03 — iOS-style stacked glass notifications that expand into a list with spring depth, per-notification dismiss, and collapse control. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/glass-03.json
+- glass-04 — 2x2 frosted macOS desktop widget grid: calendar, weather, animated battery ring, and a checkable reminders list. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/glass-04.json
+- glass-05 — mac Spotlight search with live filtering across grouped results, arrow-key selection highlight, and kbd hints on frosted glass. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/glass-05.json
+
+## header
+- header-01 — SaaS marketing header with a two-column product mega-dropdown, What's-new card, auth CTAs and a mobile slide-down sheet. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/header-01.json
+- header-02 — Centered-logo header with links split around the logo and a dismissible announcement bar that collapses with a height animation. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/header-02.json
+- header-03 — Docs header with animated section-tab underline, ⌘K search field with focus glow, version dropdown chip and GitHub button. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/header-03.json
+- header-04 — E-commerce header with category pills, centered search, wishlist and cart badges with a springing item count, and a free-shipping banner. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/header-04.json
+- header-05 — Floating glassmorphic rounded-full header with layout-animated active pill, glowing CTA and a scroll-state compact transition. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/header-05.json
+
+## hooks
+- use-auto-resize-textarea — https://x-ui-self.vercel.app/r/use-auto-resize-textarea.json
+- use-debounce — https://x-ui-self.vercel.app/r/use-debounce.json
+
+## input
+- input-01 — Six-digit OTP input with auto-advance, paste support, shake-on-error, and an emerald verified state. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/input-01.json
+- input-02 — Drag-and-drop upload dropzone with animated per-file progress, type icons, remove actions, and a size total. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/input-02.json
+- input-03 — Search field with removable inline filter chips and an animated results dropdown that adds selections as chips. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/input-03.json
+- input-04 — Tag input with tinted chips, Enter-to-add, a limit with shake feedback, counter, and quick-add suggestions. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/input-04.json
+- form-01 — Sign-in card with GitHub/Google buttons, floating focus fields, show/hide password, animated checkbox, and a spinner-to-check submit. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/form-01.json
+
+## lib
+- utils (deps: clsx, tailwind-merge) — https://x-ui-self.vercel.app/r/utils.json
+
+## list
+- list-01 (deps: lucide-react) — https://x-ui-self.vercel.app/r/list-01.json
+- list-02 (deps: lucide-react) — https://x-ui-self.vercel.app/r/list-02.json
+
+## loader
+- loader-01 (deps: motion) — https://x-ui-self.vercel.app/r/loader-01.json
+- loader-02 (deps: motion) — https://x-ui-self.vercel.app/r/loader-02.json
+
+## media
+- media-01 — Full music player card with rotating vinyl sheen, hover-scrub seek bar, morphing play/pause, like and queue actions, and an up-next row. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/media-01.json
+- media-02 — 16:9 video frame with hover-revealed control bar, center play burst, buffered timeline with chapter ticks, and an expanding volume slider. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/media-02.json
+- media-03 — Podcast episode list with a single active row showing an animated equalizer and progress hairline, per-row play/pause, and a cycling speed chip. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/media-03.json
+- media-04 — Three-image gallery card with crossfading stage, zoom toggle, caption bar, thumbnails, and arrow-key navigation. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/media-04.json
+- media-05 — Audio waveform scrubber with 60 deterministic bars, drag-to-seek pointer handling, a following timestamp bubble, and animated skip controls. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/media-05.json
+
+## modal
+- modal-01 — Destructive confirm dialog with type-to-confirm input and loading-to-done delete button. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/modal-01.json
+- modal-02 — Share sheet with copy-link tooltip, permission toggle chips, email invites and export actions. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/modal-02.json
+- modal-03 — Upgrade paywall with gradient-ring icon, staggered benefits, springing price toggle and sheen CTA. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/modal-03.json
+- modal-04 — Keyboard-first confirm dialog with live Y/N keycaps and a progress-ring auto-cancel countdown. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/modal-04.json
+- modal-05 — Onboarding tour card with a spring-tracked spotlight ring, step dots and finish state. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/modal-05.json
+
+## nav
+- nav-01 — Glass navbar with backdrop blur, a product dropdown panel with icon items, ghost sign-in, and a solid CTA. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/nav-01.json
+- nav-02 — Floating pill navigation with an animated thumb that springs between active links via layoutId. (deps: framer-motion) — https://x-ui-self.vercel.app/r/nav-02.json
+- nav-03 — App sidebar with grouped sections, badge counts, an animated collapsible section, and a bottom user row. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/nav-03.json
+- nav-04 — macOS-style glass dock where app icons magnify based on cursor proximity, with tooltips and running-app dots. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/nav-04.json
+- nav-05 — Command palette rendered open with searchable grouped results, keyboard and hover selection, shortcuts, and a kbd-hint footer. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/nav-05.json
+
+## notification
+- notification-01 — Notification center with animated All/Unread filter pills, mark-all-read, action rows, and an all-caught-up empty state. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/notification-01.json
+- notification-02 — Bottom-right toast stack with iOS-style depth scaling, auto-dismiss progress hairlines, and exit slides. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/notification-02.json
+
+## onboarding
+- onboarding-01 — Get-started checklist with animated progress, spring check draws, and a confetti completion state. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/onboarding-01.json
+- onboarding-02 — Three-step wizard with a filling stepper, direction-aware sliding panels, and an animated finish state. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/onboarding-02.json
+
+## payment
+- payment-01 — Premium credit card with click-to-flip 3D animation, cursor tilt, moving sheen, CSS-built EMV chip, and full front/back detailing. (deps: framer-motion) — https://x-ui-self.vercel.app/r/payment-01.json
+- payment-02 — Checkout order summary with line items, a promo-code input with animated discount row, and a spring-animated total. (deps: framer-motion, lucide-react) — https://x-ui-self.vercel.app/r/payment-02.json
+- payment-03 — Transaction list grouped by day with tinted category icons, staggered row entrances, credit highlights, and a pending status pill. (deps: framer-motion, lucide-react) — https://x-ui-self.vercel.app/r/payment-03.json
+- payment-04 — Three-tier pricing section with an animated monthly/yearly toggle, spring price swaps, and an elevated most-popular tier. (deps: framer-motion, lucide-react) — https://x-ui-self.vercel.app/r/payment-04.json
+- payment-05 — Subscription usage card with a draw-on-mount SVG progress ring, slim linear meters, and an upgrade CTA. (deps: framer-motion, lucide-react) — https://x-ui-self.vercel.app/r/payment-05.json
+
+## profile
+- profile-01 (deps: lucide-react) — https://x-ui-self.vercel.app/r/profile-01.json
+- profile-02 (deps: lucide-react) — https://x-ui-self.vercel.app/r/profile-02.json
+
+## shop
+- shop-01 — Product card with draggable gradient-art gallery, wishlist heart, size chips, and an add-to-cart button that morphs into a check. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/shop-01.json
+- shop-02 — Cart panel with animated quantity steppers, slide-out item removal, a free-shipping promo hint, and springy live totals. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/shop-02.json
+- shop-03 — Reviews summary with animated rating distribution bars, verified-purchase chip, highlighted snippets, and helpful toggles. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/shop-03.json
+- shop-04 — Variant picker with color swatches, sold-out size grid with notify tooltips, quantity stepper, live stock meter, and per-variant pricing. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/shop-04.json
+- shop-05 — Order tracking card with a four-step progress rail, traveling truck indicator, animated connector fill, ETA, and address block. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/shop-05.json
+
+## stat
+- stat-01 — Row of KPI stat cards with count-up numbers, delta badges, and gradient-filled SVG sparklines. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/stat-01.json
+- stat-02 — Activity card with three concentric SVG rings animating on mount, a center total, and legend rows. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/stat-02.json
+- stat-03 — Leaderboard card with medal treatments for the top three, staggered score bars, and a pinned current-user row. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/stat-03.json
+
+## status
+- status-01 — Presence avatar stack that fans out on hover with name tooltips, live typing indicator, and a segmented control to set your own status. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/status-01.json
+- status-02 — Service uptime monitor with 30-day incident strips, hover tooltips, per-service status toggles, and a reactive overall-health header. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/status-02.json
+- status-03 — Animated CI deploy pipeline with connected stage nodes, spinner ring, log line ticker, springy checkmarks, and a retryable failure path. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/status-03.json
+- status-04 — Changelog list with version chips, typed New/Improved/Fixed badges, expandable entry details, and a subscribe-to-updates row. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/status-04.json
+- status-05 — Live-ops activity ticker where typed events slide in on an interval with tinted icon rings, pause-on-hover, and per-type filter chips. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/status-05.json
+
+## svg
+- svg-01 (deps: motion) — https://x-ui-self.vercel.app/r/svg-01.json
+
+## table
+- table-01 — Sortable data table with animated sort arrows, status pills, checkbox row selection, and a slide-in bulk-actions bar. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/table-01.json
+- table-02 — Kanban column with drag-to-reorder task cards, labels, avatars, due chips, and a ghost row to append new tasks. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/table-02.json
+- table-03 — Mini month calendar with sliding month transitions, today ring, event dots, and an event list for the selected day. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/table-03.json
+- table-04 — File browser with breadcrumb path, inline-expanding folders, typed file icons, row selection, and a kebab action popover. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/table-04.json
+- table-05 — Code diff viewer with additions/deletions chips, tinted added and removed lines, an expandable collapsed hunk, and a copy button. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/table-05.json
+
+## testimonial
+- testimonial-01 — Two-row infinite testimonial marquee scrolling in opposite directions with edge fades and pause-on-hover. (deps: lucide-react) — https://x-ui-self.vercel.app/r/testimonial-01.json
+- testimonial-02 — Rotating serif spotlight quote that crossfades on a timer with clickable dot indicators. (deps: framer-motion) — https://x-ui-self.vercel.app/r/testimonial-02.json
+
+## toolbar
+- toolbar (deps: lucide-react, motion) — https://x-ui-self.vercel.app/r/toolbar.json
+
+## tweet-card
+- tweet-card (deps: lucide-react) — https://x-ui-self.vercel.app/r/tweet-card.json
+
+## user
+- user-01 — Profile dropdown with plan chip, shortcut menu items, an animated theme segmented control, and a sign-out row. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/user-01.json
+
+## vercel-chat
+- vercel-chat (deps: lucide-react) — https://x-ui-self.vercel.app/r/vercel-chat.json
+
+## widget
+- widget-01 — Weather card with animated sun/moon scene, hourly forecast strip, and a day/night sky toggle. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/widget-01.json
+- widget-02 — World clock with live-ticking analog mini clock faces, digital time, and day/night indicators for three cities. (deps: lucide-react) — https://x-ui-self.vercel.app/r/widget-02.json
+- widget-03 — GitHub-style habit heatmap with hoverable tooltips, click-to-cycle cells, streak counter, and legend. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/widget-03.json
+- widget-04 — Pomodoro timer with a smooth circular countdown ring, focus/break modes, and press-physics controls. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/widget-04.json
+- widget-05 — Device status card with battery charge bar, segmented storage breakdown, memory pressure gauge, and uptime. (deps: lucide-react, framer-motion) — https://x-ui-self.vercel.app/r/widget-05.json

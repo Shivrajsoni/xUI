@@ -18,17 +18,16 @@ interface Card02Props {
 }
 
 const defaultProfile = {
-  name: "Shivraj Soni",
+  name: "Alex Rivera",
   role: "Senior Developer",
-  image:
-    "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png",
+  image: "/avatars/avatar-01.svg",
   status: "Open to Work",
   skills: [
     { name: "Frontend", level: 5 },
     { name: "Backend", level: 4 },
     { name: "DevOps", level: 4 },
   ],
-  portfolio: "github.com/alexchen",
+  portfolio: "https://github.com/",
 } satisfies Required<Card02Props>;
 
 export default function Card02({
@@ -46,7 +45,7 @@ export default function Card02({
           "relative overflow-hidden",
           "bg-white/50 dark:bg-zinc-900/50",
           "backdrop-blur-xl",
-          "border border-zinc-200/50 dark:border-zinc-800/50",
+          "border border-zinc-100/50 dark:border-zinc-800/50 border-2",
           "rounded-2xl",
           "transition-all duration-300",
           "hover:shadow-xl hover:shadow-zinc-200/20 dark:hover:shadow-zinc-900/20",
@@ -135,18 +134,21 @@ export default function Card02({
 
         <div className="px-5 pb-5 flex gap-2 items-center">
           <Button
+            asChild
             variant="default"
             size="sm"
             className={cn(
               "w-full",
-              "bg-zinc-900 dark:bg-zinc-100",
-              "hover:bg-zinc-700 dark:hover:bg-zinc-300",
-              "text-white dark:text-zinc-900",
-              "shadow-xs"
+              "border border-zinc-200 bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800",
+              "hover:bg-zinc-200 dark:hover:bg-zinc-700",
+              "text-zinc-900 dark:text-zinc-100",
+              "shadow-none"
             )}
           >
-            <ExternalLink className="w-4 h-4 mr-2" />
-            View Portfolio
+            <a href={portfolio} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="w-4 h-4 mr-2" />
+              View Portfolio
+            </a>
           </Button>
           <Button
             variant="ghost"

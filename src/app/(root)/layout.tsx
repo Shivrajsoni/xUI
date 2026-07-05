@@ -1,11 +1,5 @@
 import Header from "@/components/landing/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "UI Component Library (Xui) ",
-  description: "Designed and Created by Shivraj Soni",
-};
 
 export default function RootLayout({
   children,

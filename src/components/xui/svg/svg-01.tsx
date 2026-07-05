@@ -1,13 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 interface HandWrittenTitleProps {
   title?: string;
   subtitle?: string;
 }
 
 export default function Svg01({ title, subtitle }: HandWrittenTitleProps) {
-  const draw = {
+  const draw: Variants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {
       pathLength: 1,

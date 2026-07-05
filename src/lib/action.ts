@@ -14,11 +14,9 @@ export const getComponent = async (fileName: string | null, folder: string) => {
   const baseDir = path.join(process.cwd(), "src/components/xui");
   if (!fileName || fileName === "undefined") {
     const fullPath = path.join(baseDir, `${folder}.tsx`);
-    // console.log("fullPath", fullPath);
     return await readFileCache(fullPath);
   }
 
-  console.log("here");
   const fullPath = path.join(baseDir, folder, `${fileName}.tsx`);
 
   return await readFileCache(fullPath);
@@ -31,7 +29,7 @@ export type CopyComponentState = {
 };
 
 export const CopyComponent = async (
-  prevState: CopyComponentState,
+  _prevState: CopyComponentState,
   formData: FormData
 ) => {
   try {
